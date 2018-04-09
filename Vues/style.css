@@ -1,0 +1,46 @@
+body{
+    background-image: url(image/accueil/background.png);
+    background-attachment: fixed;
+    font-family: "Century Gothic";
+    background-repeat: no-repeat;
+}
+
+nav{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 130px;
+    position: fixed;
+    background-image: url(image/accueil/header_background_transparent.png);
+    background-repeat: no-repeat;
+}
+
+nav a{
+    size: 90%;
+    text-align: center;
+    background-size: 100%;
+}
+
+nav img{
+    max-height: 120px;
+    max-width: 120px;
+    width: auto;
+    height: auto;
+    opacity: 1;
+}
+
+nav img:hover{
+    opacity:0.5;
+}
+
+footer{
+    right:5%;
+    bottom:0;
+    text-align: center;
+    position:fixed;
+}
