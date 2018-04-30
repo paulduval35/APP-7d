@@ -3,6 +3,8 @@ body{
     background-attachment: fixed;
     font-family: "Century Gothic";
     background-repeat: no-repeat;
+    font-size: 14px;
+    color: white;
 }
 
 nav{
@@ -43,4 +45,48 @@ footer{
     bottom:0;
     text-align: center;
     position:fixed;
+}
+
+h1 {
+    color:#252584;
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    font-style: italic;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    font-size: 2em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    font-style: italic;
+    letter-spacing: 0.5em;
+    text-align: center;
+}
+
+h3 {
+    color: #999;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+p {
+    line-height: 21px;
+    text-align: center;
+}
+
+#acceuil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.element {
+    width: 50%;
+    height: 90%;
 }
