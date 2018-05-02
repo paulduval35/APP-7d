@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +11,7 @@
 
 <body>
     <?php require "nav.php";?>
+	
     <div id="main_accueil">
         <div class="box_gauche_main_accueil"></div>
         <div class="connexion">
