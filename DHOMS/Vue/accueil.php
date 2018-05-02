@@ -10,13 +10,9 @@
 
 <body>
     <?php require "nav.php";?>
-    <h1><a href="index.html"><img src="image/accueil/logoDHOMStransparant.png" alt="accueil"></a></h1>
-    <h1>DHOMS ACCUEIL</h1>
-    <h2>Bienvenue</h2>
-
-    <div id="acceuil">
-
-        <div class="element">
+    <div id="main_accueil">
+        <div class="box_gauche_main_accueil"></div>
+        <div class="connexion">
             <h3> Connexion </h3>
 
             <form action="connexion.php" method="post">
@@ -29,7 +25,7 @@
             </form>
         </div>
 
-        <div class="element">
+    <div class="inscription">
             <h3> Inscription </h3>
             <form action="inscription.php" method="post">
                 <p><input type="text" value="Adresse mail"></p>
@@ -39,8 +35,9 @@
                 <p><input type="radio" name="CGU" value="CGU"> J'ai lu et j'accepte les CGU</p>
                 <p><input type="submit" value="S'inscrire"></p>
             </form>
-        </div>
     </div>
+    </div>
+
 
 </body>
 </html>
