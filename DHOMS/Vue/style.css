@@ -68,13 +68,13 @@ h2 {
     text-align: center;
 }
 
-h3 {
-    color: #999;
-    font-size: 1.5em;
+#connexion_inscription {
+    color: #777777;
+    font-size: 1.7em;
     text-align: center;
 }
 
-p {
+#p_connexion, #p_inscription {
     line-height: 21px;
     text-align: center;
 }
