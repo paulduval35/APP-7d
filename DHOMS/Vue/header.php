@@ -11,11 +11,19 @@
 <body>
 
     <! a retirer >
-    <?php require "nav.php" ?>
+    <?php require "headerfooternav.php" ?>
 
     <header>
-        test
+        <h1>test</h1>
     </header>
+
+    <section>
+        test2
+    </section>
+
+    <footer>
+        test3
+    </footer>
 
 </body>
 
