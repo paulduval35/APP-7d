@@ -13,7 +13,6 @@
     <?php require "nav.php";?>
 	
     <div id="main_accueil">
-        <div class="box_gauche_main_accueil"></div>
         <div class="connexion">
             <h3 id="connexion_inscription"> Connexion </h3>
 
@@ -26,7 +25,7 @@
 
     <div class="inscription">
             <h3 id="connexion_inscription"> Inscription </h3>
-            <form action="inscription.php" method="post">
+            <form action="inscription.php" method="post" id="p_inscription">
 			<p><input id="mailins" type="email" name="email" placeholder=" E-mail" required title="E-mail: user@domain.com"/></p>
 			<p>	<input id="mdpm" type="password" name="mdp" placeholder="Mot de passe" title="Minimum 8 caractères (uniquement des chiffres et des lettres);" required/></p>
 			<p><input id="mdp2" type="password" name="mdp2" placeholder="Confirmer le mot de passe" required></p>

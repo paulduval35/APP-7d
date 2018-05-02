@@ -90,13 +90,9 @@ p {
     min-width: 220px;
 }
 
-.inscription {
-    margin-right: 5%;
-}
 
-.box_gauche_main_accueil {
-    min-width: 120px;
-    background-color: yellow;
+.connexion {
+    margin-left: 12%;
 }
 
 #main_accueil {
