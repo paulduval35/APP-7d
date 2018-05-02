@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php require "nav.php";?>
+    <?php require "headerfooternav.php";?>
 	
     <div id="main_accueil">
         <div class="box_gauche_main_accueil"></div>

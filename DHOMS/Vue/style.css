@@ -1,40 +1,61 @@
 body{
+    margin:0px;
     background-image: url(image/accueil/background.png);
     background-attachment: fixed;
     font-family: "Century Gothic";
     background-repeat: no-repeat;
     font-size: 14px;
     color: white;
+    display:grid;
+    grid-template-columns: 7% 1fr;
+}
+
+#header_footer{
+    height: 100vh;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 15% 80% 5%;
+}
+
+header{
+    display:flex;
+    grid-template-columns: 1fr 7%;
+    justify-content: center;
+    background-color: cyan;
+    grid-row:1;
+    align-items: stretch;
 }
 
 nav{
-    min-width: 70px;
+    grid-column: 1;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     flex-basis: 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 10%;
-    max-width: 130px;
+    height: 100vh;
+    width: 7%;
     position: fixed;
     background-image: url(image/accueil/header_background_transparent.png);
     background-repeat: no-repeat;
 }
 
+section{
+    grid-row: 2;
+}
+
+footer{
+    background-color: darkcyan;
+    grid-row:3;
+}
+
 nav a{
-    size: 90%;
     text-align: center;
     background-size: 100%;
 }
 
 nav img{
-    max-height: 120px;
-    max-width: 120px;
     width: 90%;
-    height: auto;
     opacity: 1;
 }
 
@@ -42,12 +63,6 @@ nav img:hover{
     opacity:0.5;
 }
 
-footer{
-    right:5%;
-    bottom:0;
-    text-align: center;
-    position:fixed;
-}
 
 #logo_accueil  {
     margin: 0;
@@ -65,7 +80,7 @@ h2 {
     margin: 0;
     margin-bottom: 7px;
     padding: 4px;
-    font-style: italic;
+    /*font-style: italic;*/
     letter-spacing: 0.5em;
     text-align: center;
 }
@@ -106,3 +121,4 @@ p {
     height: 100%;
     //background-color: white;
 }
+
