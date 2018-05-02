@@ -8,6 +8,7 @@ body{
 }
 
 nav{
+    min-width: 70px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -16,7 +17,8 @@ nav{
     top: 0;
     left: 0;
     height: 100%;
-    width: 130px;
+    width: 10%;
+    max-width: 130px;
     position: fixed;
     background-image: url(image/accueil/header_background_transparent.png);
     background-repeat: no-repeat;
@@ -31,7 +33,7 @@ nav a{
 nav img{
     max-height: 120px;
     max-width: 120px;
-    width: auto;
+    width: 90%;
     height: auto;
     opacity: 1;
 }
@@ -68,13 +70,13 @@ h2 {
     text-align: center;
 }
 
-#connexion_inscription {
-    color: #777777;
-    font-size: 1.7em;
+h3 {
+    color: #999;
+    font-size: 1.5em;
     text-align: center;
 }
 
-#p_connexion, #p_inscription {
+p {
     line-height: 21px;
     text-align: center;
 }

@@ -1,12 +1,21 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: epida
- * Date: 24/04/2018
- * Time: 14:34
- */
+<!DOCTYPE html>
+<html lang="en">
 
-echo 'hello world';
-echo 'test 2';
-?>
+<head>
+    <title>DHOMS</title>
+    <meta charset="UTF-8">
+    <link rel= "stylesheet" href="style.css" />
+    <!-- commentaire -->
+</head>
+
+<body>
+
+    <! a retirer >
+    <?php require "nav.php" ?>
+
+    <header>
+        test
+    </header>
+
+</body>
 
