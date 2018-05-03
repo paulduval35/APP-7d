@@ -10,6 +10,8 @@ body{
     grid-template-columns: 7% 1fr;
 }
 
+
+
 #header_footer{
     height: 100vh;
     grid-column: 2;

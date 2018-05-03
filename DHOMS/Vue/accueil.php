@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
     <title>DHOMS</title>
     <meta charset="UTF-8">
     <link rel= "stylesheet" href="style.css" />
@@ -10,7 +11,7 @@
 </head>
 
 <body>
-    <?php require "headerfooternav.php";?>
+
 	
     <div id="main_accueil">
         <div class="connexion">

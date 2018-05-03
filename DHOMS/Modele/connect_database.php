@@ -5,10 +5,10 @@
    $dbname = "dhoms";
    $host='localhost';
    $user='root';
-   $pass=
+
 
    try {
-       $db = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
+       $db = new PDO("mysql:host=$host;dbname=$dbname", "$user", "");
        $db->query("SET NAMES UTF8");
        $_SERVER['name'] = $db;
 
