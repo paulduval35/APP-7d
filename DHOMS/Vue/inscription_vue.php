@@ -23,7 +23,7 @@
 
 
 
-                <form id ="form_inscription" action="../Controller/inscription_controller.php" method="post" id="p_inscription">
+                <form id ="form_inscription" action="../Controleur/inscription_controleur.php" method="post" id="p_inscription">
 
                     <ul class = "flex-outer">
                         <li>

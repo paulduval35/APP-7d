@@ -26,7 +26,7 @@
 
     <div class="inscription">
             <h3 id="connexion_inscription"> Inscription </h3>
-            <form action="../Controller/inscription_controller.php" method="post" id="p_inscription">
+            <form action="../Controleur/inscription_controleur.php" method="post" id="p_inscription">
 			<p><input id="mailins" type="email" name="email" placeholder=" E-mail" required title="E-mail: user@domain.com"/></p>
 			<p>	<input id="mdpm" type="password" name="mdp" placeholder="Mot de passe" title="Minimum 8 caractères (uniquement des chiffres et des lettres);" required/></p>
 			<p><input id="mdp2" type="password" name="mdp2" placeholder="Confirmer le mot de passe" required></p>
