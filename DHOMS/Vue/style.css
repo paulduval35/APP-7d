@@ -2,6 +2,7 @@
 Squelette
  */
 
+
 body {
     margin: 0px;
     background-image: url(image/accueil/background.png);
@@ -21,16 +22,19 @@ body {
     grid-column: 2;
     display: grid;
     grid-template-rows: 15% 80% 5%;
+    margin:0;
 }
 
 header{
+    background-image: url(image/accueil/header_bg.png);
+    background-repeat: no-repeat;
     display:flex;
-    grid-template-columns: 1fr 7%;
+    flex-direction: row;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.1);
     grid-row:1;
-    align-items: stretch;
+    align-items: center;
     overflow:hidden;
+    padding:0;
 }
 
 nav{
@@ -43,7 +47,7 @@ nav{
     height: 100vh;
     width: 7%;
     position: fixed;
-    background-image: url(image/accueil/header_background_transparent.png);
+    background-image: url(image/accueil/nav_background_transparent.png);
     background-repeat: no-repeat;
 }
 
@@ -57,9 +61,12 @@ section{
 }
 
 footer{
-    background-color: rgba(255, 255, 255, 0.1);
+    display:flex;
+    justify-content: center;
+    align-items: center;
     grid-row:3;
     overflow: hidden;
+    background-image: url(image/accueil/footer_bg.png);
 }
 
 nav a{
@@ -90,6 +97,8 @@ block (titre, paragraphes, form)
     min-width: 250px;
     background-color: yellow;
 }
+
+
 
 h2 {
     color: white;
@@ -127,12 +136,16 @@ p {
 
 #form_inscription{
     width: 50%;
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin:20px;
 }
 
 .flex-outer{
-    min-width: 250px;
+    box-sizing: border-box;
+    min-width: 320px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
+
     text-transform: uppercase;
     list-style: none;
 }
@@ -160,8 +173,8 @@ p {
     margin: auto;
     padding: 8px 16px;
     border: none;
-    background: #444444;
-    color: white;
+    background: white;
+    color: #444444;
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 2px;
@@ -200,5 +213,27 @@ Autres, ID, etc
     font-size: 3em;
     text-align: center;
     color: #ffff;
+    margin: 0;
+    padding-top: 20px;
+    letter-spacing: 0.1em;
 }
 
+input, select{
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+}
+
+#titre{
+    font-weight: bold;
+    font-size: 4em;
+    margin-right: auto;
+    margin: 10px;
+    color: #444444;
+    letter-spacing: -0.05em;
+}
+
+#soustitre{
+    font-size: 1.5em;
+}
