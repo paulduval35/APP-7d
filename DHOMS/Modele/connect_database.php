@@ -8,7 +8,7 @@
 
 
    try {
-       $db = new PDO("mysql:host=$host;dbname=$dbname", "$user", "");
+       $db = new PDO("mysql:host=$host;dhoms=$dbname", "$user", "");
        $db->query("SET NAMES UTF8");
        $_SERVER['name'] = $db;
 
