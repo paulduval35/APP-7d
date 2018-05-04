@@ -1,4 +1,4 @@
-body{
+#squelette{
     margin:0px;
     background-image: url(image/accueil/background.png);
     background-attachment: fixed;
@@ -8,6 +8,10 @@ body{
     color: white;
     display:grid;
     grid-template-columns: 7% 1fr;
+}
+
+body{
+    margin: 0px;
 }
 
 

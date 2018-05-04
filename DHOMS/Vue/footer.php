@@ -10,7 +10,6 @@
 
 <body>
 
-    <h2>DHOMS by DOMISEP</h2>
+footer
 
 </body>
-
