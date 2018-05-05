@@ -10,7 +10,8 @@
 
 <body>
 
-    <h2>DHOMS by DOMISEP</h2>
+
+<div id="titre">DHOMS</div> <div id="soustitre">by<br> DOMISEP</div>
 
 </body>
 

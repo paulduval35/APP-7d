@@ -1,17 +1,18 @@
-#squelette{
-    margin:0px;
+/*
+Squelette
+ */
+
+
+body {
+    margin: 0px;
     background-image: url(image/accueil/background.png);
     background-attachment: fixed;
     font-family: "Century Gothic";
     background-repeat: no-repeat;
     font-size: 14px;
     color: white;
-    display:grid;
+    display: grid;
     grid-template-columns: 7% 1fr;
-}
-
-body{
-    margin: 0px;
 }
 
 
@@ -21,15 +22,19 @@ body{
     grid-column: 2;
     display: grid;
     grid-template-rows: 15% 80% 5%;
+    margin:0;
 }
 
 header{
+    background-image: url(image/accueil/header_bg.png);
+    background-repeat: no-repeat;
     display:flex;
-    grid-template-columns: 1fr 7%;
+    flex-direction: row;
     justify-content: center;
-    background-color: cyan;
     grid-row:1;
-    align-items: stretch;
+    align-items: center;
+    overflow:hidden;
+    padding:0;
 }
 
 nav{
@@ -42,17 +47,26 @@ nav{
     height: 100vh;
     width: 7%;
     position: fixed;
-    background-image: url(image/accueil/header_background_transparent.png);
+    background-image: url(image/accueil/nav_background_transparent.png);
     background-repeat: no-repeat;
 }
 
 section{
+    display: flex;
+    flex-direction: column;
     grid-row: 2;
+    overflow: auto;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 footer{
-    background-color: darkcyan;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     grid-row:3;
+    overflow: hidden;
+    background-image: url(image/accueil/footer_bg.png);
 }
 
 nav a{
@@ -70,6 +84,10 @@ nav img:hover{
 }
 
 
+/*
+block (titre, paragraphes, form)
+ */
+
 #logo_accueil  {
     margin: 0;
     margin-bottom: 7px;
@@ -79,6 +97,8 @@ nav img:hover{
     min-width: 250px;
     background-color: yellow;
 }
+
+
 
 h2 {
     color: white;
@@ -102,25 +122,142 @@ p {
     text-align: center;
 }
 
-.inscription, .connexion {
-    margin-top: 15%;
-    justify-content: space-around;
-    align-items: center;
-    width: 45%;
-    height: 40%;
-    min-width: 220px;
-}
 
+
+.inscription{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 30%;
+}
 
 .connexion {
     margin-left: 12%;
 }
+
+#form_inscription{
+    width: 50%;
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin:20px;
+}
+
+.flex-outer{
+    box-sizing: border-box;
+    min-width: 320px;
+    padding: 20px;
+
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.flex-outer li{
+    display: flex;
+}
+
+.flex-outer li {/*form*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flex-outer > li > label {
+    flex: 1 0 120px;
+    max-width: 320px;
+}
+
+.flex-outer > li > label + *{
+    flex: 1 0 240px;
+}
+
+.flex-outer li button{
+    margin: auto;
+    padding: 8px 16px;
+    border: none;
+    background: white;
+    color: #444444;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 2px;
+}
+
+.flex-outer li input:not([type='checkbox']), select{
+    padding: 15px;
+    border: none;
+}
+
+.flex-outer li label{
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.flex-outer > li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+
+/*
+Autres, ID, etc
+ */
 
 #main_accueil {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
-    //background-color: white;
+//background-color: white;
 }
 
+#connexion_inscription{
+    font-size: 3em;
+    text-align: center;
+    color: #ffff;
+    margin: 0;
+    padding-top: 20px;
+    letter-spacing: 0.1em;
+}
+
+input, select{
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+}
+
+#titre{
+    font-weight: bold;
+    font-size: 4em;
+    margin-right: auto;
+    margin: 10px;
+    color: #444444;
+    letter-spacing: -0.05em;
+}
+
+#soustitre{
+    font-size: 1.5em;
+}
+
+.checkboxclass{
+    display:flex;
+    justify-content: center;
+}
+
+#checkbox{
+    height: 15px;
+    width: 15px;
+}
+
+section::-webkit-scrollbar{
+    background-color: lightgray;
+}
+
+section::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(#59A4C9, #59B3B7);
+}
+
+
+
+section::-webkit-scrollbar-track{
+
+}
