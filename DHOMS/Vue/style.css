@@ -237,3 +237,27 @@ input, select{
 #soustitre{
     font-size: 1.5em;
 }
+
+.checkboxclass{
+    display:flex;
+    justify-content: center;
+}
+
+#checkbox{
+    height: 15px;
+    width: 15px;
+}
+
+section::-webkit-scrollbar{
+    background-color: lightgray;
+}
+
+section::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(#59A4C9, #59B3B7);
+}
+
+
+
+section::-webkit-scrollbar-track{
+
+}

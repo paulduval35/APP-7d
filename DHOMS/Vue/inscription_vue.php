@@ -108,7 +108,7 @@
                             <input id="etat_inscription" name ="etat" required placeholder="ENTRER VOTRE ETAT">
                         </li>
 
-                        <li>
+                        <li class="checkboxclass">
                             <input id = "checkbox" type="checkbox" name="CGU" value="CGU">J'ai lu et j'accepte les CGU
                         </li>
 

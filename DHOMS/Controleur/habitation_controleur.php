@@ -6,7 +6,7 @@
  * Time: 11:20
  */
 
-include("habitation_model.php");
-include("habitation.php");
+include("../Modele/habitation_model.php");
+include("../Vue/habitation.php");
 
 ?>
