@@ -49,13 +49,13 @@ $ville = isset($_POST['ville']) ? $_POST['ville'] : NULL;
 
 if($nom_habitation != NULL AND $surface != NULL AND $num_rue != NULL AND $rue != NULL AND $etage != NULL AND $num_appartement != NULL AND $code_postal != NULL AND $ville != NULL AND $pays != NULL )
 {
-    if(isset $POST['CGU'])
+    if(isset ($POST['CGU']))
     {
         include "/Applications/XAMPP/xamppfiles/htdocs/DHOMS/Modele/habitation_model.php";
     }
 }
 
-
+include "/Applications/XAMPP/xamppfiles/htdocs/DHOMS/Vue/validation_habitation.php";
 
 
 ?>

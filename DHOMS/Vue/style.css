@@ -275,3 +275,8 @@ section::-webkit-scrollbar-track{
     font-size:1.1em;
     color: #444444;
 }
+
+.titre_validation_ajout_habitation {
+    display:flex;
+    justify-content:center;
+}
