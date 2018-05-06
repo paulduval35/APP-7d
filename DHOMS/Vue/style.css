@@ -124,21 +124,11 @@ p {
 
 
 
-.inscription{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 30%;
-}
-
-.connexion {
-    margin-left: 12%;
-}
-
-#form_inscription, #form_habitation{
-    width: 50%;
+#form_inscription, #form_habitation, #form_connexion{
+    width: 90%;
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
-    margin:20px;
+    margin:30px;
 }
 
 .flex-outer{
@@ -211,13 +201,19 @@ Autres, ID, etc
 //background-color: white;
 }
 
-#connexion_inscription, #ajouter_habitation{
+.connexion_inscription, #ajouter_habitation{
     font-size: 3em;
     text-align: center;
     color: #ffff;
     margin: 0;
     padding-top: 20px;
     letter-spacing: 0.1em;
+}
+
+#box_connexion_inscription {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
 }
 
 input, select{
