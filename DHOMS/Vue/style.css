@@ -134,7 +134,7 @@ p {
     margin-left: 12%;
 }
 
-#form_inscription{
+#form_inscription, #form_habitation{
     width: 50%;
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -209,7 +209,7 @@ Autres, ID, etc
 //background-color: white;
 }
 
-#connexion_inscription{
+#connexion_inscription, #ajouter_habitation{
     font-size: 3em;
     text-align: center;
     color: #ffff;
