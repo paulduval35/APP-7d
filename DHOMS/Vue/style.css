@@ -154,6 +154,10 @@ p {
 .flex-outer > li > label + *{
     flex: 1 0 240px;
 }
+.flex-outer .message_contact{
+    min-width: 95%;
+    min-height: 15px;
+}
 
 .flex-outer li button{
     margin: auto;

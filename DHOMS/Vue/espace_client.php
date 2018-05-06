@@ -34,6 +34,9 @@ try {
             <h3 id="connexion_inscription"> Tableau de bord</h3>
 
             <ul class="flex-outer">
+                <li >
+                    <a href="habitation.php"><button >Ajouter une habitation</button></a>
+                </li>
                 <li ><label>Chambre :</label><br/>
                     <div class ="moyen_texte">
                         <?php
