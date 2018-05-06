@@ -270,3 +270,8 @@ section::-webkit-scrollbar-track{
     color: #444444;
 }
 
+.moyen_texte {
+    font-weight: inherit ;
+    font-size:1.1em;
+    color: #444444;
+}
