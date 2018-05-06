@@ -27,7 +27,7 @@
                     <h3 id="connexion_inscription"> INSCRIPTION </h3><br>
                     <ul class = "flex-outer">
                         <li>
-                            <label>
+                            <label for="nom_inscription">
                                 Nom
                             </label>
 
@@ -35,7 +35,7 @@
                         </li>
 
                         <li>
-                            <label>
+                            <label for="prenom_inscription">
                                 Prénom
                             </label>
 
@@ -43,21 +43,21 @@
                         </li>
 
                         <li>
-                            <label>
+                            <label for="mail_inscription">
                                 E-mail
                             </label>
                             <input id="mail_inscription" type="email" name="email"  required  placeholder="ENTRER VOTRE EMAIL">
                         </li>
 
                         <li>
-                            <label>
+                            <label for="confirmationmail_inscription">
                                 Confirmer votre email
                             </label>
                             <input id="confirmationmail_inscription" type="email"  name="emailconfirmation" required placeholder="CONFIRMER VOTRE EMAIL">
                         </li>
 
                         <li>
-                            <label>
+                            <label for="mdpm">
                                 Mot de passe
                             </label>
 
@@ -67,7 +67,7 @@
                         </li>
 
                         <li>
-                            <label>
+                            <label for="mdp2">
                                 Confirmer le mot de passe
                             </label>
 
@@ -75,7 +75,7 @@
                         </li>
 
                         <li>
-                            <label>
+                            <label for="statut_inscription">
                                 Statut
                             </label>
 
@@ -86,7 +86,7 @@
                         </li>
 
                         <li>
-                            <label>
+                            <label for="numfixe_inscription">
                                 Numéro de téléphone fixe
                             </label>
 
@@ -94,7 +94,7 @@
                         </li>
 
                         <li>
-                            <label>
+                            <label for="nummobile_inscription">
                                 Numéro de téléphone mobile
                             </label>
 
@@ -102,7 +102,7 @@
                         </li>
 
                         <li>
-                            <label>
+                            <label for="etat_inscription">
                                 Etat
                             </label>
                             <input id="etat_inscription" name ="etat" required placeholder="ENTRER VOTRE ETAT">

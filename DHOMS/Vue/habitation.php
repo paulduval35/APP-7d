@@ -9,9 +9,23 @@
 <body>
 
 
+<<<<<<< HEAD
 <nav>
     <?php include "nav.php"?>
 </nav>
+=======
+// On affiche chaque entrée une à une
+while ($donnees = $reponse->fetch())
+{
+    ?>
+    <p>
+        <strong>Habitation</strong> : <?php echo $donnees['nom']; ?><br />
+        ID: <?php echo $donnees['ID']; ?>
+        Taille : <?php echo $donnees['surface']; ?> metres carrés !<br />
+    </p>
+    <?php
+}
+>>>>>>> 3ee8614eb06afbf0c5a7f1a8a39b0ae2dbf695a3
 
 <div id="header_footer">
     <header>
@@ -20,7 +34,14 @@
 
     <section>
 
+// test d'ajoue d'un élément dans le tableau habitation :
 
+<<<<<<< HEAD
+=======
+// $bdd->exec('INSERT INTO habitation(nom,surface,ID_adresse) VALUES (\'maison1\',20,2)');
+
+// echo 'Le contenu a bien ete ajoute';
+>>>>>>> 3ee8614eb06afbf0c5a7f1a8a39b0ae2dbf695a3
 
 
         <form id ="form_habitation" action="/Applications/XAMPP/xamppfiles/htdocs/DHOMS/Controleur/habitation_controleur.php" method="POST" id="p_habitation">
