@@ -21,7 +21,7 @@
     </header>
     <section>
         <div id="cgu">
-            <h2>Condition Général d’Utilisation</h2>
+            <h2>Conditions Générales d’Utilisation</h2>
                 <h3 class="partie_cgu"> I. A propos de nous <h3/>
                     <p class="texte_cgu">
                         La Société DHOMS est une SARL au capital social de 100000€, dont le siège social est au 10 Rue de Vanves - 92130 Issy-les-Moulineaux et immatriculée au Registre du commerce et des sociétés de Paris sous le numéro 123456789. La Société propose les services suivants : Développement web.<p/>

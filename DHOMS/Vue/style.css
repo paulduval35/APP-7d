@@ -192,7 +192,7 @@ p {
 
 #cgu{
     width: 50%;
-    min-width: 320px;
+    min-width: 400px;
     background-color: rgba(255, 255, 255, 0.3);
     margin:20px;
     color: #999;
@@ -203,19 +203,20 @@ p {
 .partie_cgu{
     color: darkslategray;
     font-size: 2em;
-    margin: 0;
+    margin: 20px;
     margin-bottom: 7px;
     padding: 4px;
     text-align: left;
 }
 
 .texte_cgu{
-    color: gray;
+    color: #444444;
     font-size: 0.8em;
     margin: 0;
     margin-bottom: 7px;
     padding: 4px;
     text-align: justify;
+    margin: 20px;
 }
 
 /*
