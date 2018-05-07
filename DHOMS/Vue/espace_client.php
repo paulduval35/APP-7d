@@ -35,7 +35,7 @@ try {
 
             <ul class="flex-outer">
                 <li >
-                    <a href="habitation.php"><button >Ajouter une habitation</button></a>
+                    <a href="habitation_vue.php"><button >Ajouter une habitation</button></a>
                 </li>
                 <li ><label>Maison :</label><br/>
                     <div class ="moyen_texte">
