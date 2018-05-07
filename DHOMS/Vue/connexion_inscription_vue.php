@@ -88,6 +88,7 @@
                         </li>
 
                         <li>
+
                             <button type="submit">S'inscrire</button>
                         </li>
 

@@ -2,7 +2,6 @@
 Squelette
  */
 
-
 body {
     margin: 0px;
     background-image: url(image/accueil/background.png);
@@ -14,8 +13,6 @@ body {
     display: grid;
     grid-template-columns: 7% 1fr;
 }
-
-
 
 #header_footer{
     height: 100vh;
@@ -83,7 +80,6 @@ nav img:hover{
     opacity:0.5;
 }
 
-
 /*
 block (titre, paragraphes, form)
  */
@@ -97,8 +93,6 @@ block (titre, paragraphes, form)
     min-width: 250px;
     background-color: yellow;
 }
-
-
 
 h2 {
     color: white;
@@ -122,8 +116,6 @@ p {
     text-align: center;
 }
 
-
-
 #form_inscription, #form_habitation, #form_connexion{
     width: 90%;
     min-width: 320px;
@@ -139,7 +131,6 @@ p {
     list-style: none;
 }
 
-
 .flex-outer li {/*form*/
     display: flex;
     flex-wrap: wrap;
@@ -151,16 +142,18 @@ p {
     max-width: 320px;
 }
 
+
 .flex-outer > li > label + *{
     flex: 1 0 240px;
 }
+
 .flex-outer .message_contact{
     min-width: 95%;
     min-height: 15px;
 }
 
 .flex-outer li button{
-    margin: auto;
+    margin-left: auto;
     padding: 8px 16px;
     border: none;
     background: white;
@@ -191,6 +184,39 @@ p {
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
     margin:20px;
+}
+
+/*
+    CSS des CGU
+ */
+
+#cgu{
+    width: 50%;
+    min-width: 400px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin:20px;
+    color: #999;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+.partie_cgu{
+    color: darkslategray;
+    font-size: 2em;
+    margin: 20px;
+    margin-bottom: 7px;
+    padding: 4px;
+    text-align: left;
+}
+
+.texte_cgu{
+    color: #444444;
+    font-size: 0.8em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    text-align: justify;
+    margin: 20px;
 }
 
 /*
@@ -258,8 +284,6 @@ section::-webkit-scrollbar-thumb{
     background-image: linear-gradient(#59A4C9, #59B3B7);
 }
 
-
-
 section::-webkit-scrollbar-track{
 
 }
@@ -280,8 +304,11 @@ section::-webkit-scrollbar-track{
     display:flex;
     justify-content:center;
 }
+<<<<<<< HEAD
 
 .position_option{
     display:flex;
     justify-content: left;
 }
+=======
+>>>>>>> 33ab0419582185332966fea6db26f5f91dab19ca
