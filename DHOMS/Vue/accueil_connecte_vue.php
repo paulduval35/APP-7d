@@ -7,6 +7,7 @@
     <title>DHOMS</title>
     <meta charset="UTF-8">
     <link rel= "stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Vue/style.css"/>
 	<!-- commentaire -->
 </head>
 
@@ -23,7 +24,13 @@
         </header>
 
         <section>
-            contenu
+            <?php if($header == 3){
+                echo "oui";
+            }
+            else{
+                echo "non";
+            }
+            ?>
         </section>
 
         <footer>

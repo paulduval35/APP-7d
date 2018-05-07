@@ -1,4 +1,7 @@
 <?php
+
+global $bdd;
+
 try
 {
     // On se connecte à MySQL
