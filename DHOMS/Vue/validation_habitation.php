@@ -5,7 +5,7 @@
 
     <title>DHOMS</title>
     <meta charset="UTF-8">
-    <link rel= "stylesheet" href="style.css" />
+    <link rel= "stylesheet" href="../Vue/style.css" />
     <!-- commentaire -->
 </head>
 
@@ -24,7 +24,7 @@
     <section>
 
         <div class="titre_validation_ajout_habitation">
-            <h2>Votre habitation a bien été ajouté</h2>
+            <h2>Votre habitation a bien été ajoutée</h2>
         </div>
 
     </section>

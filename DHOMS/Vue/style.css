@@ -280,3 +280,8 @@ section::-webkit-scrollbar-track{
     display:flex;
     justify-content:center;
 }
+
+.position_option{
+    display:flex;
+    justify-content: left;
+}
