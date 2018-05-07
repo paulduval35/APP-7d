@@ -51,7 +51,7 @@ if($nom_habitation != NULL AND $surface != NULL AND $num_rue != NULL AND $rue !=
 {
     if(isset ($POST['CGU']))
     {
-        include "/Applications/XAMPP/xamppfiles/htdocs/DHOMS/Modele/habitation_modele.php";
+        include "/Applications/XAMPP/xamppfiles/htdocs/DHOMS/Modele/habitation_model.php";
     }
 }
 
