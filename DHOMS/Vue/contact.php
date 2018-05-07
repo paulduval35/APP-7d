@@ -24,19 +24,21 @@
     <section>
 
         <form id="form_contact" action="../Controleur/contact_controleur.php" method="post">
-        <h3 id="connexion_inscription"> Nous contacter</h3>
+        <h3> Nous contacter</h3>
 
             <ul class="flex-outer">
                 <li><label>Appelez nous</label>
                     <div class ="gros_texte">0123456789</div>
                 </li>
 
-                <li ><label><br>ou<br></label></li>
+                <li ><label><br>ou envoyez nous un message<br></label></li>
+                <li >
+                    <textarea rows = "1" class="message_contact" placeholder="OBJECT"></textarea>
 
-                <li>
-                    <label for="message_contact">Envoyez nous un message</label>
 
-                    <textarea rows = "5" id="message_contact" placeholder="VOTRE MESSAGE"></textarea>
+                </li>
+                <li >
+                    <textarea rows = "8" class="message_contact" placeholder="VOTRE MESSAGE"></textarea>
 
 
                 </li>

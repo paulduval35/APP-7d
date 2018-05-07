@@ -6,7 +6,8 @@
 
     <title>DHOMS</title>
     <meta charset="UTF-8">
-    <link rel= "stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="../Vue/style.css">
 	<!-- commentaire -->
 </head>
 
@@ -23,7 +24,11 @@
         </header>
 
         <section>
-            contenu
+            <?php
+            while($donnees = $listePiece->fetch()){
+                echo $donnees['ID'];
+            }
+            ?>
         </section>
 
         <footer>

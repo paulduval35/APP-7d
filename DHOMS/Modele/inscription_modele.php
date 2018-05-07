@@ -24,6 +24,7 @@ function ajouter_membre_dans_bdd($nom, $prenom, $statut,$numfixe,$nummobile,$ema
     $bdd->bindParam(':nom',nom);
     $bdd->bindParam(':prenom', prenom);
 
+
 }
 
 ?>
