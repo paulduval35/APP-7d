@@ -151,7 +151,7 @@ p {
 }
 
 .flex-outer li button{
-    margin: auto;
+    margin-left: auto;
     padding: 8px 16px;
     border: none;
     background: white;
