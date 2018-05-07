@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 16 avr. 2018 à 20:09
+-- Généré le :  lun. 07 mai 2018 à 09:26
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.3
 
@@ -93,6 +93,17 @@ CREATE TABLE `controleur` (
   `ID_piece` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `controleur`
+--
+
+INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `niveau_batterie`, `ID_piece`) VALUES
+(1, '0001', 'Température', 'Température', 'éteint', 100, 1),
+(2, '0002', 'Lumière', 'Lumière', 'Allumé', 100, 1),
+(3, '0001', 'Température', 'Température', 'Allumé', 100, 2),
+(4, '0003', 'Humidité', 'Humidité', 'éteint', 100, 1),
+(5, '0003', 'Humidité', 'Humidité', 'Allumé', 100, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -167,6 +178,14 @@ CREATE TABLE `habitation` (
   `surface` int(11) NOT NULL,
   `ID_adresse` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `habitation`
+--
+
+INSERT INTO `habitation` (`ID`, `nom`, `surface`, `ID_adresse`) VALUES
+(1, 'maison1', 20, 2),
+(2, 'maison2', 40, 2);
 
 -- --------------------------------------------------------
 
@@ -465,7 +484,7 @@ ALTER TABLE `contact_domisep`
 -- AUTO_INCREMENT pour la table `controleur`
 --
 ALTER TABLE `controleur`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `donnee`
@@ -501,7 +520,7 @@ ALTER TABLE `gestionnaire_immeuble`
 -- AUTO_INCREMENT pour la table `habitation`
 --
 ALTER TABLE `habitation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `lien_control_program`
