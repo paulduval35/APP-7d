@@ -37,7 +37,7 @@ try {
                 <li >
                     <a href="habitation.php"><button >Ajouter une habitation</button></a>
                 </li>
-                <li ><label>Chambre :</label><br/>
+                <li ><label>Maison :</label><br/>
                     <div class ="moyen_texte">
                         <?php
                         // On récupère le contenu de la table CONTROLEUR pour la pièce 1
@@ -71,7 +71,7 @@ try {
                     </div>
                 </li>
 
-                <li ><label>Chambre :</label><br/>
+                <li ><label>Salon :</label><br/>
                     <div class ="moyen_texte">
                         <?php
                         // On récupère le contenu de la table CONTROLEUR pour la pièce 3
