@@ -25,9 +25,7 @@
 
         <section>
             <?php
-            while($donnees = $listePiece->fetch()){
-                echo $donnees['ID'];
-            }
+            include "capteur_vue.php";
             ?>
         </section>
 
