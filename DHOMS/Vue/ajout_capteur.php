@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--remarque: je travaille uniquement sur la première option pour l'instant-->
 <head>
     <title>DHOMS</title>
     <meta charset="UTF-8">
@@ -20,11 +20,15 @@
             </header>          
 					<ul class = "flex-outer">
 
-	<h2> selectionner le type de capteur</h2>
+	<h2> selectionner le capteur:</h2>
 	 
 	<p>
-	
+<?$selection = $_POST['taskOption'];  ?>
 <table style="width:100%">
+  
+<form id ="nouveau_capteur" action="../Controleur/capteur_controlleur.php" method="post" >
+  
+  
   <tr>
     <th>thermometre</th>
     <th>lumière</th> 
@@ -33,22 +37,48 @@
 
   </tr>
   <tr>
-    <th><a href="ajouter_thermo.php">
-		<img src="image/accueil/accueil.png" alt="thermometre" text-align: "center";>
-			</a></th>
+    <th><div class="dropdown">
+	<img src="image/capteurs/thermometer.png" alt="whatever"  >
+	<div class="dropdown-content">
+	<button id=val class=butto name="subject" type="submit" value="1">modele1</button>
+    <button id=val class=butto name="subject" type="submit" value="2">modele2</button>
+	<button id=val class=butto name="subject" type="submit" value="3">modele3</button>
+
+	</div>
+</div></th>
     
   
-    <th><a href="ajouter_lumière.php">
-		<img src="image/accueil/accueil.png" alt="lumière" text-align: "center";>
+    <th>
+	<div class="dropdown">
+<img src="image/accueil/accueil.png" alt="whatever"  >
+<div class="dropdown-content">
+    <a href="#">modele 1.1 </a>
+    <a href="#">modele 1.2 </a>
+    <a href="#">modele 1.3 </a>
+  </div>
+</div>
 			</a></th>
     
  
     <th><a href="ajouter_stores.php">
-		<img src="image/accueil/accueil.png" alt="stores" text-align: "center";>
-			</a></th>
-	<th><a href="ajouter_sonore.php">
-		<img src="image/accueil/accueil.png" alt="sonore" text-align: "center";>
-			</a></th>
+		<div class="dropdown">
+<img src="image/accueil/accueil.png" alt="whatever"  >
+<div class="dropdown-content">
+    <a href="#">modele 1 1</a>
+    <a href="#">modele 1 2</a>
+    <a href="#">modele 1 3</a>
+  </div>
+</div>
+			</th>
+	<th><div class="dropdown">
+<img src="image/accueil/accueil.png" alt="whatever"  >
+<div class="dropdown-content">
+    <a href="#">modele 1 1</a>
+    <a href="#">modele 1 2</a>
+    <a href="#">modele 1 3</a>
+  </div>
+</div></th>
+	<tr>   </tr>		
 			
 	<tr>
     <th>machin</th>
@@ -60,26 +90,50 @@
   <tr>
   </tr>
   <tr>
-    <th><a href="ajouter_machin.php">
-		<img src="image/accueil/accueil.png" alt="machin" text-align: "center";>
-			</a></th>
+    <th><div class="dropdown">
+<img src="image/accueil/accueil.png" alt="whatever"  >
+<div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div></th>
     
   
-    <th><a href="ajouter_bidule.php">
-		<img src="image/accueil/accueil.png" alt="bidule" text-align: "center";>
-			</a></th>
+    <th><div class="dropdown">
+<img src="image/accueil/accueil.png" alt="whatever"  >
+<div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div></th>
     
  
-    <th><a href="ajouter_truc.php">
-		<img src="image/accueil/accueil.png" alt="truc" text-align: "center";>
-			</a></th>
+    <th><div class="dropdown">
+<img src="image/accueil/accueil.png" alt="whatever"  >
+<div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div></th>
 			
-	<th><a href="ajouter_chouette.php">
-		<img src="image/accueil/accueil.png" alt="chouette" text-align: "center";>
-			</a></th>
+	<th><div class="dropdown">
+<img src="image/accueil/accueil.png" alt="whatever"  >
+<div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div></th>
     
 
 	</p>
-	 </ul>
+	
+	 </form>
 	</table> 
+	<p>les icons proviennent de Freepik  (www.flaticon.com) </p>
+		 </ul>
+
 	 </body>
