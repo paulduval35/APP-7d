@@ -17,8 +17,12 @@ catch(Exception $e)
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
-$ID_personne_connectee ="9";
-$reponse = $bdd->query("SELECT nom FROM habitation INNER JOIN appartenance_maison ON habitation.ID = appartenance_maison.ID_habitation WHERE appartenance_maison.ID_personne = .$ID_personne_connectee");
+function getMaisons($ID_personne_connectee){
+    global $bdd;
+    $listeMaisons = $bdd->query("SELECT * FROM habitation INNER JOIN appartenance_maison ON habitation.ID = appartenance_maison.ID_habitation WHERE appartenance_maison.ID_personne = '$ID_personne_connectee'");
+
+    return $listeMaisons;
+}
 
 //affichage des maisons d'un propriétaire
 while ($donnees = $reponse->fetch())

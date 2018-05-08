@@ -185,6 +185,21 @@ p {
     background-color: rgba(255, 255, 255, 0.3);
     margin:20px;
 }
+/*
+CSS footer
+ */
+#footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.text_footer{
+    color: white;
+    font-size : 10%;
+}
+
+
 
 /*
     CSS des CGU
@@ -304,6 +319,7 @@ section::-webkit-scrollbar-track{
     display:flex;
     justify-content:center;
 }
+/*
 <<<<<<< HEAD
 
 .position_option{
@@ -312,3 +328,4 @@ section::-webkit-scrollbar-track{
 }
 =======
 >>>>>>> 33ab0419582185332966fea6db26f5f91dab19ca
+*/
