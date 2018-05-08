@@ -34,28 +34,26 @@ $ID_pays="";
 $ID_ville="";
 
 
-$nom_habitation =  !empty($_POST['nom_habitation']) ? $POST_['nom_habitation'] : NULL;
-$surface = isset($_POST['surface']) ? $_POST['surface'] : NULL;
-$num_rue = isset($_POST['num_rue']) ? $_POST['num_rue'] : NULL;
-$rue = isset($_POST['rue']) ? $_POST['rue'] : NULL;
-$etage = isset($_POST['etage']) ? $_POST['etage'] : NULL;
-$num_appartement = isset($_POST['num_appartement']) ? $_POST['num_appartement'] :NULL;
-$code_postal = isset($_POST['code_postal']) ? $_POST['code_postal'] : NULL;
-$pays = isset($_POST['pays']) ? $_POST['pays'] : NULL;
-$ville = isset($_POST['ville']) ? $_POST['ville'] : NULL;
+$nom_habitation =  $_POST['nom_habitation'];
+$surface = $_POST['surface'];
+$num_rue = $_POST['num_rue'];
+$rue = $_POST['rue'];
+$etage = $_POST['etage'];
+$num_appartement = $_POST['num_appartement'];
+$code_postal = $_POST['code_postal'];
+$pays = $_POST['pays'];
+$ville = $_POST['ville'];
 
 
 //on envoie les données grâce au modele
 
-if($nom_habitation != NULL AND $surface != NULL AND $num_rue != NULL AND $rue != NULL AND $etage != NULL AND $num_appartement != NULL AND $code_postal != NULL AND $ville != NULL AND $pays != NULL )
-{
-    if(isset ($POST['CGU']))
+if(isset($_POST['CGU']))
     {
-        include "/Applications/XAMPP/xamppfiles/htdocs/DHOMS/Modele/habitation_model.php";
+        include "../Modele/habitation_model.php";
+        include "../Vue/validation_habitation.php";
     }
-}
 
-include "/Applications/XAMPP/xamppfiles/htdocs/DHOMS/Vue/validation_habitation.php";
+
 
 
 ?>
