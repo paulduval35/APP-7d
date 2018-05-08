@@ -19,20 +19,21 @@ catch(Exception $e)
 
 function getMaisons($ID_personne_connectee){
     global $bdd;
-    $listeMaisons = $bdd->query("SELECT * FROM habitation INNER JOIN appartenance_maison ON habitation.ID = appartenance_maison.ID_habitation WHERE appartenance_maison.ID_personne = '$ID_personne_connectee'");
+    $listeMaisons = $bdd->query("SELECT DISTINCT nom FROM habitation JOIN appartenance_maison ON habitation.ID = appartenance_maison.ID_habitation WHERE appartenance_maison.ID_personne = '$ID_personne_connectee'");
 
     return $listeMaisons;
 }
 
 //affichage des maisons d'un propriétaire
-while ($donnees = $reponse->fetch())
-{
-    echo $donnees['nom'] . '<br />';
-}
-$reponse->closeCursor();
+$donnees = getMaisons(2)->fetch();
 
-echo $donnees['nom'];
-echo 'pas maison fdp';
+foreach ($donnees as $elem => $val) {
+    if ($elem == 'nom') {
+        echo $elem . ' -    [ ' . $val . ' ]' . '<br />';
+    }
+}
+
+//echo 'pas maison fdp';
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
