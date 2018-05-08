@@ -185,7 +185,7 @@ p {
     background-color: rgba(255, 255, 255, 0.3);
     margin:20px;
 }
--/*
+/*
 CSS footer
  */
 #footer {
@@ -196,12 +196,12 @@ CSS footer
 
 .text_footer{
     color: white;
-    font-size : 10%;
+    font-size : 100%;
 }
-/*
-    CSS des CGU
- */
 
+/*
+    CSS CGU
+ */
 #cgu{
     width: 50%;
     min-width: 400px;
@@ -223,7 +223,59 @@ CSS footer
 
 .texte_cgu{
     color: #444444;
-    font-size: 0.8em;
+    font-size: 0.6em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    text-align: justify;
+    margin: 20px;
+}
+
+/*
+    CSS Mentions Légales
+ */
+#mentions_legales{
+    width: 50%;
+    min-width: 400px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin:20px;
+    color: #999;
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+#intro_mentions_legales{
+    color: #444444;
+    font-size: 0.9em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    text-align: justify;
+    margin: 20px;
+}
+
+.partie_mentions_legales{
+    color: darkslategray;
+    font-size: 1.8em;
+    margin: 20px;
+    margin-bottom: 7px;
+    padding: 4px;
+    text-align: left;
+}
+
+.texte_mentions_legales{
+    color: #444444;
+    font-size: 0.6em;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px;
+    text-align: justify;
+    margin: 20px;
+}
+
+#liste_mentions_legales{
+    color: #444444;
+    font-size: 0.6em;
     margin: 0;
     margin-bottom: 7px;
     padding: 4px;
@@ -322,9 +374,6 @@ section::-webkit-scrollbar-track{
     justify-content: left;
 }
 
-
-
-
 /* Dropdown Button */
 .dropbtn {
     background-color: #4CAF50;
@@ -381,5 +430,3 @@ section::-webkit-scrollbar-track{
     margin: 4px 2px;
     cursor: pointer;
 }
-=======
->>>>>>> 33ab0419582185332966fea6db26f5f91dab19ca
