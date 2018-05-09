@@ -25,7 +25,7 @@
 
         <section>
             <?php
-            include "capteur_vue.php";
+            include "piece_vue.php";
             ?>
         </section>
 
