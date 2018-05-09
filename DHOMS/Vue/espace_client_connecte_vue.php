@@ -24,12 +24,14 @@
         </header>
 
         <section>
-            <?php foreach($listeMaison as $row):?>
-                <div>
-                    <?php include "maison_vue.php";?>
+            <div id = "box-tableaubord">
+                <?php foreach($listeMaison as $row):?>
+                    <div class = "maison-tableaubord">
+                        <?php include "maison_vue.php";?>
 
-                </div>
-            <?php endforeach;?>
+                    </div>
+                <?php endforeach;?>
+            </div>
         </section>
 
         <footer>

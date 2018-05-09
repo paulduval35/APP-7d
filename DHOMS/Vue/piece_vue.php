@@ -8,11 +8,15 @@ $listeCapteur = $capteur->fetchAll();
 
 
 
-<div>
+<div class = "nom-piece">
     <?php echo $row1['nom'];?>
-    <?php foreach($listeCapteur as $row2):?>
-    <div>
+</div>
+
+<div class = "box-capteur-tableaubord">
+<?php foreach($listeCapteur as $row2):?>
+    <div class = "capteur-tableaubord">
         <?php include "capteur_vue.php";?>
     </div>
-    <?php endforeach;?>
+<?php endforeach;?>
+
 </div>

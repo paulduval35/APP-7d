@@ -57,6 +57,7 @@ section{
     overflow: auto;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 footer {
@@ -176,7 +177,7 @@ a {
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 2px;
-    margin: auto;
+    margin-left: auto;
 }
 
 .flex-outer li input:not([type='checkbox']), .flex-outer select, .flex-outer textarea{
@@ -363,8 +364,98 @@ input:checked + .curseur:before {
     margin: 20px;
 }
 
+
+
+
+
 /*
-Autres, ID, etc
+
+
+
+    CSS tableau de bord
+
+
+
+ */
+
+#box-tableaubord{
+    display:flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 90%;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+/*
+Affichage des maisons
+ */
+.maison-tableaubord{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 22%;
+    background-color: black;
+}
+
+.box-piece-tableaubord{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: grey;
+    margin: 3px;
+}
+
+
+/*
+Affichage des pièces
+ */
+
+.piece-tableaubord{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: blue;
+    margin: 3px;
+}
+
+.box-capteur-tableaubord{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: green;
+}
+
+/*
+Affichages des capteurs
+ */
+.capteur-tableaubord{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: yellowgreen;
+    margin: 3px;
+}
+
+
+.nom-maison{
+    text-transform: uppercase;
+}
+
+/*
+
+
+
+    Autres, ID, etc
+
+
+
+
  */
 
 #main_accueil {
