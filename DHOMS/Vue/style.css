@@ -148,6 +148,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom:20px;
 }
 
 .flex-outer li label {
@@ -190,9 +191,6 @@ a {
     text-transform: uppercase;
 }
 
-.flex-outer li:not(:last-child) {
-    margin-bottom: 20px;
-}
 
 #form_contact{
     width: 50%;

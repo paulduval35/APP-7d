@@ -128,10 +128,6 @@
                 </li>
                 </div>
 
-                <li class="checkboxclass">
-                    <input id = "checkbox" type="checkbox" name="CGU" value="CGU">J'ai lu et j'accepte les CGU
-                </li>
-
                 <li>
                     <button type="submit">Ajouter</button>
                 </li>
