@@ -18,7 +18,7 @@ body {
     height: 100vh;
     grid-column: 2;
     display: grid;
-    grid-template-rows: 15% 80% 5%;
+    grid-template-rows: minmax(58px,15%) minmax(50px, 80%) minmax(30px,5%);
     margin:0;
 }
 
@@ -94,6 +94,7 @@ footer #marge_g_footer {
     min-width:50px;
 }
 
+
 /*
 block (titre, paragraphes, form)
  */
@@ -135,13 +136,6 @@ a {
     color: white;
 }
 
-#form_inscription, #form_habitation, #form_connexion{
-    width: 90%;
-    min-width: 320px;
-    background-color: rgba(255, 255, 255, 0.3);
-    margin:30px;
-}
-
 .flex-outer{
     box-sizing: border-box;
     min-width: 320px;
@@ -156,14 +150,16 @@ a {
     align-items: center;
 }
 
-.flex-outer > li > label {
-    flex: 1 0 120px;
+.flex-outer li label {
+    flex: 1;
     max-width: 320px;
+    min-width: 100px;
 }
 
 
-.flex-outer > li > label + *{
-    flex: 1 0 240px;
+.flex-outer li label + *{
+    flex: 2;
+    min-width: 150px;
 }
 
 .flex-outer .message_contact{
@@ -172,7 +168,6 @@ a {
 }
 
 .flex-outer li button{
-    margin-left: auto;
     padding: 8px 16px;
     border: none;
     background: white;
@@ -180,21 +175,22 @@ a {
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 2px;
+    margin: auto;
 }
 
 .flex-outer li input:not([type='checkbox']), .flex-outer select, .flex-outer textarea{
-    padding: 15px;
+    padding: 10px;
     border: none;
 }
 
 .flex-outer li label{
-    padding: 8px;
+    padding: 6px;
     font-weight: 300;
     letter-spacing: .09em;
     text-transform: uppercase;
 }
 
-.flex-outer > li:not(:last-child) {
+.flex-outer li:not(:last-child) {
     margin-bottom: 20px;
 }
 
@@ -219,7 +215,71 @@ CSS footer
     text-align: center;
 }
 
+/*
+    CSS Habitation
+*/
 
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* cache la checkbox moche par défaut */
+.switch input {display:none;}
+
+.curseur {
+    width: 60px;
+    position: absolute;
+    cursor: pointer;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.curseur:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#a_cacher {
+    display: none;
+}
+
+input:checked + span > div {
+    display: block;
+}
+
+input:checked + .curseur {
+    background-color: #5aa4ca;
+}
+
+input:checked + .curseur:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Pour rendre le curseur rond */
+.curseur.rond {
+    border-radius: 34px;
+}
+
+.curseur.rond:before {
+    border-radius: 50%;
+}
 
 /*
     CSS CGU
@@ -318,7 +378,7 @@ Autres, ID, etc
 }
 
 .connexion_inscription, #ajouter_habitation{
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     color: #ffff;
     margin: 0;
@@ -328,9 +388,24 @@ Autres, ID, etc
 
 #box_connexion_inscription {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(340px, 45%) minmax(20px,50px) minmax(340px, 45%);
     grid-gap: 10px;
+    font-size : 12px;
+    padding : 20px;
+
 }
+
+#form_inscription, #form_habitation, #form_connexion{
+    margin: auto;
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin:25px;
+}
+
+#form_habitation {
+    width: 70%;
+}
+
 
 input, select{
     -ms-box-sizing:content-box;

@@ -14,17 +14,53 @@
       <file leaf-file-name="habitation.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/habitation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="327">
+              <caret line="108" column="55" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="habitation_model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="habitation_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/habitation_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            <state relative-caret-position="442">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="255" lean-forward="true" selection-start-line="255" selection-end-line="255" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/nav.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="103" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connexion_inscription_vue.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/connexion_inscription_vue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
@@ -63,15 +99,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="habitation_controleur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controleur/habitation_controleur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -96,9 +123,20 @@
       <find>flex-ou</find>
       <find>center</find>
       <find>header</find>
+      <find>conn</find>
+      <find>butt</find>
+      <find>inscrip</find>
+      <find>flex-o</find>
+      <find>padding</find>
+      <find>inscr</find>
+      <find>img</find>
+      <find>slider</find>
+      <find>swi</find>
+      <find>li la</find>
     </findStrings>
     <replaceStrings>
       <replace>CONFIRMEZ</replace>
+      <replace>curseur</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -115,14 +153,15 @@
         <option value="$PROJECT_DIR$/Vue/espace_client.php" />
         <option value="$PROJECT_DIR$/Controleur/habitation_controleur.php" />
         <option value="$PROJECT_DIR$/Vue/header.php" />
-        <option value="$PROJECT_DIR$/Vue/habitation.php" />
         <option value="$PROJECT_DIR$/Vue/validation_habitation.php" />
         <option value="$PROJECT_DIR$/Vue/test_inclusion_personne.php" />
         <option value="$PROJECT_DIR$/Vue/pages supprimées mais qui pourront être utiles plus tard/nav.php" />
         <option value="$PROJECT_DIR$/Vue/nav.php" />
-        <option value="$PROJECT_DIR$/Vue/footer.php" />
-        <option value="$PROJECT_DIR$/Vue/style.css" />
         <option value="$PROJECT_DIR$/Modele/habitation_model.php" />
+        <option value="$PROJECT_DIR$/Vue/connexion_inscription_vue.php" />
+        <option value="$PROJECT_DIR$/Vue/footer.php" />
+        <option value="$PROJECT_DIR$/Vue/habitation.php" />
+        <option value="$PROJECT_DIR$/Vue/style.css" />
       </list>
     </option>
   </component>
@@ -216,18 +255,17 @@
       <workItem from="1525418745831" duration="4148000" />
       <workItem from="1525531461107" duration="17651000" />
       <workItem from="1525786758321" duration="3900000" />
-      <workItem from="1525798774814" duration="6709000" />
+      <workItem from="1525798774814" duration="23193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64712000" />
+    <option name="totallyTimeSpent" value="81196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1487" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.260339" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.260339" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -247,6 +285,27 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.260339" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -400,29 +459,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modele/tableau_bord_modele.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modele/gestion_personne.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-612" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modele/inscription_modele.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vue/nav.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="187">
+          <caret line="11" column="103" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -433,31 +478,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/style.css">
+    <entry file="file://$PROJECT_DIR$/Vue/connexion_inscription_vue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5140">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="432">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/footer.php">
+    <entry file="file://$PROJECT_DIR$/Modele/tableau_bord_modele.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/habitation.php">
+    <entry file="file://$PROJECT_DIR$/Modele/inscription_modele.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="255">
+          <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modele/habitation_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state relative-caret-position="442">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/habitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="108" column="55" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="255" lean-forward="true" selection-start-line="255" selection-end-line="255" />
         </state>
       </provider>
     </entry>

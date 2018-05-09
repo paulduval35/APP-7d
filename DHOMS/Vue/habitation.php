@@ -19,9 +19,26 @@
 <div id = "header_footer">
     <header>
         <?php include "header.php"?>
+
+
+        <script type="text/javascript">
+            function afficher(id)
+            {
+                if(document.getElementById(id).style.display == "block")
+                {
+                    document.getElementById(id).style.display = "none";
+                }
+                else
+                {
+                    document.getElementById(id).style.display = "block";
+                }
+            }
+
+        </script>
     </header>
 
     <section>
+
 
         <form id ="form_habitation" action="http://localhost/DHOMS/Controleur/habitation_controleur.php" method="POST" id="p_habitation">
             <h3 id="ajouter_habitation"> AJOUTER UNE HABITATION </h3><br>
@@ -87,11 +104,14 @@
                         Appartement ?
                     </label>
                     <div class="position_option">
-                        <input type="radio" name="appartement" value="oui" id="oui" checked="checked"/><label for="Nui">OUI</label>
-                        <input type="radio" name="appartement" value="non" id="non"/><label for="Non">NON</label>
+                        <label class="switch">
+                            <input type="checkbox" class="selection_appart" onclick="afficher('a_cacher')">
+                            <span class="curseur rond"></span>
+                        </label>
                     </div>
-                </li>
 
+                </li>
+                <div id="a_cacher">
                 <li>
                     <label>
                         Etage
@@ -106,6 +126,7 @@
                     </label>
                     <input id="num_appartement" name ="num_appartement" type="text" required placeholder="NUMERO D'APPARTEMENT">
                 </li>
+                </div>
 
                 <li class="checkboxclass">
                     <input id = "checkbox" type="checkbox" name="CGU" value="CGU">J'ai lu et j'accepte les CGU
@@ -114,6 +135,7 @@
                 <li>
                     <button type="submit">Ajouter</button>
                 </li>
+
 
 
             </ul>
