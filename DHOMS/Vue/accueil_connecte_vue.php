@@ -24,12 +24,11 @@
         </header>
 
         <section>
-            <?php foreach($listeMaison as $row):?>
-                <div>
-                    <?php include "maison_vue.php";?>
-
-                </div>
-            <?php endforeach;?>
+            <?php
+            while($donnees = $listePiece->fetch()){
+                echo $donnees['ID'];
+            }
+            ?>
         </section>
 
         <footer>

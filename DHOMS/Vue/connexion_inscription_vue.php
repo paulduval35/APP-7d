@@ -47,6 +47,7 @@
 
                     </ul>
                 </form>
+                <div></div>
                 <form id ="form_inscription" action="../Controleur/inscription_controleur.php" method="post" id="p_inscription">
                     <h3 class="connexion_inscription"> INSCRIPTION </h3><br>
                     <ul class = "flex-outer">
@@ -84,7 +85,7 @@
                         </li>
 
                         <li class="checkboxclass">
-                            <input id = "checkbox" type="checkbox" name="CGU" value="CGU">J'ai lu et j'accepte les CGU
+                            <input id = "checkbox" type="checkbox" name="CGU" value="CGU"><a href="CGU.php">J'ai lu et j'accepte les CGU<a/>
                         </li>
 
                         <li>

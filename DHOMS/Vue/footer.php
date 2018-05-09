@@ -9,7 +9,11 @@
 </head>
 
 <body>
-
-footer
+<div id="footer">
+    <div class="text_footer">© 2018 SetD</div>
+    <div class="text_footer"><a href="CGU.php">CGU</a></div>
+    <div class="text_footer"><a href="mentions_legales.php">Mentions Légales</a></div>
+    <div class="text_footer"><a href="Contact.php">Contact</a></div>
+</div>
 
 </body>

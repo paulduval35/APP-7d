@@ -17,18 +17,21 @@ catch(Exception $e)
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
-$ID_personne_connectee ="9";
-$reponse = $bdd->query("SELECT nom FROM habitation INNER JOIN appartenance_maison ON habitation.ID = appartenance_maison.ID_habitation WHERE appartenance_maison.ID_personne = .$ID_personne_connectee");
+function getMaisons($ID_personne_connecte){
+    global $bdd;
+    $reponse = $bdd->query("SELECT DISTINCT * 
+FROM habitation JOIN appartenance_maison ON habitation.ID = appartenance_maison.ID_habitation 
+WHERE appartenance_maison.ID_personne = '$ID_personne_connecte'");
 
-//affichage des maisons d'un propriétaire
-while ($donnees = $reponse->fetch())
-{
-    echo $donnees['nom'] . '<br />';
+    while ($donnees = $reponse->fetch()) {
+        ?>
+        <p><?php echo $donnees['ID']; ?><br/></p>
+    <?php }
 }
-$reponse->closeCursor();
 
-echo $donnees['nom'];
-echo 'pas maison fdp';
+getMaisons(2);
+
+
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
