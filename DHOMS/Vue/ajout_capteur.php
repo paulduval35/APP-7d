@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
 
-
+<br><br>
                             </div>
                             <div id ="nouveau_capteur">
                                 <div class="nom_capteur">Store</div>

@@ -135,7 +135,12 @@ a {
     text-decoration: none;
     color: white;
 }
+b{
+	text-decoration: none;
+    color: black;
+    font-size: 1.0em;
 
+}
 .flex-outer{
     box-sizing: border-box;
     min-width: 320px;
@@ -575,6 +580,8 @@ section::-webkit-scrollbar-track{
 }
 .nom_capteur {
     text-align: center;
+	    font-size: 1.5em;
+
 }
 
 #form_nouv_capteur{
