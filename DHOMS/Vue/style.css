@@ -319,6 +319,11 @@ section::-webkit-scrollbar-track{
     display:flex;
     justify-content:center;
 }
+
+
+.pb_CGU, .pb_confirmation, .pb_taille_mdp {
+
+}
 /*
 <<<<<<< HEAD
 
