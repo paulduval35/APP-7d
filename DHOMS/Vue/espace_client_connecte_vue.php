@@ -24,9 +24,14 @@
         </header>
 
         <section>
-            <?php
-            include "capteur_vue.php";
-            ?>
+            <div id = "box-tableaubord">
+                <?php foreach($listeMaison as $row):?>
+                    <div class = "maison-tableaubord">
+                        <?php include "maison_vue.php";?>
+
+                    </div>
+                <?php endforeach;?>
+            </div>
         </section>
 
         <footer>

@@ -22,7 +22,7 @@
     </header>
 
     <section>
-        contenu
+
     </section>
 
     <footer>

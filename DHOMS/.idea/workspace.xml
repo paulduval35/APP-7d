@@ -11,26 +11,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="connexion_inscription_vue.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/connexion_inscription_vue.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-72">
               <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding />
+=======
+      <file leaf-file-name="inscription_modele.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Modele/inscription_modele.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="inscription_controleur.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controleur/inscription_controleur.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="795">
               <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding />
+=======
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="11016">
+              <caret line="648" column="1" selection-start-line="648" selection-start-column="1" selection-end-line="648" selection-end-column="1" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="connexion_inscription_modele.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/connexion_inscription_modele.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,6 +73,13 @@
             <state relative-caret-position="480">
               <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="ajout_capteur.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue/ajout_capteur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="125" column="7" lean-forward="true" selection-start-line="125" selection-start-column="7" selection-end-line="125" selection-end-column="7" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
             </state>
           </provider>
         </entry>
@@ -82,9 +106,29 @@
       <find>conta</find>
       <find>form_co</find>
       <find>flex-ou</find>
+      <find>center</find>
+      <find>header</find>
+      <find>conn</find>
+      <find>butt</find>
+      <find>inscrip</find>
+      <find>flex-o</find>
+      <find>padding</find>
+      <find>inscr</find>
+      <find>img</find>
+      <find>slider</find>
+      <find>swi</find>
+      <find />
+      <find>outer</find>
+      <find>capt</find>
+      <find>class=button_choix</find>
+      <find>butto</find>
+      <find>nav</find>
     </findStrings>
     <replaceStrings>
       <replace>CONFIRMEZ</replace>
+      <replace>curseur</replace>
+      <replace>class=button_choix</replace>
+      <replace>class=boutton_choix</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -100,14 +144,25 @@
         <option value="$PROJECT_DIR$/Vue/espace_client.php" />
         <option value="$PROJECT_DIR$/Controleur/habitation_controleur.php" />
         <option value="$PROJECT_DIR$/Vue/header.php" />
-        <option value="$PROJECT_DIR$/Vue/habitation.php" />
         <option value="$PROJECT_DIR$/Vue/validation_habitation.php" />
         <option value="$PROJECT_DIR$/Vue/test_inclusion_personne.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Vue/footer.php" />
         <option value="$PROJECT_DIR$/Vue/pages supprimées mais qui pourront être utiles plus tard/nav.php" />
         <option value="$PROJECT_DIR$/Vue/nav.php" />
         <option value="$PROJECT_DIR$/Modele/connexion_inscritpion_modele.php" />
         <option value="$PROJECT_DIR$/Modele/habitation_model.php" />
+=======
+        <option value="$PROJECT_DIR$/Vue/pages supprimées mais qui pourront être utiles plus tard/nav.php" />
+        <option value="$PROJECT_DIR$/Vue/nav.php" />
+        <option value="$PROJECT_DIR$/Vue/connexion_inscription_vue.php" />
+        <option value="$PROJECT_DIR$/Vue/footer.php" />
+        <option value="$PROJECT_DIR$/Vue/habitation.php" />
+        <option value="$PROJECT_DIR$/Modele/habitation_model.php" />
+        <option value="$PROJECT_DIR$/Controleur/url.php" />
+        <option value="$PROJECT_DIR$/Vue/ajout_capteur.php" />
+        <option value="$PROJECT_DIR$/Modele/ajout_capteur_modele.php" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         <option value="$PROJECT_DIR$/Vue/style.css" />
         <option value="$PROJECT_DIR$/Modele/inscription_modele.php" />
         <option value="$PROJECT_DIR$/Vue/connexion_inscription_vue.php" />
@@ -126,10 +181,18 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+<<<<<<< HEAD
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -146,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -172,8 +236,11 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="Scratches" />
+=======
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,13 +286,23 @@
       <workItem from="1525418165655" duration="139000" />
       <workItem from="1525418745831" duration="4148000" />
       <workItem from="1525531461107" duration="17651000" />
+<<<<<<< HEAD
       <workItem from="1525786758321" duration="3300000" />
       <workItem from="1525792414841" duration="17000" />
       <workItem from="1525792435420" duration="22182000" />
+=======
+      <workItem from="1525786758321" duration="3900000" />
+      <workItem from="1525798774814" duration="23193000" />
+      <workItem from="1525850509742" duration="4467000" />
+      <workItem from="1525887060685" duration="1419000" />
+      <workItem from="1525889255568" duration="8348000" />
+      <workItem from="1525966855372" duration="3000" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="79602000" />
   </component>
   <component name="ToolWindowManager">
@@ -251,6 +328,32 @@
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+    <option name="totallyTimeSpent" value="95433000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16601562" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,35 +367,57 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Vue/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/Modele/inscription_modele.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2895">
           <caret line="193" column="19" lean-forward="false" selection-start-line="193" selection-start-column="19" selection-end-line="193" selection-end-column="19" />
           <folding />
+=======
+        <state relative-caret-position="5338">
+          <caret line="314" lean-forward="true" selection-start-line="314" selection-end-line="314" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/footer.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="165">
           <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding />
+=======
+        <state relative-caret-position="187">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2895">
           <caret line="193" column="19" lean-forward="false" selection-start-line="193" selection-start-column="19" selection-end-line="193" selection-end-column="19" />
           <folding />
+=======
+        <state relative-caret-position="3264">
+          <caret line="192" column="42" lean-forward="true" selection-start-line="192" selection-start-column="42" selection-end-line="192" selection-end-column="42" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>
@@ -356,15 +481,24 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Vue/validation_habitation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/faq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/test_inclusion_personne.php">
+    <entry file="file://$PROJECT_DIR$/Vue/pages supprimées mais qui pourront être utiles plus tard/nav.php" />
+    <entry file="file://$PROJECT_DIR$/Vue/contact.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="285">
           <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
         </state>
@@ -374,11 +508,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+=======
+        <state relative-caret-position="187">
+          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/habitation_controleur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/headerfooternav.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="395">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
@@ -475,11 +621,72 @@
         <state relative-caret-position="120">
           <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
+=======
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/habitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="115" column="27" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/tableau_bord_controleur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/habitation_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/url.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vue/espace_client.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="45" column="62" lean-forward="true" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/validation_habitation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/test_inclusion_personne.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/nos_produits.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="570">
           <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
@@ -487,14 +694,23 @@
             <marker date="1525708242360" expanded="true" signature="1928:1971" ph="SELECT * FRO... controleur" />
             <marker date="1525708242360" expanded="true" signature="2693:2736" ph="SELECT * FRO... controleur" />
           </folding>
+=======
+        <state relative-caret-position="119">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/contact.php">
+    <entry file="file://$PROJECT_DIR$/Vue/nav.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="315">
           <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
           <folding />
+=======
+        <state relative-caret-position="85">
+          <caret line="5" column="103" selection-start-line="5" selection-start-column="103" selection-end-line="5" selection-end-column="103" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>
@@ -506,6 +722,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Modele/connect_database_modele.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -554,11 +771,26 @@
             <marker date="1525254845052" expanded="true" signature="12322:12632" ph="INSERT INTO utilisateur... " />
             <marker date="1525254845052" expanded="true" signature="13107:13188" ph="UPDATE numero_serie... " />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/connexion_inscription_vue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/inscription_modele.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/ajout_capteur_modele.php" />
     <entry file="file://$PROJECT_DIR$/Vue/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="623">
           <caret line="324" column="0" lean-forward="false" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
           <folding />
@@ -613,6 +845,17 @@
         <state relative-caret-position="795">
           <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
           <folding />
+=======
+        <state relative-caret-position="11016">
+          <caret line="648" column="1" selection-start-line="648" selection-start-column="1" selection-end-line="648" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/ajout_capteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="125" column="7" lean-forward="true" selection-start-line="125" selection-start-column="7" selection-end-line="125" selection-end-column="7" />
+>>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
         </state>
       </provider>
     </entry>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 07 mai 2018 à 09:26
+-- Généré le :  jeu. 10 mai 2018 à 13:09
 -- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.3
+-- Version de PHP :  7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,6 +39,15 @@ CREATE TABLE `adresse` (
   `ID_pays` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `adresse`
+--
+
+INSERT INTO `adresse` (`ID`, `num_rue`, `rue`, `etage`, `num_appartement`, `code_postal`, `ID_ville`, `ID_pays`) VALUES
+(1, 1, 'rue Victor Hugo', 2, 4, 75005, 1, 1),
+(2, 2, 'impasse Victor Hugo', 0, 0, 85330, 2, 1),
+(3, 15, 'boulevard Baudelaire', 1, 3, 75006, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -50,6 +59,15 @@ CREATE TABLE `appartenance_maison` (
   `ID_personne` int(11) NOT NULL,
   `ID_habitation` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `appartenance_maison`
+--
+
+INSERT INTO `appartenance_maison` (`ID`, `ID_personne`, `ID_habitation`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -184,8 +202,9 @@ CREATE TABLE `habitation` (
 --
 
 INSERT INTO `habitation` (`ID`, `nom`, `surface`, `ID_adresse`) VALUES
-(1, 'maison1', 20, 2),
-(2, 'maison2', 40, 2);
+(1, 'Appartement HUGO', 275, 1),
+(2, 'Villa campagne HUGO', 540, 2),
+(3, 'Appartement BAUDELAIRE', 150, 3);
 
 -- --------------------------------------------------------
 
@@ -250,6 +269,17 @@ CREATE TABLE `pays` (
   `pays` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `pays`
+--
+
+INSERT INTO `pays` (`ID`, `pays`) VALUES
+(1, 'FRANCE'),
+(2, 'BELGIQUE'),
+(3, 'ALLEMAGNE'),
+(4, 'LUXEMBOURG'),
+(5, 'SUISSE');
+
 -- --------------------------------------------------------
 
 --
@@ -271,6 +301,14 @@ CREATE TABLE `personne` (
   `ID_adresse` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `personne`
+--
+
+INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
+(1, 'HUGO', 'Victor', 'Primaire', 211223344, 611223344, 'victorhugo@gmail.com', 'victorhugo', '', 0, 0, 1),
+(2, 'BAUDELAIRE', 'Charles', 'Primaire', 100112233, 600112233, 'charlesbaudelaire@gmail.com', 'charlesbaudelaire', '', 0, 0, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -283,6 +321,35 @@ CREATE TABLE `piece` (
   `surface` int(11) NOT NULL,
   `ID_habitation` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `piece`
+--
+
+INSERT INTO `piece` (`ID`, `nom`, `surface`, `ID_habitation`) VALUES
+(1, 'Chambre 1', 30, 1),
+(2, 'Salon', 60, 1),
+(3, 'Chambre 2', 20, 1),
+(4, 'Chambre 3', 30, 1),
+(5, 'Salle de bain', 15, 1),
+(6, 'Entrée', 10, 1),
+(7, 'Couloir', 10, 1),
+(8, 'Cuisine', 20, 1),
+(9, 'Salle', 80, 1),
+(10, 'Chambre 1', 30, 2),
+(11, 'Chambre 2', 40, 2),
+(12, 'Chambre 3', 20, 2),
+(13, 'Chambre 4', 20, 2),
+(14, 'Salle', 80, 2),
+(15, 'Salon 1', 50, 2),
+(16, 'Salon 2', 40, 2),
+(17, 'Cuisine ', 30, 2),
+(18, 'Salle de bain 1', 20, 2),
+(19, 'Salle de bain 2', 15, 2),
+(20, 'Entrée', 20, 2),
+(21, 'Couloir', 15, 2),
+(22, 'Véranda', 60, 2),
+(23, 'Cave', 100, 2);
 
 -- --------------------------------------------------------
 
@@ -321,6 +388,14 @@ CREATE TABLE `ville` (
   `ID` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `ville`
+--
+
+INSERT INTO `ville` (`ID`, `nom`) VALUES
+(1, 'PARIS'),
+(2, 'Noirmoutier-en-l\'Île');
 
 --
 -- Index pour les tables déchargées
@@ -460,13 +535,13 @@ ALTER TABLE `ville`
 -- AUTO_INCREMENT pour la table `adresse`
 --
 ALTER TABLE `adresse`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `appartenance_maison`
 --
 ALTER TABLE `appartenance_maison`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `cgu`
@@ -520,7 +595,7 @@ ALTER TABLE `gestionnaire_immeuble`
 -- AUTO_INCREMENT pour la table `habitation`
 --
 ALTER TABLE `habitation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `lien_control_program`
@@ -550,19 +625,19 @@ ALTER TABLE `panne`
 -- AUTO_INCREMENT pour la table `pays`
 --
 ALTER TABLE `pays`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `personne`
 --
 ALTER TABLE `personne`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT pour la table `programmation`
@@ -580,7 +655,7 @@ ALTER TABLE `ticket_sav`
 -- AUTO_INCREMENT pour la table `ville`
 --
 ALTER TABLE `ville`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
