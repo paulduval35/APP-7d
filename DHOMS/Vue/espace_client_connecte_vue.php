@@ -24,14 +24,21 @@
         </header>
 
         <section>
-            <div id = "box-tableaubord">
+            <div id="box_tableaubord" class = "box_tableaubord" >
+                <h3 id="titre_tableau_de_bord">Tableau de bord</h3>
                 <?php foreach($listeMaison as $row):?>
-                    <div class = "maison-tableaubord">
+                    <div class="maison_tableaubord" id = "maison_tableaubord <?php echo $row['ID']?>">
                         <?php include "maison_vue.php";?>
 
                     </div>
                 <?php endforeach;?>
+                <div class="flex-outer" id="bouton_ajout_habitation">
+                    <li>
+                        <a href="../Vue/habitation.php"><button >Ajouter une habitation</button></a>
+                    </li>
+                </div>
             </div>
+
         </section>
 
         <footer>

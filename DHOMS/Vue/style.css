@@ -135,12 +135,7 @@ a {
     text-decoration: none;
     color: white;
 }
-b{
-	text-decoration: none;
-    color: black;
-    font-size: 1.0em;
 
-}
 .flex-outer{
     box-sizing: border-box;
     min-width: 320px;
@@ -181,7 +176,7 @@ b{
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 2px;
-    margin-left: auto;
+    margin: auto;
 }
 
 .flex-outer li input:not([type='checkbox']), .flex-outer select, .flex-outer textarea{
@@ -222,27 +217,51 @@ CSS footer
     CSS Habitation
 */
 
-.switch {
+.switch{
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
 }
 
+.switch.ON_OFF {
+    position: static;
+
+}
+
+
+.switch.tab_bord_maison, .switch.tab_bord_piece{
+    width: 100%;
+    height: 100%;
+}
+
 /* cache la checkbox moche par défaut */
 .switch input {display:none;}
 
 .curseur {
-    width: 60px;
-    position: absolute;
-    cursor: pointer;
-    top: 6px;
-    left: 6px;
-    right: 6px;
-    bottom: 6px;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+     width: 60px;
+     position: absolute;
+     cursor: pointer;
+     top: 8px;
+     left: 6px;
+     right: 6px;
+     bottom: 6px;
+     background-color: #ccc;
+     -webkit-transition: .4s;
+     transition: .4s;
+ }
+
+.curseur.rond.ON_OFF {
+    margin: auto;
+}
+
+.curseur.rond.ON_OFF {
+    width: 95px;
+    height: 80%;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    bottom: 10%;
 }
 
 .curseur:before {
@@ -257,13 +276,19 @@ CSS footer
     transition: .4s;
 }
 
-#a_cacher {
+.curseur.rond.ON_OFF:before {
+    height: 26px;
+    width: 26px;
+    top:5%;
+    bottom: 5%;
+}
+
+.a_cacher{
     display: none;
 }
 
-input:checked + span > div {
-    display: block;
-}
+
+
 
 input:checked + .curseur {
     background-color: #5aa4ca;
@@ -274,6 +299,12 @@ input:checked + .curseur:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
+
+input:checked + .curseur.rond.ON_OFF:before {
+    transform: translateX(60px);
+}
+
+
 
 /* Pour rendre le curseur rond */
 .curseur.rond {
@@ -382,36 +413,32 @@ input:checked + .curseur:before {
 
  */
 
-#box-tableaubord{
-    display:flex;
-    flex-direction:row ;
-    flex-wrap: wrap;
+.box_tableaubord{
+    display:grid;
     background-color: rgba(255, 255, 255, 0.3);
     width: 90%;
-    height: auto;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    height: max-content;
     margin: 20px;
     padding: 20px;
-    justify-content: space-around;
 }
 
 /*
 Affichage des maisons
  */
-.maison-tableaubord{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 22%;
-    background-color: black;
+.maison_tableaubord{
+    display: grid;
+    margin-bottom: 30px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    background-color: rgb(72,72,72);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
 }
 
-.box-piece-tableaubord{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: grey;
-    margin: 3px;
+.box_piece_tableaubord{
+    display: grid;
+    width: 98%;
+    margin: 1%;
 }
 
 
@@ -419,37 +446,103 @@ Affichage des maisons
 Affichage des pièces
  */
 
-.piece-tableaubord{
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: blue;
-    margin: 3px;
+.piece_tableaubord{
+    display:grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    background-color: grey;
+    margin-bottom: 3px;
 }
 
-.box-capteur-tableaubord{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: green;
+.box_capteur_tableaubord{
+    display:grid;
+    margin: 3px 3px 3px 3px;
+    grid-template-columns: repeat(5,1fr);
+    background-color: rgb(115,180,207);
 }
 
 /*
 Affichages des capteurs
  */
-.capteur-tableaubord{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    background-color: yellowgreen;
+.capteur_tableaubord{
+    display: block;
     margin: 3px;
 }
 
 
-.nom-maison{
+.nom_maison{
+    font-size: 1.5em;
+    text-align: center;
+    display:block;
+    padding-top: 15px;
+    cursor: pointer;
     text-transform: uppercase;
 }
+.nom_piece{
+    font-size: 1.1em;
+    text-align: center;
+    display:block;
+    padding-top: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.nom_capteur.tab_bord{
+    font-size: 1.1em;
+    text-align: center;
+    display:block;
+    padding-top: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.box_nom_maison{
+    display:block;
+    height: 60px;
+}
+
+
+#bouton_ajout_habitation{
+    margin:auto;
+}
+
+/*
+    Slider Température
+ */
+
+.slider_temperature, .slider_store {
+    -webkit-appearance: none;
+    width: 90%;
+    margin: 5% 0px;
+    height: 20px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider_temperature::-webkit-slider-thumb, .slider_store::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #5aa4ca;
+    cursor: pointer;
+}
+
+.slider_temperature::-moz-range-thumb, .slider_store::-moz-range-thumb {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #5aa4ca;
+    cursor: pointer;
+}
+
+
+
 
 /*
 
@@ -470,13 +563,18 @@ Affichages des capteurs
 //background-color: white;
 }
 
-.connexion_inscription, #ajouter_habitation{
+.connexion_inscription, #ajouter_habitation, #titre_tableau_de_bord{
     font-size: 2em;
     text-align: center;
     color: #ffff;
     margin: 0;
     padding-top: 20px;
     letter-spacing: 0.1em;
+}
+
+#titre_tableau_de_bord{
+    padding-top: 0px;
+    margin-bottom: 20px;
 }
 
 #box_connexion_inscription {
@@ -558,16 +656,6 @@ section::-webkit-scrollbar-track{
     display:flex;
     justify-content:center;
 }
-<<<<<<< HEAD
-
-
-.pb_CGU, .pb_confirmation, .pb_taille_mdp {
-
-}
-/*
-<<<<<<< HEAD
-=======
->>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
 
 .position_option{
     display:flex;
@@ -590,8 +678,6 @@ section::-webkit-scrollbar-track{
 }
 .nom_capteur {
     text-align: center;
-	    font-size: 1.5em;
-
 }
 
 #form_nouv_capteur{
@@ -618,6 +704,7 @@ section::-webkit-scrollbar-track{
 /* selecteur Content (Hidden by Default) */
 .selecteur-content {
     width: 80%;
+    min-width: 110px;
     display: none;
     position:absolute;
     left: 10%;
@@ -651,7 +738,7 @@ section::-webkit-scrollbar-track{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.boutton_choix {
+.boutton_choix, #humidité {
     background-color: #96c0d1;
     width: 95%;
     border: none;
@@ -663,4 +750,10 @@ section::-webkit-scrollbar-track{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+#humidité{
+    cursor: default;
+    width: 78%;
+    margin: 4px 1%;
 }
