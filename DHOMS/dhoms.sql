@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 10 mai 2018 à 13:09
+-- Généré le :  ven. 11 mai 2018 à 05:16
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.4
 
@@ -116,11 +116,23 @@ CREATE TABLE `controleur` (
 --
 
 INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `niveau_batterie`, `ID_piece`) VALUES
-(1, '0001', 'Température', 'Température', 'éteint', 100, 1),
-(2, '0002', 'Lumière', 'Lumière', 'Allumé', 100, 1),
-(3, '0001', 'Température', 'Température', 'Allumé', 100, 2),
-(4, '0003', 'Humidité', 'Humidité', 'éteint', 100, 1),
-(5, '0003', 'Humidité', 'Humidité', 'Allumé', 100, 3);
+(1, '0001', 'Température', 'capteur', 'éteint', 100, 1),
+(2, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 1),
+(3, '0001', 'Température', 'capteur', 'Allumé', 100, 2),
+(4, '0001', 'Température', 'capteur', 'Allumé', 100, 3),
+(5, '0001', 'Température', 'capteur', 'Allumé', 100, 5),
+(6, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 3),
+(7, '0001', 'Température', 'capteur', 'Allumé', 100, 4),
+(8, '0003', 'Humidité', 'capteur', 'Allumé', 100, 3),
+(9, '0001', 'Température', 'capteur', 'Allumé', 100, 6),
+(10, '0001', 'Température', 'capteur', 'Allumé', 100, 7),
+(11, '0001', 'Température', 'capteur', 'Allumé', 100, 8),
+(12, '0001', 'Température', 'capteur', 'Allumé', 100, 9),
+(13, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 2),
+(14, '0003', 'Humidité', 'capteur', 'éteint', 100, 1),
+(15, '0002', 'Lumière', 'actionneur', 'Éteint', 0, 4),
+(16, '0004', 'Présence', 'capteur', 'Allumé', 100, 1),
+(17, '0005', 'Store', 'actioneur', '100', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -328,9 +340,9 @@ CREATE TABLE `piece` (
 
 INSERT INTO `piece` (`ID`, `nom`, `surface`, `ID_habitation`) VALUES
 (1, 'Chambre 1', 30, 1),
-(2, 'Salon', 60, 1),
-(3, 'Chambre 2', 20, 1),
-(4, 'Chambre 3', 30, 1),
+(2, 'Chambre 2', 20, 1),
+(3, 'Chambre 3', 30, 1),
+(4, 'Salon', 60, 1),
 (5, 'Salle de bain', 15, 1),
 (6, 'Entrée', 10, 1),
 (7, 'Couloir', 10, 1),
@@ -559,7 +571,7 @@ ALTER TABLE `contact_domisep`
 -- AUTO_INCREMENT pour la table `controleur`
 --
 ALTER TABLE `controleur`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT pour la table `donnee`
@@ -595,7 +607,7 @@ ALTER TABLE `gestionnaire_immeuble`
 -- AUTO_INCREMENT pour la table `habitation`
 --
 ALTER TABLE `habitation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `lien_control_program`
