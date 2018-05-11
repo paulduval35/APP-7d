@@ -135,12 +135,14 @@ a {
     text-decoration: none;
     color: white;
 }
+
 b{
-	text-decoration: none;
+    text-decoration: none;
     color: black;
     font-size: 1.0em;
 
 }
+
 .flex-outer{
     box-sizing: border-box;
     min-width: 320px;
@@ -498,7 +500,6 @@ Affichages des capteurs
     display:block;
     padding-top: 3px;
     cursor: pointer;
-.nom-maison{
     text-transform: uppercase;
 }
 
@@ -662,16 +663,6 @@ section::-webkit-scrollbar-track{
     display:flex;
     justify-content:center;
 }
-<<<<<<< HEAD
-
-
-.pb_CGU, .pb_confirmation, .pb_taille_mdp {
-
-}
-/*
-<<<<<<< HEAD
-=======
->>>>>>> 44d8a0f42b2d7e2988667b0b2b5e833910e6f1b7
 
 .position_option{
     display:flex;
