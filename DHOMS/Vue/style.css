@@ -294,9 +294,6 @@ CSS footer
     display: none;
 }
 
-
-
-
 input:checked + .curseur {
     background-color: #5aa4ca;
 }
@@ -511,6 +508,10 @@ Affichages des capteurs
 
 #bouton_ajout_habitation{
     margin:auto;
+}
+
+.ajout_habitation{
+    margin: auto;
 }
 
 /*

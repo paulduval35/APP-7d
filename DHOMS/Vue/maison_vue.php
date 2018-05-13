@@ -47,6 +47,14 @@ $listeCapteur_global = $capteur_global->fetchAll();
     </div>
 
 <?php endforeach;?>
+    <div id="box_nom_piece" class="box_nom_piece">
+
+        <label class="switch tab_bord_piece">
+            <input type="checkbox" class="selection_piece")">
+            <span id="nom_piece" class="nom_piece">Ajouter une pièce</span>
+        </label>
+
+    </div>
 </div>
 </div>
 

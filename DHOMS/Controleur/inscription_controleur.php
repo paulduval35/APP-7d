@@ -44,6 +44,7 @@ if (isset($_POST['CGU']))
                 {
                     include "../Modele/connexion_inscription_modele.php";
                     sendData($email,$mot_de_passe);
+                    include "../../DHOMS/Vue/habitation.php";
                 }
 
             }
