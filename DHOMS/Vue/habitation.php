@@ -5,12 +5,9 @@
 
     <title>DHOMS</title>
     <meta charset="UTF-8">
-<<<<<<< HEAD
     <link rel= "stylesheet" href="../Vue/style.css" />
-=======
-    <link rel= "stylesheet" href="/DHOMS/Vue/style.css" />
-    <script src="/DHOMS/Vue/javascript.js" type="text/javascript"></script>
->>>>>>> ace92a07e95ce4cb782692b6de77b008f7a7a6ed
+    <script src="../Vue/javascript.js" type="text/javascript"></script>
+
     <!-- commentaire -->
 </head>
 
