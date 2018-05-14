@@ -38,4 +38,14 @@ function sendData($email, $mot_de_passe)
 }
 
 
+function getEmail($email)
+{
+    include "connect_database_modele.php";
+    $existe = false;
+    $resultat = "SELECT email FROM personne WHERE email = '.$email'";
+    if ($resultat['email'] == $email) {$existe = true;}
+    echo $existe;
+    return $existe;
+}
+
 ?>

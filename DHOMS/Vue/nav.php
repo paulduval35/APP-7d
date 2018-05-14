@@ -1,9 +1,7 @@
 <?php include "../Controleur/url.php"?>
 
 
-<?php
-/*$DHOMS_URL = /Application/XAMPP/xamppfiles/htdocs/DHOMS;*/
-?>
+
 
 <a href="<?php echo $DHOMS_URL; ?>/Vue/connexion_inscription_vue.php"><img src="<?php echo $DHOMS_URL;?>/Vue/image/accueil/accueil.png" alt="accueil"></a>
 <a href="<?php echo $DHOMS_URL; ?>/Vue/nos_produits.php"><img src="<?php echo $DHOMS_URL;?>/Vue/image/accueil/nosproduits.png" alt="nosproduits"> </a>

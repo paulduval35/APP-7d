@@ -43,7 +43,13 @@ if (isset($_POST['CGU']))
                 if($email==$email_confirmation)
                 {
                     include "../Modele/connexion_inscription_modele.php";
-                    sendData($email,$mot_de_passe);
+                    //echo getEmail($email);
+                    if(getEmail($email))
+                    {
+                        sendData($email,$mot_de_passe);
+                    } else {
+                        echo 'Votre email existe déjà dans notre base de données';
+                    }
                 }
 
             }

@@ -38,9 +38,4 @@ else
 }*/
 
 $mdp = $_POST['mdp'];
-
 $email = $_POST['email'];
-if ($isPasswordCorrect)
-{
-    echo 'oui';
-}
