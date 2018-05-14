@@ -24,22 +24,39 @@ $mot_de_passe_confirmation_hash="";
 
 $email = $_POST['email'];
 $email_confirmation=$_POST['emailconfirmation'];
-$mot_de_passe = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
-$mot_de_passe_confirmation = password_hash($_POST['mdp2'], PASSWORD_DEFAULT);
+$mdp = htmlentities($_POST['mdp'] ,ENT_QUOTES,"utf-8");
+$mot_de_passe = password_hash($mdp, PASSWORD_DEFAULT);
+$mdp2 = htmlentities($_POST['mdp2'], ENT_QUOTES,"utf-8");
+$mot_de_passe_confirmation = password_hash($mdp2, PASSWORD_DEFAULT);
 
 
-
+$mdplenght = strlen($_POST['mdp']);
 
 if (isset($_POST['CGU']))
 {
-    if (!empty($email) and !empty($email_confirmation) and !empty($mot_de_passe) and !empty($mot_de_passe_confirmation))
+    if (!empty($email) AND !empty($email_confirmation) AND !empty($mot_de_passe) AND !empty($mot_de_passe_confirmation))
     {
-        if(strlen($mot_de_passe >=8))
+        if($mdplenght >=8)
         {
-            if($mot_de_passe == $mot_de_passe_confirmation and $email == $email_confirmation)
+            if($_POST['mdp'] == $_POST['mdp2'])
             {
-                include "../Modele/connexion_inscription_modele.php";
-                sendData($email,$mot_de_passe);
+                if($email==$email_confirmation)
+                {
+                    include "../Modele/connexion_inscription_modele.php";
+<<<<<<< HEAD
+                    //echo getEmail($email);
+                    if(getEmail($email))
+                    {
+                        sendData($email,$mot_de_passe);
+                    } else {
+                        echo 'Votre email existe déjà dans notre base de données';
+                    }
+=======
+                    sendData($email,$mot_de_passe);
+                    include "../../DHOMS/Vue/habitation.php";
+>>>>>>> 09421629bf99138ce40eb4da61d53758cc56f3c9
+                }
+
             }
         }
     }
@@ -47,7 +64,8 @@ if (isset($_POST['CGU']))
 }
 
 
-if(strlen($mot_de_passe) < 8) {
+
+if($mdplenght < 8) {
     ?>
     <div class="pb_taille_mdp">
         <?php echo 'Votre mot de passe doit contenir au moins 8 caractères'; ?>
@@ -58,12 +76,15 @@ if(strlen($mot_de_passe) < 8) {
 
 <?php
 
-if($mot_de_passe != $mot_de_passe_confirmation or $email!=$email_confirmation) {
-    ?>
-    <div class="pb_confirmation">
-        <?php echo "Votre email ou votre mot de passe n'est pas correct"; ?>
-    </div>
-    <?php
+if($mot_de_passe != $mot_de_passe_confirmation)
+{
+    if($email !== $email_confirmation) {
+        ?>
+        <div class="pb_confirmation">
+            <?php echo "Votre email ou votre mot de passe n'est pas correct"; ?>
+        </div>
+        <?php
+    }
 }
 ?>
 

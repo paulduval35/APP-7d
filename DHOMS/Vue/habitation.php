@@ -5,7 +5,9 @@
 
     <title>DHOMS</title>
     <meta charset="UTF-8">
-    <link rel= "stylesheet" href="/DHOMS/Vue/style.css" />
+    <link rel= "stylesheet" href="../Vue/style.css" />
+    <script src="../Vue/javascript.js" type="text/javascript"></script>
+
     <!-- commentaire -->
 </head>
 
@@ -21,20 +23,7 @@
         <?php include "header.php"?>
 
 
-        <script type="text/javascript">
-            function afficher(id)
-            {
-                if(document.getElementById(id).style.display == "block")
-                {
-                    document.getElementById(id).style.display = "none";
-                }
-                else
-                {
-                    document.getElementById(id).style.display = "block";
-                }
-            }
 
-        </script>
     </header>
 
     <section>
@@ -104,14 +93,14 @@
                         Appartement ?
                     </label>
                     <div class="position_option">
-                        <label class="switch">
+                        <label class="switch habitation">
                             <input type="checkbox" class="selection_appart" onclick="afficher('a_cacher')">
                             <span class="curseur rond"></span>
                         </label>
                     </div>
 
                 </li>
-                <div id="a_cacher">
+                <div id="a_cacher" class="a_cacher">
                 <li>
                     <label>
                         Etage

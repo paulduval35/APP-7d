@@ -35,8 +35,9 @@ try {
 
             <ul class="flex-outer">
                 <li >
-                    <a href="habitation.php"><button >Ajouter une habitation</button></a>
+                    <a href="../Controleur/tableau_bord_controleur.php"><button >Espace Client connecté</button></a>
                 </li>
+
                 <li ><label>Maison :</label><br/>
                     <div class ="moyen_texte">
                         <?php

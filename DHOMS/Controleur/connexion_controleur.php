@@ -12,14 +12,15 @@ session_start();
 include "../Modele/connexion_inscription_modele.php";
 //include "../Vue/connexion_inscription_vue.php";
 
-
+$email="";
 $email = $_POST['email'];
 getData($email);
 
 $isPasswordCorrect = password_verify($_POST['mdp'], $resultat['mot_de_passe']);
 $email = $_POST['email'];
 
-if(!$resultat)
+
+/*if(!$resultat)
 {
     echo 'Mauvais identifiant ou mot de passe';
 }
@@ -34,4 +35,7 @@ else
     } else {
         echo 'Mauavais identifiant ou mot de passe';
 }
-}
+}*/
+
+$mdp = $_POST['mdp'];
+$email = $_POST['email'];
