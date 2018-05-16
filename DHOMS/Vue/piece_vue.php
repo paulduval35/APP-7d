@@ -21,6 +21,19 @@ $listeCapteur = $capteur->fetchAll();
         <?php include "capteur_vue.php";?>
     </div>
 <?php endforeach;?>
+    <div class = "capteur_tableaubord">
+    <form id ="form_capteur tab_bord" action="../Controleur/capteur_controlleur.php" method="post" >
 
+        <div id ="capteur tab_bord">
+            <div class="nom_capteur tab_bord" id="nom_capteur plus"> Ajouter un capteur </div>
+
+            <div id = "icone_capteur_tableaubord" >
+                <div class="selecteur"><img class="icone_capteur" src="../Vue/image/capteurs/plus.png" alt="icone plus"
+                    </div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
 </div>
 </div>

@@ -7,7 +7,7 @@ $capteur_global = getCapteur(1);
 $listeCapteur_global = $capteur_global->fetchAll();
 
 ?>
-<script src="/DHOMS/Vue/javascript.js" type="text/javascript"></script>
+<script src="../Vue/javascript.js" type="text/javascript"></script>
 
 <div id="box_nom_maison <?php echo $row['ID']?>" class="box_nom_maison">
 
@@ -47,6 +47,14 @@ $listeCapteur_global = $capteur_global->fetchAll();
     </div>
 
 <?php endforeach;?>
+    <div id="box_nom_piece" class="box_nom_piece">
+
+        <label class="switch tab_bord_piece">
+            <input type="checkbox" class="selection_piece")">
+            <span id="nom_piece" class="nom_piece">Ajouter une pièce</span>
+        </label>
+
+    </div>
 </div>
 </div>
 

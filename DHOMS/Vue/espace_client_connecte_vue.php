@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php session_start();
+include "../Controleur/url.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +17,7 @@
 
 	
     <nav>
-        <?php include "nav.php"?>
+        <?php include $DOMS_RACINE."/Vue/nav.php"?>
     </nav>
 
     <div id = "header_footer">
@@ -33,8 +35,13 @@
                     </div>
                 <?php endforeach;?>
                 <div class="flex-outer" id="bouton_ajout_habitation">
-                    <li>
-                        <a href="../Vue/habitation.php"><button >Ajouter une habitation</button></a>
+                    <li >
+                        <a href="../Vue/ajout_capteur.php" class="ajout_habitation"><button >Ajouter un capteur</button></a>
+                    </li>
+                </div>
+                <div class="flex-outer" id="bouton_ajout_habitation">
+                    <li >
+                        <a href="../Vue/habitation.php" class="ajout_habitation"><button >Ajouter une habitation</button></a>
                     </li>
                 </div>
             </div>
