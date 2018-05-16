@@ -57,7 +57,7 @@ section{
     overflow: auto;
     justify-content: flex-start;
     align-items: center;
-
+    flex-wrap: wrap;
 }
 
 footer {
@@ -585,12 +585,13 @@ Affichages des capteurs
 }
 
 #box_connexion_inscription {
-    display: grid;
-    grid-template-columns: minmax(340px, 45%) minmax(20px,50px) minmax(340px, 45%);
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size : 12px;
     padding : 20px;
-
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 #form_inscription, #form_habitation, #form_connexion{
@@ -598,7 +599,9 @@ Affichages des capteurs
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
     margin:25px;
+    width: 35%;
 }
+
 
 #form_habitation {
     width: 70%;

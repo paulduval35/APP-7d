@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php session_start();
+include "../Controleur/url.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +17,7 @@
 
 	
     <nav>
-        <?php include "nav.php"?>
+        <?php include $DOMS_RACINE."/Vue/nav.php"?>
     </nav>
 
     <div id = "header_footer">

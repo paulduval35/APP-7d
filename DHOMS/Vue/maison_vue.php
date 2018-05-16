@@ -7,7 +7,7 @@ $capteur_global = getCapteur(1);
 $listeCapteur_global = $capteur_global->fetchAll();
 
 ?>
-<script src="/DHOMS/Vue/javascript.js" type="text/javascript"></script>
+<script src="../Vue/javascript.js" type="text/javascript"></script>
 
 <div id="box_nom_maison <?php echo $row['ID']?>" class="box_nom_maison">
 
