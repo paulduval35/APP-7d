@@ -37,7 +37,7 @@
                 </li>
 
                 <li >
-                    <button class="bouton_acc_admin"> <a href="<?php echo $DHOMS_URL; ?>/Vue/A_MODIFIER.php"> <label class="lien_acc">Gestion des capteurs et actionneurs</label> </a> </button>
+                    <button class="bouton_acc_admin"> <a href="<?php echo $DHOMS_URL; ?>/Controleur/gestion_actionneurs_controleur.php"> <label class="lien_acc">Gestion des actionneurs</label> </a> </button>
                 </li>
 
                 <li >
