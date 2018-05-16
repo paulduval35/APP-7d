@@ -777,3 +777,14 @@ section::-webkit-scrollbar-track{
     color: dimgrey;
     font-size: 1.5em;
 }
+
+.box_gestion_actionneurs{
+    display:grid;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 20%;
+    height: 2%;
+    grid-template-rows: repeat(auto-fill, 1fr);
+
+    margin: 20px;
+    padding: 20px;
+}
