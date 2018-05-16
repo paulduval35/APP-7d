@@ -43,7 +43,18 @@ if (isset($_POST['CGU']))
                 if($email==$email_confirmation)
                 {
                     include "../Modele/connexion_inscription_modele.php";
+<<<<<<< HEAD
+                    //echo getEmail($email);
+                    if(getEmail($email))
+                    {
+                        sendData($email,$mot_de_passe);
+                    } else {
+                        echo 'Votre email existe déjà dans notre base de données';
+                    }
+=======
                     sendData($email,$mot_de_passe);
+                    include "../../DHOMS/Vue/habitation.php";
+>>>>>>> 09421629bf99138ce40eb4da61d53758cc56f3c9
                 }
 
             }

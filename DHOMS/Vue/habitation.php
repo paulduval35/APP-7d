@@ -7,10 +7,9 @@
     <title>DHOMS</title>
     <meta charset="UTF-8">
 
-    <link rel= "stylesheet" href=<?php echo $DHOMS_RACINE?>."/Vue/style.css" />
+    <link rel= "stylesheet" href="../Vue/style.css" />
+    <script src="../Vue/javascript.js" type="text/javascript"></script>
 
-    <link rel= "stylesheet" href="/DHOMS/Vue/style.css" />
-    <script src="/DHOMS/Vue/javascript.js" type="text/javascript"></script>
 
     <!-- commentaire -->
 </head>

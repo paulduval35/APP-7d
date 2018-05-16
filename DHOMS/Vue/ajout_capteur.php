@@ -38,7 +38,7 @@
                             </div>
 
                             <div id = "icone_capteur" >
-                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/icone_thermometre.png" alt="icone d'un thermomètre"  >
+                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/Température.png" alt="icone d'un thermomètre"  >
                                     <div class="selecteur-content">
                                         <button id=val class=boutton_choix name="subject" type="submit" value="1">Capteur BX75</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="2">Capteur BX72</button>
@@ -46,7 +46,7 @@
                                         <button id=val class=boutton_choix name="subject" type="submit" value="3">Capteur XF126</button>
                                     </div>
                                 </div>
-                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/icone_ampoule.png" alt="icone d'un thermomètre"  >
+                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/Lumière.png" alt="icone d'un thermomètre"  >
                                     <div class="selecteur-content">
                                         <button id=val class=boutton_choix name="subject" type="submit" value="1">Capteur LX715</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="2">Capteur LX256</button>
@@ -55,14 +55,14 @@
                                         <button id=val class=boutton_choix name="subject" type="submit" value="3">Capteur LXX23</button>
                                     </div>
                                 </div>
-                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/icone_thermometre.png" alt="icone d'un thermomètre"  >
+                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/Humidité.png" alt="icone d'un thermomètre"  >
                                     <div class="selecteur-content">
                                         <button id=val class=boutton_choix name="subject" type="submit" value="1">Capteur HM25</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="2">Capteur HM74</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="3">Capteur HMX226</button>
                                     </div>
                                 </div>
-                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/icone_ampoule.png" alt="icone d'un thermomètre"  >
+                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/Présence.png" alt="icone d'un thermomètre"  >
                                     <div class="selecteur-content">
                                         <button id=val class=boutton_choix name="subject" type="submit" value="1">Capteur PR12</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="2">Capteur PR036</button>
@@ -80,27 +80,27 @@
                             </div>
 
                             <div id = "icone_capteur" >
-                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/icone_ampoule.png" alt="icone d'un thermomètre"  >
+                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/Store.png" alt="icone d'un thermomètre"  >
                                     <div class="selecteur-content">
                                         <button id=val class=boutton_choix name="subject" type="submit" value="1">Capteur STR52</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="2">Capteur STR8</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="3">Capteur STR96</button>
                                     </div>
                                 </div>
-                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/icone_thermometre.png" alt="icone d'un thermomètre"  >
+                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/plus.png" alt="icone d'un thermomètre"  >
                                     <div class="selecteur-content">
                                         <button id=val class=boutton_choix name="subject" type="submit" value="1">Capteur FNT223</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="2">Capteur FNT45</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="3">Capteur FNT76</button>
                                     </div>
                                 </div>
-                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/icone_ampoule.png" alt="icone d'un thermomètre"  >
+                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/plus.png" alt="icone d'un thermomètre"  >
                                     <div class="selecteur-content">
                                         <button id=val class=boutton_choix name="subject" type="submit" value="1">Capteur XX78</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="3">Capteur XX7</button>
                                     </div>
                                 </div>
-                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/icone_thermometre.png" alt="icone d'un thermomètre"  >
+                                <div class="selecteur"><img class="icone_capteur" src="image/capteurs/plus.png" alt="icone d'un thermomètre"  >
                                     <div class="selecteur-content">
                                         <button id=val class=boutton_choix name="subject" type="submit" value="1">Capteur Y85</button>
                                         <button id=val class=boutton_choix name="subject" type="submit" value="2">Capteur Y41</button>
