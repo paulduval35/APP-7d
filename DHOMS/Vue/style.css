@@ -784,7 +784,13 @@ section::-webkit-scrollbar-track{
     width: 20%;
     height: 2%;
     grid-template-rows: repeat(auto-fill, 1fr);
-
     margin: 20px;
     padding: 20px;
+}
+
+.liste_Utilisateurs{
+    border: solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }

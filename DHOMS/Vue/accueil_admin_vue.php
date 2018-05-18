@@ -29,7 +29,7 @@
 
             <ul class="flex-outer">
                 <li>
-                    <button class="bouton_acc_admin"> <a href="<?php echo $DHOMS_URL; ?>/Vue/A_MODIFIER.php"> <label class="lien_acc">Gestion des utilisateurs</label> </a> </button>
+                    <button class="bouton_acc_admin"> <a href="<?php echo $DHOMS_URL; ?>/Controleur/gestion_utilisateurs_controleur.php"> <label class="lien_acc">Gestion des utilisateurs</label> </a> </button>
                 </li>
 
                 <li >
