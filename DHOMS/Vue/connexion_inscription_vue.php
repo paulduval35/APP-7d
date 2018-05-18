@@ -100,6 +100,8 @@
             </ul>
         </form>
 
+        <div><button class="bouton_acc_admin"> <a href="<?php echo $DHOMS_URL; ?>/Vue/accueil_admin_vue.php"> <label class="lien_acc">Plateforme Administrateur</label> </a> </button></div>
+
     </section>
 
     <footer>

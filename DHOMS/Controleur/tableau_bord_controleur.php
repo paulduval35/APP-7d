@@ -6,6 +6,7 @@ $maisons = getMaisons(1);
 $listeMaison = $maisons->fetchall();
 
 
+
 $arrayMaison = array();
 foreach ($listeMaison as $maison){
     $arrayMaison[] = $maison['ID'];
