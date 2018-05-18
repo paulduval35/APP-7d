@@ -1,6 +1,9 @@
+
+
 <?php
 
-$capteur = getCapteur($row1['ID']);
+/*
+/$capteur = getCapteur($row1['ID']);
 $listeCapteur = $capteur->fetchAll();
 
 ?>
@@ -22,7 +25,7 @@ $listeCapteur = $capteur->fetchAll();
     </div>
 <?php endforeach;?>
     <div class = "capteur_tableaubord">
-    <form id ="form_capteur tab_bord" action="../Controleur/capteur_controlleur.php" method="post" >
+    <form id ="form_capteur tab_bord" action="../Controleur/capteur_controleur.php" method="post" >
 
         <div id ="capteur tab_bord">
             <div class="nom_capteur tab_bord" id="nom_capteur plus"> Ajouter un capteur </div>
@@ -36,4 +39,19 @@ $listeCapteur = $capteur->fetchAll();
     </div>
 </div>
 </div>
-</div>
+</div>*/
+
+while($affichage = $valeur->fetch()):?>
+    <div id = "nav_pieces">
+        <button class = "button_tableau_bord" value = "<?php echo $affichage['ID']?>" onclick = "changeValueCapteursVue(this.value)">
+            <?php echo $affichage['nom'];?>
+        </button>
+    </div>
+
+
+<?php endwhile; ?>
+
+
+
+
+

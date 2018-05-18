@@ -6,8 +6,25 @@ $maisons = getMaisons(1);
 $listeMaison = $maisons->fetchall();
 
 
+$arrayMaison = array();
+foreach ($listeMaison as $maison){
+    $arrayMaison[] = $maison['ID'];
+}
 
 
-include "../Vue/espace_client_connecte_vue.php";
+if(isset($_GET['valeur'])){
+    $test = $_GET['valeur'];
+    $valeur = getPieces($test);
+
+    while($affichage = $valeur->fetch()){
+        echo $affichage['nom'];
+    }
+}
+
+
+
+require_once "../Vue/tableau_bord_vue.php";
+
+
 
 ?>

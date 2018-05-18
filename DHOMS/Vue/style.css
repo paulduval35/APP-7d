@@ -414,6 +414,13 @@ input:checked + .curseur.rond.ON_OFF:before {
     padding: 20px;
 }
 
+#section_tableau_bord{
+    display: grid;
+    grid-template-columns: 10% 10% 1fr;
+    align-items: start;
+    justify-items: stretch;
+}
+
 /*
     Affichage des maisons
  */
@@ -427,10 +434,25 @@ input:checked + .curseur.rond.ON_OFF:before {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
 }
 
-.box_piece_tableaubord{
-    display: grid;
-    width: 98%;
-    margin: 1%;
+#nav_maison{
+    grid-column: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-self:stretch;
+    height: 100%;
+    width: 95%;
+    border-radius: 10px;
+}
+
+.contenu_nav_maison{
+    justify-self: stretch;
+}
+
+.button_tableau_bord{
+    width: 90%;
+    margin: 10px;
+    padding-top: 70%
 }
 
 /*
@@ -450,6 +472,13 @@ input:checked + .curseur.rond.ON_OFF:before {
     margin: 3px 3px 3px 3px;
     grid-template-columns: repeat(5,1fr);
     background-color: rgb(115,180,207);
+}
+
+#nav_pieces{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
 }
 
 /*
