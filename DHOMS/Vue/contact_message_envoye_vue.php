@@ -1,17 +1,21 @@
+<?php session_start();
+include "../Controleur/url.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <script src = "../Vue/jquery-3.2.1.js"></script>
     <title>DHOMS</title>
     <meta charset="UTF-8">
-    <link rel= "stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Vue/style.css">
     <!-- commentaire -->
 </head>
 
 <body>
-<nav>
-    <?php include "nav.php"?>
-</nav>
+    <nav>
+        <?php include "../Vue/nav.php"?>
+    </nav>
 
 <div id = "header_footer">
     <header>
@@ -19,7 +23,7 @@
     </header>
 
     <section>
-        <h3> Votre message à bien été envoyé à nos administrateur</h3>
+        <h2> Votre message à bien été envoyé à nos administrateur</h2>
     </section>
 
     <footer>
