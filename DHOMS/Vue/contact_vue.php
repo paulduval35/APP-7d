@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <title>DHOMS</title>
     <meta charset="UTF-8">
     <link rel= "stylesheet" href="style.css" />
@@ -10,8 +9,6 @@
 </head>
 
 <body>
-
-
 <nav>
     <?php include "nav.php"?>
 </nav>
@@ -22,7 +19,6 @@
     </header>
 
     <section>
-
         <form id="form_contact" action="../Controleur/contact_controleur.php" method="post">
         <h3> Nous contacter</h3>
 
@@ -32,15 +28,13 @@
                 </li>
 
                 <li ><label><br>ou envoyez nous un message<br></label></li>
+
                 <li >
-                    <textarea rows = "1" class="message_contact" placeholder="OBJECT"></textarea>
-
-
+                    <input name="objet" type="text" textarea rows = "1" class="message_contact" placeholder="OBJECT"></inputtextarea>
                 </li>
+
                 <li >
-                    <textarea rows = "8" class="message_contact" placeholder="VOTRE MESSAGE"></textarea>
-
-
+                    <textarea rows = "8" input name="message" class="message_contact" placeholder="VOTRE MESSAGE"></textarea>
                 </li>
 
                 <li>
@@ -54,7 +48,6 @@
         <?php include "footer.php"?>
     </footer>
 </div>
-
 
 </body>
 </html>
