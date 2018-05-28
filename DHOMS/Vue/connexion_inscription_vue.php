@@ -36,12 +36,19 @@
                             </label>
 
 
-                            <input id="mdpm" type="password" name="mdp"  title="Minimum 8 caractères (uniquement des chiffres et des lettres)" required placeholder=
+                            <input id="mdp" type="password" name="mdp"  title="Minimum 8 caractères (uniquement des chiffres et des lettres)" required placeholder=
                             "ENTREZ VOTRE MOT DE PASSE">
                         </li>
 
+                        <li class="checkboxclass">
+                            <a href="../Vue/changement_mdp.php"><input type="button" name="mdpoublie"/>Mot de passe oublié</a>
+                        </li>
+                        <li class="checkboxclass">
+                            <input id = "rester_connecter" type="checkbox" name="rester_connecte" value="RC">Rester connecter
+                        </li>
+
                         <li>
-                            <button type="submit">Se Connecter</button>
+                            <button type="submit" name="bouton">Se Connecter</button>
                         </li>
 
 

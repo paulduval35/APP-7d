@@ -1,4 +1,4 @@
-<?php
+    <?php
 /**
  * Created by PhpStorm.
  * User: paulduval
@@ -6,36 +6,59 @@
  * Time: 11:52
  */
 
+if(!empty($_POST['reste_connecte']))
+{
+    session_start();
+}
 
-session_start();
+include "url.php";
 
 include "../Modele/connexion_inscription_modele.php";
-//include "../Vue/connexion_inscription_vue.php";
-
-$email="";
-$email = $_POST['email'];
-getData($email);
-
-$isPasswordCorrect = password_verify($_POST['mdp'], $resultat['mot_de_passe']);
-$email = $_POST['email'];
 
 
-/*if(!$resultat)
+$bouton=isset($_POST['bouton']) ? $_POST['bouton'] : NULL;
+$mdpoublie ="";
+$mdpoublie=isset($_POST['mdpoublie']) ? $_POST['mdpoublie'] : NULL;
+
+$mdp = isset($_POST['mdp']) ? $_POST['mdp'] : NULL;
+$email = isset($_POST['email']) ? $_POST['email'] : NULL;
+
+var_dump($mdpoublie);
+
+if(isset($bouton))
 {
-    echo 'Mauvais identifiant ou mot de passe';
-}
-else
-{
-    if($isPasswordCorrect)
+    $email="";
+    $mdp="";
+    $mdp = $_POST['mdp'];
+    $email = $_POST['email'];
+    getConnexion($email);
+
+    if (password_verify($mdp,getConnexion($email))===true)
     {
-        session_start();
-        $_SESSION['ID'] = $resultat['ID'];
-        $_SESSION['email'] = $email;
-        echo 'Vous êtes connecté !';
+        include "../Vue/espace_client_connecte_vue.php";
     } else {
-        echo 'Mauavais identifiant ou mot de passe';
+        include "../Vue/connexion_inscription_vue.php";
+    }
 }
+
+
+$email = isset($_POST['email']) ? $_POST['email'] : NULL;
+$subject='Mot de passe oublié DHOMS';
+$message='Changement du mot de passe' ?><a href="../Vue/changement_mdp.php">Changer votre mot de passe</a><?php;
+mail($email,$subject,$message);
+
+/*elseif(isset($_POST['go']) AND $_POST['go'] == 'Mot de passe oublié')
+{
+    //echo "<script type=\"text/javascript\"> alert(\"Un mail vous a été envoyé\"); </script>";
+    $email = isset($_POST['email']) ? $_POST['email'] : NULL;
+    $subject='Mot de passe oublié DHOMS';
+    $message='Changement du mot de passe' ?><a href="../Vue/changement_mdp.php">Changer votre mot de passe</a><?php;
+    mail($email,$subject,$message);
+}
+
+else {
+    include '../Vue/connexion_inscription_vue.php';
 }*/
 
-$mdp = $_POST['mdp'];
-$email = $_POST['email'];
+
+?>

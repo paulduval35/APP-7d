@@ -6,15 +6,21 @@
  * Time: 10:24
  */
 
+if(!empty($_POST['reste_connecte']))
+{
+    session_start();
+}
+
+
 include "../Modele/connexion_inscription_modele.php";
 
 //Initialisation des variables
 
 $email="";
-$email_confirmation="";
+
 
 $email = $_POST['email'];
-$email_confirmation=$_POST['emailconfirmation'];
+
 $mdp = $_POST['mdp'];
 $mdp2 = $_POST['mdp2'];
 
@@ -24,33 +30,29 @@ $nb_email = check_pseudo($email);
 
 $mdplenght = strlen($_POST['mdp']);
 
-if (isset($_POST['CGU']))
-{
-    if (!empty($email) AND !empty($email_confirmation) AND !empty($mdp) AND !empty($mdp2))
+
+
+    if (!empty($email) AND !empty($mdp) AND !empty($mdp2))
     {
         if($mdplenght >=8)
         {
             if($_POST['mdp'] == $_POST['mdp2'])
             {
-                if($email==$email_confirmation)
-                {
-                    if($nb_email!=NULL)
-                    {
                         include "../Vue/connexion_inscription_vue.php";
                         echo 'Votre email existe déjà dans notre base de données !!!';
 
                     } else {
                         $mot_de_passe = password_hash($mdp, PASSWORD_BCRYPT);
-                        sendData($email,$mot_de_passe);
+                        changeData($email,$mot_de_passe);
                         include "tableau_bord_controleur.php";
                     }
-                }
+
 
             }
-        }
+
     }
 
-}
+
 
 if($mdplenght < 8) {
     ?>
@@ -72,17 +74,6 @@ if($mdp != $mdp2)
         </div>
         <?php
     }
-}
-?>
-
-<?php
-
-if(isset($_POST['CGU']) == NULL) {
-    ?>
-    <div class="pb_CGU">
-        <?php echo "Veuillez accepter les CGU"; ?>
-    </div>
-    <?php
 }
 ?>
 

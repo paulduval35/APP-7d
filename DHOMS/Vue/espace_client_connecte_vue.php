@@ -1,4 +1,5 @@
 <?php session_start();?>
+<?php include '../Controleur/url.php'?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
     <title>DHOMS</title>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="../Vue/style.css">
+    <link rel="stylesheet" href="<?php echo $DHOMS_URL?>/Vue/style.css">
 	<!-- commentaire -->
 </head>
 
@@ -20,7 +21,7 @@
 
     <div id = "header_footer">
         <header>
-            <?php include "header.php"?>
+            <?php include "../Vue/header.php"?>
         </header>
 
         <section>

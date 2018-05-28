@@ -601,6 +601,13 @@ Affichages des capteurs
     margin:25px;
 }
 
+#form_mdp_oublie{
+    margin: auto;
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: center;
+}
+
 #form_habitation {
     width: 70%;
 }
