@@ -11,6 +11,13 @@ WHERE appartenance_maison.ID_personne = '$ID_personne_connecte'");
     return $reponse;
 }
 
+function getNomMaison($id_maison){
+    global $bdd;
+    $reponse = $bdd->query("SELECT habitation.nom FROM habitation WHERE habitation.id = '$id_maison'");
+    $retour = $reponse->fetch();
+    return $retour['nom'];
+}
+
 function getPieces($id_maison){
     global $bdd;
     $listePiece = $bdd->query("SELECT * FROM piece WHERE piece.ID_habitation = '$id_maison'");
@@ -28,5 +35,7 @@ function getValuesCapteur($id_capteur){
     $listeValeursCapteurs = $bdd->query("SELECT * FROM donnee WHERE donnee.ID_controleur = '$id_capteur'");
     return $listeValeursCapteurs;
 }
+
+
 
 ?>

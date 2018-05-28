@@ -28,7 +28,7 @@
 	<p>
 <?$selection = $_POST['taskOption'];  ?>
   
-<form id ="form_nouv_capteur" action="../Controleur/capteur_controlleur.php" method="post" >
+<form id ="form_nouv_capteur" action="../Controleur/capteur_controleur.php" method="post" >
 
                             <div id ="nouveau_capteur">
                                 <div class="nom_capteur">Température</div>

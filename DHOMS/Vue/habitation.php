@@ -1,3 +1,4 @@
+<?php include "../Controleur/url.php"?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +6,10 @@
 
     <title>DHOMS</title>
     <meta charset="UTF-8">
+
     <link rel= "stylesheet" href="../Vue/style.css" />
     <script src="../Vue/javascript.js" type="text/javascript"></script>
+
 
     <!-- commentaire -->
 </head>

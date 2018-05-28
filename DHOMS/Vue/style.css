@@ -1,5 +1,5 @@
 /*
-Squelette
+    Squelette
  */
 
 body {
@@ -57,6 +57,7 @@ section{
     overflow: auto;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
@@ -94,9 +95,8 @@ footer #marge_g_footer {
     min-width:50px;
 }
 
-
 /*
-block (titre, paragraphes, form)
+    Block (titre, paragraphes, form)
  */
 
 #logo_accueil  {
@@ -140,7 +140,6 @@ b{
     text-decoration: none;
     color: black;
     font-size: 1.0em;
-
 }
 
 .flex-outer{
@@ -163,7 +162,6 @@ b{
     max-width: 320px;
     min-width: 100px;
 }
-
 
 .flex-outer li label + *{
     flex: 2;
@@ -198,16 +196,17 @@ b{
     text-transform: uppercase;
 }
 
-
 #form_contact{
     width: 50%;
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
     margin:20px;
 }
+
 /*
-CSS footer
+    Footer
  */
+
 #footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -221,7 +220,7 @@ CSS footer
 }
 
 /*
-    CSS Habitation
+    Habitation
 */
 
 .switch{
@@ -233,9 +232,7 @@ CSS footer
 
 .switch.ON_OFF {
     position: static;
-
 }
-
 
 .switch.tab_bord_maison, .switch.tab_bord_piece{
     width: 100%;
@@ -246,17 +243,17 @@ CSS footer
 .switch input {display:none;}
 
 .curseur {
-     width: 60px;
-     position: absolute;
-     cursor: pointer;
-     top: 8px;
-     left: 6px;
-     right: 6px;
-     bottom: 6px;
-     background-color: #ccc;
-     -webkit-transition: .4s;
-     transition: .4s;
- }
+    width: 60px;
+    position: absolute;
+    cursor: pointer;
+    top: 8px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
 
 .curseur.rond.ON_OFF {
     margin: auto;
@@ -308,8 +305,6 @@ input:checked + .curseur.rond.ON_OFF:before {
     transform: translateX(60px);
 }
 
-
-
 /* Pour rendre le curseur rond */
 .curseur.rond {
     border-radius: 34px;
@@ -320,8 +315,9 @@ input:checked + .curseur.rond.ON_OFF:before {
 }
 
 /*
-    CSS CGU
+    CGU
  */
+
 #cgu{
     width: 50%;
     min-width: 400px;
@@ -352,8 +348,9 @@ input:checked + .curseur.rond.ON_OFF:before {
 }
 
 /*
-    CSS Mentions Légales
+    Mentions Légales
  */
+
 #mentions_legales{
     width: 50%;
     min-width: 400px;
@@ -403,18 +400,8 @@ input:checked + .curseur.rond.ON_OFF:before {
     margin: 20px;
 }
 
-
-
-
-
 /*
-
-
-
-    CSS tableau de bord
-
-
-
+    Tableau de bord
  */
 
 .box_tableaubord{
@@ -427,9 +414,17 @@ input:checked + .curseur.rond.ON_OFF:before {
     padding: 20px;
 }
 
+#section_tableau_bord{
+    display: grid;
+    grid-template-columns: 10% 10% 1fr;
+    align-items: start;
+    justify-items: stretch;
+}
+
 /*
-Affichage des maisons
+    Affichage des maisons
  */
+
 .maison_tableaubord{
     display: grid;
     margin-bottom: 30px;
@@ -439,15 +434,29 @@ Affichage des maisons
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
 }
 
-.box_piece_tableaubord{
-    display: grid;
-    width: 98%;
-    margin: 1%;
+#nav_maison{
+    grid-column: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-self:stretch;
+    height: 100%;
+    width: 95%;
+    border-radius: 10px;
 }
 
+.contenu_nav_maison{
+    justify-self: stretch;
+}
+
+.button_tableau_bord{
+    width: 90%;
+    margin: 10px;
+    padding-top: 70%
+}
 
 /*
-Affichage des pièces
+    Affichage des pièces
  */
 
 .piece_tableaubord{
@@ -465,14 +474,21 @@ Affichage des pièces
     background-color: rgb(115,180,207);
 }
 
+#nav_pieces{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+}
+
 /*
-Affichages des capteurs
+    Affichages des capteurs
  */
+
 .capteur_tableaubord{
     display: block;
     margin: 3px;
 }
-
 
 .nom_maison{
     font-size: 1.5em;
@@ -482,6 +498,7 @@ Affichages des capteurs
     cursor: pointer;
     text-transform: uppercase;
 }
+
 .nom_piece{
     font-size: 1.1em;
     text-align: center;
@@ -504,7 +521,6 @@ Affichages des capteurs
     display:block;
     height: 60px;
 }
-
 
 #bouton_ajout_habitation{
     margin:auto;
@@ -549,18 +565,8 @@ Affichages des capteurs
     cursor: pointer;
 }
 
-
-
-
 /*
-
-
-
     Autres, ID, etc
-
-
-
-
  */
 
 #main_accueil {
@@ -568,7 +574,7 @@ Affichages des capteurs
     align-items: center;
     width: 100%;
     height: 100%;
-//background-color: white;
+    background-color: white;
 }
 
 .connexion_inscription, #ajouter_habitation, #titre_tableau_de_bord{
@@ -586,12 +592,13 @@ Affichages des capteurs
 }
 
 #box_connexion_inscription {
-    display: grid;
-    grid-template-columns: minmax(340px, 45%) minmax(20px,50px) minmax(340px, 45%);
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size : 12px;
     padding : 20px;
-
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 #form_inscription, #form_habitation, #form_connexion{
@@ -599,19 +606,22 @@ Affichages des capteurs
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
     margin:25px;
+    width: 35%;
 }
 
+<<<<<<< HEAD
 #form_mdp_oublie{
     margin: auto;
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
     position: center;
 }
+=======
+>>>>>>> 537b356e1b286a39d4075954784531d0804082d7
 
 #form_habitation {
     width: 70%;
 }
-
 
 input, select{
     -ms-box-sizing:content-box;
@@ -677,7 +687,10 @@ section::-webkit-scrollbar-track{
     justify-content: left;
 }
 
-/* selecteur Button */
+/*
+    Sélecteur Button
+*/
+
 .icone_capteur {
     max-width: 40%;
 }
@@ -691,6 +704,7 @@ section::-webkit-scrollbar-track{
     grid-template-columns: minmax(90px,1fr) minmax(90px,1fr) minmax(90px,1fr) minmax(90px,1fr);
     margin-bottom: 20px;
 }
+
 .nom_capteur {
     text-align: center;
 }
@@ -698,7 +712,6 @@ section::-webkit-scrollbar-track{
 #form_nouv_capteur{
     margin-top: 50px;
 }
-
 
 .dropbtn {
     background-color: #4CAF50;
@@ -771,4 +784,51 @@ section::-webkit-scrollbar-track{
     cursor: default;
     width: 78%;
     margin: 4px 1%;
+}
+
+/*
+    Acceuil administrateur
+*/
+
+#accueil_admin{
+    width: 50%;
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin:20px;
+    text-align: center;
+}
+
+.titre_acc {
+    font-size: 2em;
+    text-align: center;
+    color: #ffff;
+    margin: 0;
+    padding-top: 20px;
+    letter-spacing: 0.1em;
+}
+
+.bouton_acc_admin{
+    margin:auto;
+}
+
+.lien_acc{
+    color: dimgrey;
+    font-size: 1.5em;
+}
+
+.box_gestion_actionneurs{
+    display:grid;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 20%;
+    height: 2%;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    margin: 20px;
+    padding: 20px;
+}
+
+.liste_Utilisateurs{
+    border: solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }

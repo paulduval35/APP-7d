@@ -52,3 +52,4 @@ output_store.innerHTML = slider_store.value; // Affiche la valeur par défaut
 slider_store.oninput = function() {
     output_store.innerHTML = this.value;
 }
+

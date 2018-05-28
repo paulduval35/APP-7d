@@ -1,7 +1,12 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: epida
- * Date: 05/05/2018
- * Time: 13:04
- */
+
+include "../Modele/contact_modele.php";
+
+$objet=$_POST['objet'];
+$message=$_POST['message'];
+
+contact_message($bdd);
+
+include "../Vue/contact_message_envoye_vue.php";
+
+?>
