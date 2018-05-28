@@ -28,6 +28,20 @@
             <h3 class="connexion_inscription"> CONNEXION </h3><br>
             <ul class = "flex-outer">
 
+                            <input id="mdp" type="password" name="mdp"  title="Minimum 8 caractères (uniquement des chiffres et des lettres)" required placeholder=
+                            "ENTREZ VOTRE MOT DE PASSE">
+                        </li>
+
+                        <li class="checkboxclass">
+                            <a href="../Vue/changement_mdp.php"><input type="button" name="mdpoublie"/>Mot de passe oublié</a>
+                        </li>
+                        <li class="checkboxclass">
+                            <input id = "rester_connecter" type="checkbox" name="rester_connecte" value="RC">Rester connecter
+                        </li>
+
+                        <li>
+                            <button type="submit" name="bouton">Se Connecter</button>
+                        </li>
                 <li>
                     <label for="mail_connexion">
                         E-mail
@@ -39,7 +53,6 @@
                     <label for="mdpm">
                         Mot de passe
                     </label>
-
 
                     <input id="mdpm" type="password" name="mdp"  title="Minimum 8 caractères (uniquement des chiffres et des lettres)" required placeholder=
                     "ENTREZ VOTRE MOT DE PASSE">

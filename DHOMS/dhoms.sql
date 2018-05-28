@@ -2,10 +2,10 @@
 -- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le :  ven. 11 mai 2018 à 05:16
+-- Hôte : localhost
+-- Généré le :  ven. 25 mai 2018 à 09:53
 -- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.4
+-- Version de PHP :  5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -306,7 +306,8 @@ CREATE TABLE `personne` (
   `num_fixe` int(10) NOT NULL,
   `num_mobile` int(10) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mot_de_passe` varchar(255) NOT NULL,
+  `mot_de_passe` char(60) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `salt` int(11) NOT NULL,
   `forfait` varchar(255) NOT NULL,
   `etat` tinyint(1) NOT NULL,
   `ID_parent` int(11) NOT NULL,
@@ -317,9 +318,14 @@ CREATE TABLE `personne` (
 -- Déchargement des données de la table `personne`
 --
 
-INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
-(1, 'HUGO', 'Victor', 'Primaire', 211223344, 611223344, 'victorhugo@gmail.com', 'victorhugo', '', 0, 0, 1),
-(2, 'BAUDELAIRE', 'Charles', 'Primaire', 100112233, 600112233, 'charlesbaudelaire@gmail.com', 'charlesbaudelaire', '', 0, 0, 3);
+INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `salt`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
+(30, '', '', '', 0, 0, 'abc@a.com', '$2y$10$fyrsviWn/SlM7U6ScQqTgua11upMeM1aI0/31OAtBUEIDMYTlbiGm', 0, '', 0, 0, 0),
+(31, '', '', '', 0, 0, 'paul.duval.rennes@gmail.com', '$2y$10$nzzEoBqG3Tva.kYWGBuHTeEPnpZuvkGRq0B.VqBvUgpX8WPnZk0KC', 0, '', 0, 0, 0),
+(32, '', '', '', 0, 0, 'paulz.duval.rennes@gmail.com', '$2y$10$tlPoyEC/7sd/SMaxOt7viutOOO3KQh5cs1yuqYvE1uujLr8EDVK1.', 0, '', 0, 0, 0),
+(33, '', '', '', 0, 0, 'e@e.com', '$2y$10$jSLnUh8OQQhFuCiBebLPAu3uyGAVEGaVm66761nykKFRJ22l9SIN.', 0, '', 0, 0, 0),
+(34, '', '', '', 0, 0, 'jerem@azert.com', '$2y$10$/YpcI.JVFssIklUlF9OtMOvhqSjnPcLBv9y4Sb5qqj/T2tDWvsAdG', 0, '', 0, 0, 0),
+(35, '', '', '', 0, 0, 'aaa@a.com', '$2y$10$3LINTYbZyMzL0VHHpg7uKuqqoQZWPQF3rh3V6X2/vbRsgal22ZIVu', 0, '', 0, 0, 0),
+(36, '', '', '', 0, 0, 'azertyuiop@azertyuiop.com', '$2y$10$FDSLnbWtmC6ZEa4n5s1Lc.SntjhCD5OOF9q0auLqmkfdoiFaym9Nu', 0, '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -643,7 +649,7 @@ ALTER TABLE `pays`
 -- AUTO_INCREMENT pour la table `personne`
 --
 ALTER TABLE `personne`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT pour la table `piece`

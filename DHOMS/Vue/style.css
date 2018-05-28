@@ -609,6 +609,15 @@ input:checked + .curseur.rond.ON_OFF:before {
     width: 35%;
 }
 
+<<<<<<< HEAD
+#form_mdp_oublie{
+    margin: auto;
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: center;
+}
+=======
+>>>>>>> 537b356e1b286a39d4075954784531d0804082d7
 
 #form_habitation {
     width: 70%;
