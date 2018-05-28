@@ -28,7 +28,6 @@
             <h3 class="connexion_inscription"> CONNEXION </h3><br>
             <ul class = "flex-outer">
 
-<<<<<<< HEAD
                             <input id="mdp" type="password" name="mdp"  title="Minimum 8 caractères (uniquement des chiffres et des lettres)" required placeholder=
                             "ENTREZ VOTRE MOT DE PASSE">
                         </li>
@@ -43,7 +42,6 @@
                         <li>
                             <button type="submit" name="bouton">Se Connecter</button>
                         </li>
-=======
                 <li>
                     <label for="mail_connexion">
                         E-mail
@@ -55,8 +53,6 @@
                     <label for="mdpm">
                         Mot de passe
                     </label>
->>>>>>> 537b356e1b286a39d4075954784531d0804082d7
-
 
                     <input id="mdpm" type="password" name="mdp"  title="Minimum 8 caractères (uniquement des chiffres et des lettres)" required placeholder=
                     "ENTREZ VOTRE MOT DE PASSE">
