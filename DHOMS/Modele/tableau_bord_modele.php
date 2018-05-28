@@ -33,8 +33,13 @@ function getCapteur($id_piece){
 function getValuesCapteur($id_capteur){
     global $bdd;
     $listeValeursCapteurs = $bdd->query("SELECT * FROM donnee WHERE donnee.ID_controleur = '$id_capteur'");
-    return $listeValeursCapteurs;
+    while($a = $listeValeursCapteurs->fetch()){
+        $valeur = $a['donnee'];
+    }
+    return $valeur;
 }
+
+
 
 
 

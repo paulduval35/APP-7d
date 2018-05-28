@@ -1,4 +1,5 @@
-<?php session_start();
+<?php session_start();?>
+<?php
 include "../Controleur/url.php";
 ?>
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ include "../Controleur/url.php";
                 url: '../Controleur/piece_controleur.php',
                 data: {valeur: value},
                 success: function(response){
-                    $('#nav_pieces').html(response);
+                    $('#nav_maison').html(response);
                 }
             })
             $.ajax({
@@ -39,12 +40,17 @@ include "../Controleur/url.php";
                 }
             })
         }
+
+
+
+
+
     </script>
     <title>DHOMS</title>
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="../Vue/style.css">
-	<!-- commentaire -->
+
 </head>
 
 <body>
@@ -64,7 +70,9 @@ include "../Controleur/url.php";
             <div id = "nav_maison">
 
                 <?php foreach ($arrayMaison as $IDmaison):?>
+                    <?php $_SESSION['IDmaison'] = $IDmaison;?>
                     <div class="contenu_nav_maison">
+                        <input id = maisonID.<?php echo $IDmaison?> type="hidden" value="<?php echo $IDmaison?>"?>
                         <button class = "button_tableau_bord" value = "<?php echo $IDmaison?>" onclick="changeValuePieceVue(this.value)">
                         <?php echo getNomMaison($IDmaison);?>
                         </button>
