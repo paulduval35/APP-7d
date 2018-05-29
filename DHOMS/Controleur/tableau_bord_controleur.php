@@ -11,6 +11,7 @@ $arrayMaison = array();
 foreach ($listeMaison as $maison){
     $arrayMaison[] = $maison['ID'];
 };
+$IDmaison = $arrayMaison[0];
 
 
 if(isset($_GET['valeur'])){
