@@ -8,7 +8,10 @@
 
 include '../Modele/tableau_bord_modele.php';
 
-$value = getValuesCapteur($_POST['valeur']);
+if(isset($_POST['valeur'])){
+    $value = getValuesCapteur($_POST['valeur']);
+}
+
 
 echo $value;
 
