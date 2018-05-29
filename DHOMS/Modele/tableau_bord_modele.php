@@ -32,12 +32,15 @@ function getCapteur($id_piece){
 
 function getValuesCapteur($id_capteur){
     global $bdd;
-    $listeValeursCapteurs = $bdd->query("SELECT * FROM donnee d 
-INNER JOIN (SELECT donnee.ID_controleur, MAX(donnee.date) 
-AS maxdate FROM donnee WHERE donnee.ID_controleur = '$id_capteur' 
-GROUP BY donnee.ID_controleur) last_d ON d.ID_controleur = '$id_capteur' AND d.date = last_d.maxdate");
-    return $listeValeursCapteurs;
+    $listeValeursCapteurs = $bdd->query("SELECT * FROM donnee WHERE donnee.ID_controleur = '$id_capteur'");
+    while($a = $listeValeursCapteurs->fetch()){
+        $valeur = $a['donnee'];
+    }
+    return $valeur;
 }
+
+
+
 
 
 ?>
