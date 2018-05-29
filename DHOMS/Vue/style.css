@@ -62,10 +62,15 @@ section{
 }
 
 footer {
-    display:flex;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:7%;
     grid-row:3;
     overflow: hidden;
     min-height: 20px;
+    max-height: 50px;
 }
 
 footer > #footer {
@@ -405,12 +410,13 @@ input:checked + .curseur.rond.ON_OFF:before {
  */
 
 .box_tableaubord{
+    overflow: auto;
     display:grid;
     background-color: rgba(255, 255, 255, 0.3);
     width: 90%;
     grid-template-rows: repeat(auto-fill, 1fr);
     height: max-content;
-    margin: 20px;
+    margin: 20px 20px 70px 20px;
     padding: 20px;
 }
 
@@ -425,20 +431,9 @@ input:checked + .curseur.rond.ON_OFF:before {
     Affichage des maisons
  */
 
-.maison_tableaubord{
-    display: grid;
-    margin-bottom: 30px;
-    grid-template-columns: 1fr;
-    width: 100%;
-    background-color: rgb(72,72,72);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
-}
-
 #nav_maison{
-    grid-column: 1;
-
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
     justify-self:stretch;
     height: 100%;
     width: 95%;
@@ -449,15 +444,14 @@ input:checked + .curseur.rond.ON_OFF:before {
     justify-self: stretch;
 }
 
-.button_tableau_bord{
-    width: 90%;
-    margin: 10px;
-    padding-top: 70%
-}
-
 /*
     Affichage des pièces
  */
+
+#nav_pieces{
+    display: grid;
+    justify-items: flex-start;
+}
 
 .piece_tableaubord{
     display:grid;
@@ -474,29 +468,64 @@ input:checked + .curseur.rond.ON_OFF:before {
     background-color: rgb(115,180,207);
 }
 
-#nav_pieces{
-    display: flex;
-    flex-direction: column;
-    justify-items: flex-start;
-    align-items: center;
+.button_pieces, .button_global{
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 120px;
+    background-color: rgb(72,72,72);
+    border-color: rgb(142,142,142);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+    font-size: 1.1em;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.05em;
+    font-family: "Century Gothic";
 }
+
+.nom_piece_focused {
+    height: 20px;
+    margin: 10px 5%;
+    padding: 10px;
+    display: grid;
+    width: 90%;
+    background-color: rgb(72,72,72);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+    font-size: 1.1em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.05em;
+    font-family: "Century Gothic";
+}
+
+#global_tableaubord{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
 
 /*
     Affichages des capteurs
  */
 
-.capteur_tableaubord{
-    display: block;
-    margin: 3px;
+#section_capteurs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: max-content;
+    justify-items: flex-start;
 }
 
 .nom_maison{
     font-size: 1.5em;
     text-align: center;
     display:block;
-    padding-top: 15px;
-    cursor: pointer;
     text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.05em;
+    font-family: "Century Gothic";
 }
 
 .nom_piece{
@@ -517,9 +546,20 @@ input:checked + .curseur.rond.ON_OFF:before {
     text-transform: uppercase;
 }
 
+.capteur_tab_bord {
+    min-width: 120px;
+}
+
 .box_nom_maison{
-    display:block;
-    height: 60px;
+    padding: 20px 0px;
+    height: 20px;
+    display: grid;
+    margin-bottom: 30px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    background-color: rgb(72,72,72);
+    border-color: rgb(142,142,142);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
 }
 
 #bouton_ajout_habitation{

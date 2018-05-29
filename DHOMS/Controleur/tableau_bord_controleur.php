@@ -10,7 +10,9 @@ $listeMaison = $maisons->fetchall();
 $arrayMaison = array();
 foreach ($listeMaison as $maison){
     $arrayMaison[] = $maison['ID'];
-};
+}
+
+$IDmaison = $arrayMaison[0];
 
 
 if(isset($_GET['valeur'])){
@@ -20,8 +22,11 @@ if(isset($_GET['valeur'])){
     while($affichage = $valeur->fetch()){
         echo $affichage['nom'];
     }
-};
-
-include "../Vue/tableau_bord_vue.php";
+}
 
 
+require_once "../Vue/tableau_bord_vue.php";
+
+
+
+?>

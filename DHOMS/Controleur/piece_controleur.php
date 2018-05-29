@@ -6,9 +6,8 @@
  * Time: 16:34
  */
 include "../Modele/tableau_bord_modele.php";
-$idmaison = $_GET['valeur'];
-
-$idpiece = getPieces($idmaison);
+$test = $_GET['valeur'];
+$valeur = getPieces($test);
 
 include "../Vue/piece_vue.php";
 
