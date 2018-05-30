@@ -2,10 +2,10 @@
 -- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  ven. 25 mai 2018 à 09:53
+-- Hôte : 127.0.0.1
+-- Généré le :  mer. 30 mai 2018 à 10:11
 -- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  5.6.35
+-- Version de PHP :  7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -117,22 +117,22 @@ CREATE TABLE `controleur` (
 
 INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `niveau_batterie`, `ID_piece`) VALUES
 (1, '0001', 'Température', 'capteur', 'éteint', 100, 1),
-(2, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 1),
-(3, '0001', 'Température', 'capteur', 'Allumé', 100, 2),
-(4, '0001', 'Température', 'capteur', 'Allumé', 100, 3),
-(5, '0001', 'Température', 'capteur', 'Allumé', 100, 5),
-(6, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 3),
-(7, '0001', 'Température', 'capteur', 'Allumé', 100, 4),
-(8, '0003', 'Humidité', 'capteur', 'Allumé', 100, 3),
-(9, '0001', 'Température', 'capteur', 'Allumé', 100, 6),
-(10, '0001', 'Température', 'capteur', 'Allumé', 100, 7),
-(11, '0001', 'Température', 'capteur', 'Allumé', 100, 8),
-(12, '0001', 'Température', 'capteur', 'Allumé', 100, 9),
-(13, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 2),
+(2, '0002', 'Lumière', 'actionneur', 'éteint', 0, 1),
+(3, '0001', 'Température', 'capteur', 'éteint', 100, 2),
+(4, '0001', 'Température', 'capteur', 'allumé', 100, 3),
+(5, '0001', 'Température', 'capteur', 'allumé', 100, 5),
+(6, '0002', 'Lumière', 'actionneur', 'éteint', 0, 3),
+(7, '0001', 'Température', 'capteur', 'allumé', 100, 4),
+(8, '0003', 'Humidité', 'capteur', 'allumé', 100, 3),
+(9, '0001', 'Température', 'capteur', 'allumé', 100, 6),
+(10, '0001', 'Température', 'capteur', 'allumé', 100, 7),
+(11, '0001', 'Température', 'capteur', 'allumé', 100, 8),
+(12, '0001', 'Température', 'capteur', 'allumé', 100, 9),
+(13, '0002', 'Lumière', 'actionneur', 'allumé', 0, 2),
 (14, '0003', 'Humidité', 'capteur', 'éteint', 100, 1),
-(15, '0002', 'Lumière', 'actionneur', 'Éteint', 0, 4),
-(16, '0004', 'Présence', 'capteur', 'Allumé', 100, 1),
-(17, '0005', 'Store', 'actioneur', '100', 0, 1);
+(15, '0002', 'Lumière', 'actionneur', 'éteint', 0, 4),
+(16, '0004', 'Présence', 'capteur', 'allumé', 100, 1),
+(17, '0005', 'Store', 'actioneur', 'éteint', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -142,10 +142,21 @@ INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `nivea
 
 CREATE TABLE `donnee` (
   `ID` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `date` datetime NOT NULL,
   `donnee` text NOT NULL,
   `ID_controleur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `donnee`
+--
+
+INSERT INTO `donnee` (`ID`, `date`, `donnee`, `ID_controleur`) VALUES
+(1, '2018-05-25 12:34:56', '85', 17),
+(2, '2018-05-25 12:10:20', '20', 1),
+(3, '2018-05-25 12:10:22', '80', 17),
+(4, '2018-05-25 12:10:25', '43', 8),
+(5, '2018-05-25 12:12:24', '41', 14);
 
 -- --------------------------------------------------------
 
@@ -306,8 +317,7 @@ CREATE TABLE `personne` (
   `num_fixe` int(10) NOT NULL,
   `num_mobile` int(10) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mot_de_passe` char(60) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `salt` int(11) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
   `forfait` varchar(255) NOT NULL,
   `etat` tinyint(1) NOT NULL,
   `ID_parent` int(11) NOT NULL,
@@ -318,14 +328,9 @@ CREATE TABLE `personne` (
 -- Déchargement des données de la table `personne`
 --
 
-INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `salt`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
-(30, '', '', '', 0, 0, 'abc@a.com', '$2y$10$fyrsviWn/SlM7U6ScQqTgua11upMeM1aI0/31OAtBUEIDMYTlbiGm', 0, '', 0, 0, 0),
-(31, '', '', '', 0, 0, 'paul.duval.rennes@gmail.com', '$2y$10$nzzEoBqG3Tva.kYWGBuHTeEPnpZuvkGRq0B.VqBvUgpX8WPnZk0KC', 0, '', 0, 0, 0),
-(32, '', '', '', 0, 0, 'paulz.duval.rennes@gmail.com', '$2y$10$tlPoyEC/7sd/SMaxOt7viutOOO3KQh5cs1yuqYvE1uujLr8EDVK1.', 0, '', 0, 0, 0),
-(33, '', '', '', 0, 0, 'e@e.com', '$2y$10$jSLnUh8OQQhFuCiBebLPAu3uyGAVEGaVm66761nykKFRJ22l9SIN.', 0, '', 0, 0, 0),
-(34, '', '', '', 0, 0, 'jerem@azert.com', '$2y$10$/YpcI.JVFssIklUlF9OtMOvhqSjnPcLBv9y4Sb5qqj/T2tDWvsAdG', 0, '', 0, 0, 0),
-(35, '', '', '', 0, 0, 'aaa@a.com', '$2y$10$3LINTYbZyMzL0VHHpg7uKuqqoQZWPQF3rh3V6X2/vbRsgal22ZIVu', 0, '', 0, 0, 0),
-(36, '', '', '', 0, 0, 'azertyuiop@azertyuiop.com', '$2y$10$FDSLnbWtmC6ZEa4n5s1Lc.SntjhCD5OOF9q0auLqmkfdoiFaym9Nu', 0, '', 0, 0, 0);
+INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
+(1, 'HUGO', 'Victor', 'Primaire', 211223344, 611223344, 'victorhugo@gmail.com', '$2y$10$kcnfXgJn.4xk0fEL.zYwhOskd6VjM6pssbFoB5CfEsYJKqu1wswAa', '', 0, 0, 1),
+(2, 'BAUDELAIRE', 'Charles', 'Primaire', 100112233, 600112233, 'charlesbaudelaire@gmail.com', '$77fg$WfGh$y55f12vHcMzpssS$45fD7g$CcKhSm475ErDt$', '', 0, 0, 3);
 
 -- --------------------------------------------------------
 
@@ -583,7 +588,7 @@ ALTER TABLE `controleur`
 -- AUTO_INCREMENT pour la table `donnee`
 --
 ALTER TABLE `donnee`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `droit`
@@ -649,7 +654,7 @@ ALTER TABLE `pays`
 -- AUTO_INCREMENT pour la table `personne`
 --
 ALTER TABLE `personne`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `piece`
