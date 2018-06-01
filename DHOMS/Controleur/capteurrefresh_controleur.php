@@ -8,11 +8,13 @@
 
 include '../Modele/tableau_bord_modele.php';
 
-if(isset($_POST['valeur'])){
-    $value = getValuesCapteur($_POST['valeur']);
-}
+$value = getValuesCapteur($_POST['valeur']);
+$categorie = getCategorieCapteur($_POST['valeur']);
 
+if($categorie=="Température"){
+    echo $value;
+?>°C<?php }
 
-echo $value;
-
-?>
+if($categorie=="Humidité"){
+    echo $value;
+?>%<?php } ?>

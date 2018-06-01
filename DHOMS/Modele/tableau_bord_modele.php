@@ -36,7 +36,36 @@ function getValuesCapteur($id_capteur){
 INNER JOIN (SELECT donnee.ID_controleur, MAX(donnee.date) 
 AS maxdate FROM donnee WHERE donnee.ID_controleur = '$id_capteur' 
 GROUP BY donnee.ID_controleur) last_d ON d.ID_controleur = '$id_capteur' AND d.date = last_d.maxdate");
-    return $listeValeursCapteurs;
+
+    while ($liste = $listeValeursCapteurs -> fetch()){
+        $a = $liste['donnee'];
+        return $a;
+    }
+}
+
+function getCategorieCapteur($id_controleur){
+    global $bdd;
+    $categorie = $bdd->query("SELECT categorie FROM controleur WHERE controleur.ID ='$id_controleur'");
+    while ($liste = $categorie -> fetch()){
+        $a = $liste['categorie'];
+        return $a;
+    }
+}
+
+
+
+function getValuesProgrammationCapteur($id_capteur){
+    global $bdd;
+    $listeValeursProgrammationCapteurs = $bdd->query("SELECT * FROM programmation p 
+INNER JOIN (SELECT programmation.ID_controleur, MAX(programmation.date_execution) 
+AS maxdate FROM programmation WHERE programmation.ID_controleur = '$id_capteur' 
+GROUP BY programmation.ID_controleur) last_p ON p.ID_controleur = '$id_capteur' AND p.date_execution = last_p.maxdate");
+
+    while ($liste = $listeValeursProgrammationCapteurs -> fetch()){
+        $a = $liste['donnee'];
+        return $a;
+    }
+
 }
 
 
