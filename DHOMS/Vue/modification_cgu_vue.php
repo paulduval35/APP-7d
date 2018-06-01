@@ -21,25 +21,23 @@
 
     <section>
         <?php foreach($texte_cgu as $row):?>
-            <?php echo $row['texte_cgu']?>
+            <?php $affiche = $row['texte_cgu'];?>
         <?php endforeach;?>
 
-        <div>
+        <form id ="form_habitation" action="../Controleur/cgu_envoie_modif_controleur.php" method="POST" id="p_habitation">
+            <h3 id="ajouter_habitation"> MOFIFIER LES CGU : </h3><br>
+            <ul class = "flex-outer">
+                <li>
+                    <?php foreach($texte_cgu as $row):?>
+                         <textarea rows='25' lines='100' input type='text' name='texte_cgu' class='modif_cgu' > <?php echo"$affiche"?></textarea>
+                    <?php endforeach;?>
+                </li>
 
-        <form>
-            <div>
-                <label for="cgu"><h1>Modification des CGU :</h1></label>
-                <input type="text" id="uname" name="name"
-                       placeholder= "<?php foreach($texte_cgu as $row):?>
-                                        <?php echo $row['texte_cgu']?>
-                                    <?php endforeach;?>">
-            </div>
-            <div>
-                <button>Envoyer</button>
-            </div>
+                <li>
+                    <button type="submit">Enregistrer les modifications</button>
+                </li>
+            </ul>
         </form>
-</div>
-
 
     </section>
 
