@@ -117,7 +117,6 @@ include "../Controleur/url.php";
 
 <script>changeValuePieceVue(1);
     changeValueGlobal(1);
-
 </script>
 
         </section>

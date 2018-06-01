@@ -344,10 +344,12 @@ input:checked + .curseur.rond.ON_OFF:before {
 
 .texte_cgu{
     color: #444444;
-    font-size: 0.5em;
+    font-size: 0.6em;
+    margin: 0;
+    margin-bottom: 7px;
     padding: 4px;
     text-align: justify;
-    margin: 15px;
+    margin: 20px;
 }
 
 /*
@@ -569,8 +571,21 @@ input:checked + .curseur.rond.ON_OFF:before {
 }
 
 /*
-    Slider Température
+    Température
  */
+
+.selecteur_a_remonter {
+    top : 80%;
+}
+
+.valeur_capteur_actuelle {
+    position: relative ;
+    bottom: 30px;
+    font-size: 1.5em;
+    margin : 0px 30%;
+    background-color: #444444;
+    opacity: 0.8;
+}
 
 .slider_temperature, .slider_store {
     -webkit-appearance: none;

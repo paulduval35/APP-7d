@@ -47,7 +47,7 @@
                     <input id="mdpconfirm" type="password" name="mdpconfirm" required placeholder="ENTREZ VOTRE MOT DE PASSE">
 
                 <li class="checkboxclass">
-                    <input id = "rester_connecter" type="checkbox" name="rester_connecte" value="RC">Rester connecter
+                    <input id = "rester_connecter" type="checkbox" name="rester_connecte" value="RC">Rester connecté
                 </li>
 
                 <li>
