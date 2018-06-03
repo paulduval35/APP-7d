@@ -8,7 +8,7 @@
 <div class="nom_capteur tab_bord" id="nom_capteur "> <?php echo $capteur['categorie'];?> </div>
 
 <div id = "icone_capteur_tableaubord" class = "icone_capteur_tableaubord_<?php echo $capteur['ID']?>" >
-    <div class="selecteur"><img class="icone_capteur" src="../Vue/image/capteurs/<?php echo $capteur['categorie']?>.png" alt="icone <?php echo $alt_lum;?>"  >
+    <div class="selecteur"><img class="icone_capteur" src="../Vue/image/capteurs/<?php echo $capteur['categorie']?>.png" alt="icone Température"  >
         <div class="valeur_capteur_actuelle" id="<?php echo $capteur['ID']?>"></div>
         <div class="selecteur-content selecteur_a_remonter">
             <div class="slidecontainer">
@@ -68,15 +68,15 @@
 
                                                 <?php if($capteur['categorie']=="Store"){?>
                                                 <div class="nom_capteur tab_bord" id="nom_capteur "> <?php echo $capteur['categorie'];?> </div>
-                                                <div id = "icone_capteur_tableaubord" class = "icone_capteur_tableaubord_<?php echo $capteur['ID']?>" >
-                                                    <div class="selecteur"><img class="icone_capteur" src="../Vue/image/capteurs/<?php echo $capteur['categorie']?>.png" alt="icone <?php echo $alt_lum;?>"  >
-                                                        <div class="selecteur-content ON_OFF">
-                                                            <div class="slidecontainer">
-                                                                <input type="range" min="0" max="100" value="<?php echo $affichageDonnees['donnee']?>" class="slider_store" id="slider_<?php echo $capteur['ID']?>"></div>
-                                                            <span id="humidité">Ouvert à <span id="val_slider_<?php echo $capteur['ID']?>"><?php echo $affichageDonnees['donnee']?>%</span></span>
+                                                    <div id = "icone_capteur_tableaubord" class = "icone_capteur_tableaubord_<?php echo $capteur['ID']?>" >
+                                                        <div class="selecteur"><img class="icone_capteur" src="../Vue/image/capteurs/<?php echo $capteur['categorie']?>.png" alt="icone Température"  >
+                                                            <div class="valeur_capteur_actuelle" id="<?php echo $capteur['ID']?>"></div>
+                                                            <div class="selecteur-content selecteur_a_remonter">
+                                                                <div class="slidecontainer">
+                                                                    <input type="range" min="5" max="35" value="18" class="slider_temperature" id="slider_<?php echo $capteur['ID']?>">
+                                                                </div><span id="humidité"><span id="<?php echo $capteur['ID']?>"></span></div>
                                                         </div>
                                                     </div>
-                                                </div>
 
                                                                 <?php    }    ?>
 

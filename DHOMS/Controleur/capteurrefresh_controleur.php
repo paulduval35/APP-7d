@@ -15,6 +15,6 @@ if($categorie=="Température"){
     echo $value;
 ?>°C<?php }
 
-if($categorie=="Humidité"){
+if($categorie=="Humidité" or $categorie=="Store"){
     echo $value;
 ?>%<?php } ?>
