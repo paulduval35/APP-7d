@@ -1,4 +1,4 @@
-/*
+ /*
     Squelette
  */
 
@@ -125,11 +125,12 @@ h2 {
     text-align: center;
 }
 
-h3 {
+h3{
     color: #999;
     font-size: 1.5em;
     text-align: center;
 }
+
 
 p {
     line-height: 21px;
@@ -173,10 +174,11 @@ b{
     min-width: 150px;
 }
 
-.flex-outer .message_contact{
+.flex-outer .message_contact .nvtitre_faq{
     min-width: 95%;
     min-height: 15px;
 }
+
 
 .flex-outer li button{
     padding: 8px 16px;
@@ -223,6 +225,28 @@ b{
     font-size : 90%;
     text-align: center;
 }
+
+ /*
+     Gestion des pannes
+ */
+
+ #box_panne_message {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     font-size : 16px;
+     padding : 20px;
+     justify-content: center;
+     align-items: flex-start;
+     background-color: rgba(255, 255, 255, 0.3);
+     text-align: right;
+ }
+
+ #panne_message {
+     justify-content: center;
+     width: 100%;
+ }
 
 /*
     Habitation
