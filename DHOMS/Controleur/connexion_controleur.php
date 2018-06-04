@@ -23,7 +23,7 @@ $mdpoublie=isset($_POST['mdpoublie']) ? $_POST['mdpoublie'] : NULL;
 $mdp = isset($_POST['mdp']) ? $_POST['mdp'] : NULL;
 $email = isset($_POST['email']) ? $_POST['email'] : NULL;
 
-var_dump($mdpoublie);
+//var_dump($mdpoublie);
 
 if(isset($bouton))
 {
@@ -47,18 +47,6 @@ $subject='Mot de passe oublié DHOMS';
 $message='Changement du mot de passe' ?><a href="../Vue/changement_mdp.php">Changer votre mot de passe</a><?php;
 mail($email,$subject,$message);
 
-/*elseif(isset($_POST['go']) AND $_POST['go'] == 'Mot de passe oublié')
-{
-    //echo "<script type=\"text/javascript\"> alert(\"Un mail vous a été envoyé\"); </script>";
-    $email = isset($_POST['email']) ? $_POST['email'] : NULL;
-    $subject='Mot de passe oublié DHOMS';
-    $message='Changement du mot de passe' ?><a href="../Vue/changement_mdp.php">Changer votre mot de passe</a><?php;
-    mail($email,$subject,$message);
-}
-
-else {
-    include '../Vue/connexion_inscription_vue.php';
-}*/
 
 
 ?>
