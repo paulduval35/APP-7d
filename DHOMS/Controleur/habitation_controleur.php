@@ -27,19 +27,19 @@ $reponse = $bdd->query('SELECT * FROM habitation');
 
 
 // Initialiation des variables
-$ID="";
+
 $ID_adresse="";
 $ID_habitation="";
 $ID_pays="";
 $ID_ville="";
+$ID_appartenance_habitation="";
+$ID_personne="";
 
 
 $nom_habitation =  $_POST['nom_habitation'];
 $surface = $_POST['surface'];
 $num_rue = $_POST['num_rue'];
 $rue = $_POST['rue'];
-$etage = $_POST['etage'];
-$num_appartement = $_POST['num_appartement'];
 $code_postal = $_POST['code_postal'];
 $pays = $_POST['pays'];
 $ville = $_POST['ville'];
@@ -47,11 +47,8 @@ $ville = $_POST['ville'];
 
 //on envoie les données grâce au modele
 
-if(isset($_POST['CGU']))
-    {
-        include "../Modele/habitation_model.php";
+        include "../Modele/habitation_modele.php";
         include "../Vue/validation_habitation.php";
-    }
 
 
 
