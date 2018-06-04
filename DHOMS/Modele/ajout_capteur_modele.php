@@ -10,24 +10,15 @@ function insertCapteur($value,$piece){
 $query->execute();
 $row = $query->fetch();
 
-$ID=$row['ID'];
 $type=$row['type'];
 $categorie=$row['categorie'];
 echo $type;
 echo $categorie;
-echo $ID;
+
+$query = $bdd->prepare ( "INSERT INTO `controleur` (`categorie`, `type`, `ID_piece`) VALUES (?,?,?)") ; 
+$query->execute([$categorie, $type, $piece]);
 
 
-   
-  // $query = $bdd->prepare("insert $value INTO `controleur` WHERE `capteur`.`reference` = '$s'");
- $val=[   'ID' => $ID,
-    'type' => $type,
-    'categorie' => $categorie,];
-  $query = $bdd->prepare ( "INSERT INTO `controleur` (`categorie`, `type`, `ID_piece`) VALUES (:categorie, :type, '$piece')") ; 
-$result = $query->execute();
-
-echo $result['ID_piece'];
-return $result;
 }
 
 
