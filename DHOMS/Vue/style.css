@@ -800,7 +800,7 @@ section::-webkit-scrollbar-track{
     display: block;
 }
 
-.selecteur:hover .selecteur-content > .boutton_choix:hover{
+.selecteur:hover .selecteur-content > .bouton_choix:hover{
     opacity: 0.5;
     background-color: #444444;
 }
@@ -810,18 +810,22 @@ section::-webkit-scrollbar-track{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.boutton_choix, #humidité {
+.bouton_choix, .bouton_capteur {
     background-color: #96c0d1;
-    width: 95%;
-    border: none;
+    width: 85%;
+    border-color: #96c0d1;
     color: white;
+    margin-bottom: 5%;
     padding: 7% 7%;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     cursor: pointer;
+    display: inline-block;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: "Century Gothic";
 }
 
 #humidité{
