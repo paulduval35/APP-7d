@@ -92,35 +92,6 @@
                 </li>
 
                 <li>
-                    <label>
-                        Appartement ?
-                    </label>
-                    <div class="position_option">
-                        <label class="switch habitation">
-                            <input type="checkbox" class="selection_appart" onclick="afficher('a_cacher')">
-                            <span class="curseur rond"></span>
-                        </label>
-                    </div>
-
-                </li>
-                <div id="a_cacher" class="a_cacher">
-                <li>
-                    <label>
-                        Etage
-                    </label>
-
-                    <input id = "etage" name = "etage" type="text" required placeholder="ETAGE">
-                </li>
-
-                <li>
-                    <label>
-                        Numéro d'appartement
-                    </label>
-                    <input id="num_appartement" name ="num_appartement" type="text" required placeholder="NUMERO D'APPARTEMENT">
-                </li>
-                </div>
-
-                <li>
                     <button type="submit">Ajouter</button>
                 </li>
 

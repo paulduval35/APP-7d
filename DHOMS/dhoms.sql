@@ -2,10 +2,10 @@
 -- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  ven. 25 mai 2018 à 09:53
+-- Hôte : 127.0.0.1
+-- Généré le :  lun. 04 juin 2018 à 01:27
 -- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  5.6.35
+-- Version de PHP :  7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,9 +44,9 @@ CREATE TABLE `adresse` (
 --
 
 INSERT INTO `adresse` (`ID`, `num_rue`, `rue`, `etage`, `num_appartement`, `code_postal`, `ID_ville`, `ID_pays`) VALUES
-(1, 1, 'rue Victor Hugo', 2, 4, 75005, 1, 1),
-(2, 2, 'impasse Victor Hugo', 0, 0, 85330, 2, 1),
-(3, 15, 'boulevard Baudelaire', 1, 3, 75006, 1, 1);
+(1, 1, 'rue des Sith', 2, 4, 75005, 1, 1),
+(2, 2, 'impasse de l\'Empire', 0, 0, 85330, 2, 1),
+(3, 15, 'boulevard Chewbacca', 1, 3, 75006, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -142,10 +142,29 @@ INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `nivea
 
 CREATE TABLE `donnee` (
   `ID` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `donnee` text NOT NULL,
+  `date` datetime NOT NULL,
+  `donnee` int(11) NOT NULL,
   `ID_controleur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `donnee`
+--
+
+INSERT INTO `donnee` (`ID`, `date`, `donnee`, `ID_controleur`) VALUES
+(1, '2018-05-25 12:10:20', 20, 1),
+(2, '2018-06-02 14:24:25', 18, 1),
+(3, '2018-06-02 10:23:37', 18, 3),
+(4, '2018-06-01 13:24:40', 19, 4),
+(5, '2018-06-01 08:20:36', 19, 5),
+(6, '2018-06-02 15:23:22', 17, 7),
+(7, '2018-06-02 12:19:18', 42, 8),
+(8, '2018-06-04 19:15:20', 20, 9),
+(9, '2018-06-02 14:23:17', 18, 10),
+(10, '2018-06-04 20:17:17', 19, 11),
+(11, '2018-06-02 16:20:25', 19, 12),
+(12, '2018-06-02 13:10:26', 44, 14),
+(13, '2018-06-01 18:15:17', 85, 17);
 
 -- --------------------------------------------------------
 
@@ -214,9 +233,9 @@ CREATE TABLE `habitation` (
 --
 
 INSERT INTO `habitation` (`ID`, `nom`, `surface`, `ID_adresse`) VALUES
-(1, 'Appartement HUGO', 275, 1),
-(2, 'Villa campagne HUGO', 540, 2),
-(3, 'Appartement BAUDELAIRE', 150, 3);
+(1, 'Appartement SKYWALKER', 275, 1),
+(2, 'Villa campagne SKYWALKER', 540, 2),
+(3, 'Appartement SOLO', 150, 3);
 
 -- --------------------------------------------------------
 
@@ -278,14 +297,14 @@ CREATE TABLE `panne` (
 
 CREATE TABLE `pays` (
   `ID` int(11) NOT NULL,
-  `pays` varchar(255) NOT NULL
+  `nom` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `pays`
 --
 
-INSERT INTO `pays` (`ID`, `pays`) VALUES
+INSERT INTO `pays` (`ID`, `nom`) VALUES
 (1, 'FRANCE'),
 (2, 'BELGIQUE'),
 (3, 'ALLEMAGNE'),
@@ -306,8 +325,7 @@ CREATE TABLE `personne` (
   `num_fixe` int(10) NOT NULL,
   `num_mobile` int(10) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mot_de_passe` char(60) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `salt` int(11) NOT NULL,
+  `mot_de_passe` varchar(255) NOT NULL,
   `forfait` varchar(255) NOT NULL,
   `etat` tinyint(1) NOT NULL,
   `ID_parent` int(11) NOT NULL,
@@ -318,14 +336,9 @@ CREATE TABLE `personne` (
 -- Déchargement des données de la table `personne`
 --
 
-INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `salt`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
-(30, '', '', '', 0, 0, 'abc@a.com', '$2y$10$fyrsviWn/SlM7U6ScQqTgua11upMeM1aI0/31OAtBUEIDMYTlbiGm', 0, '', 0, 0, 0),
-(31, '', '', '', 0, 0, 'paul.duval.rennes@gmail.com', '$2y$10$nzzEoBqG3Tva.kYWGBuHTeEPnpZuvkGRq0B.VqBvUgpX8WPnZk0KC', 0, '', 0, 0, 0),
-(32, '', '', '', 0, 0, 'paulz.duval.rennes@gmail.com', '$2y$10$tlPoyEC/7sd/SMaxOt7viutOOO3KQh5cs1yuqYvE1uujLr8EDVK1.', 0, '', 0, 0, 0),
-(33, '', '', '', 0, 0, 'e@e.com', '$2y$10$jSLnUh8OQQhFuCiBebLPAu3uyGAVEGaVm66761nykKFRJ22l9SIN.', 0, '', 0, 0, 0),
-(34, '', '', '', 0, 0, 'jerem@azert.com', '$2y$10$/YpcI.JVFssIklUlF9OtMOvhqSjnPcLBv9y4Sb5qqj/T2tDWvsAdG', 0, '', 0, 0, 0),
-(35, '', '', '', 0, 0, 'aaa@a.com', '$2y$10$3LINTYbZyMzL0VHHpg7uKuqqoQZWPQF3rh3V6X2/vbRsgal22ZIVu', 0, '', 0, 0, 0),
-(36, '', '', '', 0, 0, 'azertyuiop@azertyuiop.com', '$2y$10$FDSLnbWtmC6ZEa4n5s1Lc.SntjhCD5OOF9q0auLqmkfdoiFaym9Nu', 0, '', 0, 0, 0);
+INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
+(1, 'SKYWALKER', 'Anakin', 'Primaire', 211223344, 611223344, 'anakinskywalker@gmail.com', 'anakinskywalker', '', 0, 0, 1),
+(2, 'SOLO', 'Han', 'Primaire', 100112233, 600112233, 'hansolo@gmail.com', 'hansolo', '', 0, 0, 3);
 
 -- --------------------------------------------------------
 
@@ -559,7 +572,7 @@ ALTER TABLE `adresse`
 -- AUTO_INCREMENT pour la table `appartenance_maison`
 --
 ALTER TABLE `appartenance_maison`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `cgu`
@@ -583,7 +596,7 @@ ALTER TABLE `controleur`
 -- AUTO_INCREMENT pour la table `donnee`
 --
 ALTER TABLE `donnee`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pour la table `droit`
@@ -613,7 +626,7 @@ ALTER TABLE `gestionnaire_immeuble`
 -- AUTO_INCREMENT pour la table `habitation`
 --
 ALTER TABLE `habitation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `lien_control_program`
@@ -649,7 +662,7 @@ ALTER TABLE `pays`
 -- AUTO_INCREMENT pour la table `personne`
 --
 ALTER TABLE `personne`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `piece`

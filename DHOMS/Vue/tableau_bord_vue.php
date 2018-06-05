@@ -29,6 +29,19 @@ include "../Controleur/url.php";
         }
 
 
+        function changeValueGlobal(value) {
+            $.ajax({
+                type: 'GET',
+                url: '../Controleur/capteur_controleur.php',
+                data:{valeur: value},
+                success: function(response){
+                    $('#section_capteurs').html(response);
+                }
+            })
+        }
+
+
+
         function changeValueCapteursVue(value) {
             $.ajax({
                 type: 'GET',
@@ -59,49 +72,52 @@ include "../Controleur/url.php";
             <?php include "header.php"?>
         </header>
 
-        <section id = "section_tableau_bord">
+                    <div id="box_tableaubord" class = "box_tableaubord" >
+                        <h3 id="titre_tableau_de_bord">Tableau de bord</h3>
+                            <div>
+                                <div id = "maison_tableaubord <?php echo $IDmaison?>" class="box_nom_maison" value = "<?php echo $IDmaison?>">
+                                    <span class="nom_maison"> <?php echo getNomMaison($IDmaison);?> </span>
+                                </div>
+                            </div>
+                        <div id = "global_tableaubord">
+                            <div>
+                                <button class = "button_global" onclick = "changeValueGlobal(1)">
+                                    Global
+                                </button>
+                            </div>
+                            <div class="nom_piece_focused">
+                                Global
+                            </div>
+                        </div>
+                        <div id = "nav_maison">
 
-            <div id = "nav_maison">
+                            <div id = "nav_pieces">
 
-                <?php foreach ($arrayMaison as $IDmaison):?>
-                    <div class="contenu_nav_maison">
-                        <button class = "button_tableau_bord" value = "<?php echo $IDmaison?>" onclick="changeValuePieceVue(this.value)">
-                        <?php echo getNomMaison($IDmaison);?>
-                        </button>
+                            </div>
+
+                            <div id = "section_capteurs">
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="flex-outer" id="bouton_ajout_habitation">
+                            <li >
+                                <a href="../Vue/ajout_capteur.php" class="ajout_habitation"><button >Ajouter un capteur</button></a>
+                            </li>
+                        </div>
+                        <div class="flex-outer" id="bouton_ajout_habitation">
+                            <li >
+                                <a href="../Vue/habitation.php" class="ajout_habitation"><button >Ajouter une habitation</button></a>
+                            </li>
+                        </div>
                     </div>
-                <?php endforeach ?>
 
 
-
-            </div>
-
-            <div id = "nav_pieces">
-
-
-
-            </div>
-
-            <div id = "section_capteurs">
-
-
-
-            </div>
-
-            <!--<div id="box_tableaubord" class = "box_tableaubord" >
-
-
-                <div class="flex-outer" id="bouton_ajout_habitation">
-                    <li >
-                        <a href="../Vue/ajout_capteur.php" class="ajout_habitation"><button >Ajouter un capteur</button></a>
-                    </li>
-                </div>
-                <div class="flex-outer" id="bouton_ajout_habitation">
-                    <li >
-                        <a href="../Vue/habitation.php" class="ajout_habitation"><button >Ajouter une habitation</button></a>
-                    </li>
-                </div>
-            </div>
-            -->
+<script>changeValuePieceVue(1);
+    changeValueGlobal(1);
+</script>
 
         </section>
 

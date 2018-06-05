@@ -1,12 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: paulduval
- * Date: 18/05/2018
- * Time: 11:57
- */
 
-$DHOMS_URL="http://localhost/DHOMS/";
-$DHOMS_racine = "/Applications/XAMPP/xamppfiles/htdocs/DHOMS";
+
+$DHOMS_URL="http://localhost:63342/site_app/APP-7d/DHOMS";
+$DHOMS_RACINE="D:/Work/APP/info/site_app/APP-7d/DHOMS";
+
 
 ?>
