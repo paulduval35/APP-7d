@@ -376,6 +376,11 @@ input:checked + .curseur.rond.ON_OFF:before {
     margin: 20px;
 }
 
+.modif_cgu_area, #modif_cgu_area {
+    margin: 0px;
+    width: 900px;
+}
+
 /*
     Mentions Légales
  */
