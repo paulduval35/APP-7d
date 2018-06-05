@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "../Controleur/url.php";
 ?>
 <!DOCTYPE html>
@@ -71,6 +71,8 @@ include "../Controleur/url.php";
         <header>
             <?php include "header.php"?>
         </header>
+
+        <section>
 
                     <div id="box_tableaubord" class = "box_tableaubord" >
                         <h3 id="titre_tableau_de_bord">Tableau de bord</h3>
