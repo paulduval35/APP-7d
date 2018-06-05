@@ -34,22 +34,23 @@ function modifier_maison_tableaubord(id)
 }
 
 
-var slider_temperature = document.getElementById("slider_temperature");
-var output_temperature = document.getElementById("val_slider_temperature");
+function slider(ID) {
+
+    var slider_temperature = document.getElementById("slider_"+ID);
+    var output_temperature = document.getElementById("val_"+ID);
+    output_temperature.innerHTML = slider_temperature.value; // Affiche la valeur par défaut
+
+// Update la valeur du slider à chaque fois qu'on le bouge
+    slider_temperature.oninput = function () {
+        output_temperature.innerHTML = this.value;
+    }
+}
+
+var slider_temperature = document.getElementById("slider_1");
+var output_temperature = document.getElementById("val_1");
 output_temperature.innerHTML = slider_temperature.value; // Affiche la valeur par défaut
 
 // Update la valeur du slider à chaque fois qu'on le bouge
-slider_temperature.oninput = function() {
+slider_temperature.oninput = function () {
     output_temperature.innerHTML = this.value;
 }
-
-
-var slider_store = document.getElementById("slider_store");
-var output_store = document.getElementById("val_slider_store");
-output_store.innerHTML = slider_store.value; // Affiche la valeur par défaut
-
-// Update la valeur du slider à chaque fois qu'on le bouge
-slider_store.oninput = function() {
-    output_store.innerHTML = this.value;
-}
-
