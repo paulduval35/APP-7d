@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 include "../Controleur/url.php";
 ?>
 <!DOCTYPE html>

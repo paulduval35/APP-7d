@@ -1,14 +1,14 @@
-    <?php
+<?php
 /**
  * Created by PhpStorm.
  * User: paulduval
  * Date: 09/05/2018
  * Time: 11:52
  */
-
+session_start();
 if(!empty($_POST['reste_connecte']))
 {
-    session_start();
+
 }
 
 include "url.php";
@@ -35,9 +35,10 @@ if(isset($bouton))
 
     if (password_verify($mdp,getConnexion($email))===true)
     {
-        include "../Vue/espace_client_connecte_vue.php";
+        $_SESSION['ID'] = getID($email);
+        header('Location: ../Controleur/tableau_bord_controleur.php ');
     } else {
-        include "../Vue/connexion_inscription_vue.php";
+        header('Location: ../Vue/connexion_inscription_vue.php');
     }
 }
 

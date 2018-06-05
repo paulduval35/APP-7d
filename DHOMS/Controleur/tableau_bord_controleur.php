@@ -1,28 +1,36 @@
 <?php
-
+session_start();
 include "../Modele/tableau_bord_modele.php";
 
-$maisons = getMaisons(1);
-$listeMaison = $maisons->fetchall();
+
+if (isset($_SESSION['ID'])) {
 
 
-
-$arrayMaison = array();
-foreach ($listeMaison as $maison){
-    $arrayMaison[] = $maison['ID'];
-};
-$IDmaison = $arrayMaison[0];
+    $maisons = getMaisons($_SESSION['ID']);
+    $listeMaison = $maisons->fetchall();
 
 
-if(isset($_GET['valeur'])){
-    $test = $_GET['valeur'];
-    $valeur = getPieces($test);
+    $arrayMaison = array();
+    foreach ($listeMaison as $maison) {
+        $arrayMaison[] = $maison['ID'];
+    };
 
-    while($affichage = $valeur->fetch()){
-        echo $affichage['nom'];
-    }
-};
-
-include "../Vue/tableau_bord_vue.php";
+    $IDmaison = $arrayMaison[0];
 
 
+    if (isset($_GET['valeur'])) {
+        $test = $_GET['valeur'];
+        $valeur = getPieces($test);
+
+        while ($affichage = $valeur->fetch()) {
+            echo $affichage['nom'];
+        }
+    };
+
+    include "../Vue/tableau_bord_vue.php";
+
+}
+
+else{
+    header('Location: http://localhost:63342/site_app/APP-7d/DHOMS/Vue/connexion_inscription_vue.php');
+}

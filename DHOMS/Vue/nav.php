@@ -8,4 +8,6 @@
 <a href="<?php echo $DHOMS_URL; ?>/Controleur/tableau_bord_controleur.php"><img src="<?php echo $DHOMS_URL;?>/Vue/image/accueil/espaceclient.png" alt="espaceclient"> </a>
 <a href="<?php echo $DHOMS_URL; ?>/Vue/faq.php"><img src="<?php echo $DHOMS_URL;?>/Vue/image/accueil/faq.png" alt="faq"> </a>
 <a href="<?php echo $DHOMS_URL; ?>/Vue/contact_vue.php"><img src="<?php echo $DHOMS_URL;?>/Vue/image/accueil/contact.png" alt="contact"> </a>
-
+<?php if(isset($_SESSION['ID'])){
+    echo "<a href = '../Controleur/logout.php'> Se déconnecter </a>";
+}?>

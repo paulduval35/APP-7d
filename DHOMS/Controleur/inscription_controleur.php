@@ -8,6 +8,7 @@
 
 include "../Modele/connexion_inscription_modele.php";
 
+
 //Initialisation des variables
 
 $email="";
@@ -42,7 +43,8 @@ if (isset($_POST['CGU']))
                     } else {
                         $mot_de_passe = password_hash($mdp, PASSWORD_BCRYPT);
                         sendData($email,$mot_de_passe);
-                        include "tableau_bord_controleur.php";
+                        $_SESSION['ID']=getID($email);
+                        header('Location: http://localhost:63342/site_app/APP-7d/DHOMS/tableau_bord_controleur.php');
                     }
                 }
 
