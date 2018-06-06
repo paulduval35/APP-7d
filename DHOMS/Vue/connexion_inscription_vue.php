@@ -44,7 +44,7 @@
                 </li>
 
                 <li class="checkboxclass">
-                    <a href="../Vue/changement_mdp.php"><input type="button" name="mdpoublie"/>Mot de passe oublié</a>
+                    <a href="../Vue/changement_mdp.php">Mot de passe oublié</a>
                 </li>
                 <li class="checkboxclass">
                     <input id = "rester_connecter" type="checkbox" name="rester_connecte" value="RC">Rester connecter

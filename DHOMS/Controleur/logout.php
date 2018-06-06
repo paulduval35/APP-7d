@@ -5,6 +5,8 @@
  * Date: 04/06/2018
  * Time: 11:45
  */
+include "url.php";
 session_start();
 session_destroy();
-header('Location: http://localhost:63342/site_app/APP-7d/DHOMS/Vue/connexion_inscription_vue.php');
+$url = $DHOMS_URL."/Vue/connexion_inscription_vue.php";
+header('Location:'.$url);

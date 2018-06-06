@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by IntelliJ IDEA.
  * User: epida
@@ -7,6 +8,7 @@
  */
 
 include "../Modele/connexion_inscription_modele.php";
+include "url.php";
 
 
 //Initialisation des variables
@@ -44,7 +46,8 @@ if (isset($_POST['CGU']))
                         $mot_de_passe = password_hash($mdp, PASSWORD_BCRYPT);
                         sendData($email,$mot_de_passe);
                         $_SESSION['ID']=getID($email);
-                        header('Location: http://localhost:63342/site_app/APP-7d/DHOMS/tableau_bord_controleur.php');
+                        $url = $DHOMS_URL."/Controleur/tableau_bord_controleur.php";
+                        header('Location:'.$url);
                     }
                 }
 

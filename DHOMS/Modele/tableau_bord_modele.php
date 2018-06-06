@@ -1,6 +1,7 @@
 <?php
 
 include "connect_database_modele.php";
+include "../Controleur/url.php";
 
 function getMaisons($ID_personne_connecte){
     global $bdd;

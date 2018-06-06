@@ -15,20 +15,27 @@ if (isset($_SESSION['ID'])) {
         $arrayMaison[] = $maison['ID'];
     };
 
-    $IDmaison = $arrayMaison[0];
+    $lenArray = count($arrayMaison);
+
+    if($lenArray > 0) {
+        $IDmaison = $arrayMaison[0];
 
 
-    if (isset($_GET['valeur'])) {
-        $test = $_GET['valeur'];
-        $valeur = getPieces($test);
+        if (isset($_GET['valeur'])) {
+            $test = $_GET['valeur'];
+            $valeur = getPieces($test);
 
-        while ($affichage = $valeur->fetch()) {
-            echo $affichage['nom'];
-        }
-    };
+            while ($affichage = $valeur->fetch()) {
+                echo $affichage['nom'];
+            }
+        };
 
-    include "../Vue/tableau_bord_vue.php";
+        include "../Vue/tableau_bord_vue.php";
+    }
 
+    else{
+        header('Location:'.$DHOMS_URL."/Vue/habitation.php");
+    }
 }
 
 else{
