@@ -10,9 +10,10 @@
     <div class="selecteur"><img class="icone_capteur" src="../Vue/image/capteurs/<?php echo $capteur['categorie']?>.png" alt="icone Température"  >
         <div class="valeur_capteur_actuelle" id="<?php echo $capteur['ID']?>"></div>
         <div class="selecteur-content selecteur_a_remonter">
-            <div class="slidecontainer">
-                <input type="range" min="5" max="35" value="18" class="slider_temperature" id="slider_<?php echo $capteur['ID']?>" onfocus="slider(<?php echo $capteur['ID']?>)">
-            <button class="bouton_capteur"><span id="val_<?php echo $capteur['ID']?>"></span> °C</button></div></div>
+            <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/envoi_donnee_capteur_controleur.php">
+                <input type="hidden" name="ID_capteur" value="<?php echo $capteur['ID']?>">
+                <input type="range" min="5" max="35" value="18" name = "valeur_prog" class="slider_temperature" id="slider_<?php echo $capteur['ID']?>" onfocus="slider(<?php echo $capteur['ID']?>)">
+            <button class="bouton_capteur"><span id="val_<?php echo $capteur['ID']?>"></span> °C</button></form></div>
     </div>
 </div>
             <?php    }    ?>
@@ -124,7 +125,12 @@
         }
     }
 
+    var form_capteur = document.getElementById('form_capteur');
 
+    form_capteur.addEventListener('submit', function(e) {
+        form_capteur.submit();
+        e.preventDefault();
+    });
 
 </script>
 

@@ -68,5 +68,27 @@ GROUP BY programmation.ID_controleur) last_p ON p.ID_controleur = '$id_capteur' 
 
 }
 
+function postValeurProgrammationControleur($ID_controleur,$valeur_action){ //$ID_personne sera à rajouter
+    global $bdd;
+    $ID_programmation = "";
+    $ID_personne = "1";
+    $date = date("Y-m-d H:i:s");
+    $req = $bdd->prepare('INSERT INTO programmation(ID, valeur_action, date_execution, ID_personne) VALUES(:ID, :valeur_action, :date_execution, :ID_personne)');
+    $req->execute(array(
+        'ID' =>$ID_programmation,
+        'valeur_action' => $valeur_action,
+        'date_execution' => $date,
+        'ID_personne' => $ID_personne,
+    ));
+    $ID_programmation = $bdd->lastInsertId();
+    $ID_lien_control_program = "";
+    $req = $bdd->prepare('INSERT INTO lien_control_program(ID, ID_controleur, ID_programmation) VALUES(:ID, :ID_controleur, :ID_programmation)');
+    $req->execute(array(
+        'ID' => $ID_lien_control_program,
+        'ID_programmation' =>$ID_programmation,
+        'ID_controleur' => $ID_controleur,
+    ));
+}
+
 
 ?>
