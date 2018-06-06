@@ -114,6 +114,18 @@ include "../Controleur/url.php";
                                 <a href="../Vue/habitation.php" class="ajout_habitation"><button >Ajouter une habitation</button></a>
                             </li>
                         </div>
+
+                        <?php
+
+                        if ($_SESSION['statut']="Admin"):?>
+
+                            <div class = "flex-outer" id = "bouton_ajout_habitation">
+                                <li>
+                                    <a href=<?php echo $DHOMS_URL?>/Vue/accueil_admin_vue.php><button>Espace administrateur</button></a>
+                                </li>
+                            </div>
+
+                        <?php endif;?>
                     </div>
 
 

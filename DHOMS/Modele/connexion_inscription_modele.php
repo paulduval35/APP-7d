@@ -81,6 +81,25 @@ function check_pseudo($email)
 }
 
 
+function getStatut($id)
+{
+    include "connect_database_modele.php";
+    $req = $bdd->query("SELECT Statut FROM personne WHERE personne.id = '$id'");
+    while ($a = $req->fetch()) {
+        return $a;
+    }
+}
+
+function setConnected($id){
+    include "connect_database_modele.php";
+    $req = $bdd->query("INSERT INTO personneconnecte (id_personne) VALUES ('$id') ");
+}
+
+function setDisconnected($id){
+    include "connect_database_modele.php";
+    $req = $bdd->query("DELETE FROM personneconnecte WHERE id_personne = '$id'");
+}
+
 
 ?>
 
