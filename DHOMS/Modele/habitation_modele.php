@@ -63,10 +63,6 @@ $req->execute(array(
     'ID_habitation' =>$ID_habitation,
 ));
 
-
-
-
-
 function VilleExiste(){
     global $bdd;
     global $ID_ville;
