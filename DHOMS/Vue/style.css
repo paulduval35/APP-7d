@@ -907,3 +907,27 @@ section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
     height: 100%;
     display: flex;
 }
+
+ /*
+     Statistiques
+ */
+
+ #piechart{
+     margin-right: 25%;
+     margin-left: 19%;
+     background-color: rgba(255, 255, 255, 0.3);
+ }
+
+ #stat_capteurs{
+     border: 1px solid black;
+     margin-right: 25%;
+     margin-left: 40%;
+     border-collapse:collapse;
+     text-align: center;
+ }
+
+ #titre_statistique {
+     font-size: 30px;
+     text-align: center;
+     color: #ffff;
+ }
