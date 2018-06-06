@@ -21,16 +21,27 @@ function getData($email)
 }
 
 function getConnexion($email)
-{
-    include "connect_database_modele.php";
-    $req = $bdd->query("SELECT mot_de_passe FROM personne WHERE email = '$email';");
-    while ($donnees = $req->fetch())
     {
-        return $donnees['mot_de_passe'];
-    };
-}
+        include "connect_database_modele.php";
+        $req = $bdd->query("SELECT mot_de_passe FROM personne WHERE email = '$email';");
+        while ($donnees = $req->fetch())
+        {
+            return $donnees['mot_de_passe'];
+        };
+    }
 
-function sendData($email, $mot_de_passe)
+    function getID($email)
+    {
+        include "connect_database_modele.php";
+        $req = $bdd->query("SELECT ID FROM personne WHERE email = '$email';");
+        while ($donnees = $req->fetch())
+        {
+            return $donnees['ID'];
+        };
+    }
+
+
+    function sendData($email, $mot_de_passe)
 {
     include "connect_database_modele.php";
     $req = $bdd->prepare("INSERT INTO personne(email,mot_de_passe) VALUES(:email,:mot_de_passe)");

@@ -44,6 +44,10 @@
                     <button class="bouton_acc_admin"> <a href="<?php echo $DHOMS_URL; ?>/Controleur/cgu_controleur.php"> <label class="lien_acc">Modification des CGU</label> </a> </button>
                 </li>
 
+                <li >
+                    <button class="bouton_acc_admin"> <a href="<?php echo $DHOMS_URL; ?>/Controleur/statistiques_controleur.php"> <label class="lien_acc">Statistiques du site</label> </a> </button>
+                </li>
+
             </ul>
 
             </div>

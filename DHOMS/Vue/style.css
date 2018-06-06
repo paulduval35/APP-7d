@@ -62,11 +62,8 @@ section{
 }
 
 footer {
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    height:7%;
+    grid-row : 2;
+    height:100%;
     grid-row:3;
     overflow: hidden;
     min-height: 20px;
@@ -312,7 +309,7 @@ b{
 .curseur.rond.ON_OFF:before {
     height: 26px;
     width: 26px;
-    top:5%;
+    top:6%;
     bottom: 5%;
 }
 
@@ -374,6 +371,11 @@ input:checked + .curseur.rond.ON_OFF:before {
     padding: 4px;
     text-align: justify;
     margin: 20px;
+}
+
+.modif_cgu_area, #modif_cgu_area {
+    margin: 0px;
+    width: 900px;
 }
 
 /*

@@ -29,7 +29,7 @@
             <ul class = "flex-outer">
                 <li>
                     <?php foreach($texte_cgu as $row):?>
-                         <textarea rows='25' lines='100' input type='text' name='texte_cgu' class='modif_cgu' > <?php echo"$affiche"?></textarea>
+                         <textarea rows='25' lines='100' input type='text' name='texte_cgu' class='modif_cgu_area' > <?php echo"$affiche"?></textarea>
                     <?php endforeach;?>
                 </li>
 
