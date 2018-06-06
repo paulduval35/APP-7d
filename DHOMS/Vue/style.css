@@ -437,12 +437,13 @@ input:checked + .curseur.rond.ON_OFF:before {
 
 .box_tableaubord{
     overflow: auto;
+    overflow-x:hidden;
     display:grid;
     background-color: rgba(255, 255, 255, 0.3);
     width: 90%;
     grid-template-rows: repeat(auto-fill, 1fr);
     height: max-content;
-    margin: 20px 20px 70px 20px;
+    margin: 10px 15px 0px 15px;
     padding: 20px;
 }
 
@@ -723,15 +724,15 @@ input, select{
     width: 15px;
 }
 
-section::-webkit-scrollbar{
+section::-webkit-scrollbar, .box_tableaubord::-webkit-scrollbar{
     background-color: lightgray;
 }
 
-section::-webkit-scrollbar-thumb{
+section::-webkit-scrollbar-thumb, .box_tableaubord::-webkit-scrollbar-thumb{
     background-image: linear-gradient(#59A4C9, #59B3B7);
 }
 
-section::-webkit-scrollbar-track{
+section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
 
 }
 
