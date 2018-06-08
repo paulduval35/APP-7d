@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le :  lun. 04 juin 2018 à 01:27
--- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.4
+-- Host: 127.0.0.1
+-- Generation Time: Jun 05, 2018 at 09:35 AM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `dhoms`
+-- Database: `dhoms`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `adresse`
+-- Table structure for table `adresse`
 --
 
 CREATE TABLE `adresse` (
@@ -40,7 +40,7 @@ CREATE TABLE `adresse` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `adresse`
+-- Dumping data for table `adresse`
 --
 
 INSERT INTO `adresse` (`ID`, `num_rue`, `rue`, `etage`, `num_appartement`, `code_postal`, `ID_ville`, `ID_pays`) VALUES
@@ -51,7 +51,7 @@ INSERT INTO `adresse` (`ID`, `num_rue`, `rue`, `etage`, `num_appartement`, `code
 -- --------------------------------------------------------
 
 --
--- Structure de la table `appartenance_maison`
+-- Table structure for table `appartenance_maison`
 --
 
 CREATE TABLE `appartenance_maison` (
@@ -61,7 +61,7 @@ CREATE TABLE `appartenance_maison` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `appartenance_maison`
+-- Dumping data for table `appartenance_maison`
 --
 
 INSERT INTO `appartenance_maison` (`ID`, `ID_personne`, `ID_habitation`) VALUES
@@ -72,7 +72,7 @@ INSERT INTO `appartenance_maison` (`ID`, `ID_personne`, `ID_habitation`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cgu`
+-- Table structure for table `cgu`
 --
 
 CREATE TABLE `cgu` (
@@ -81,10 +81,17 @@ CREATE TABLE `cgu` (
   `texte_cgu` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `cgu`
+--
+
+INSERT INTO `cgu` (`ID`, `date_modification`, `texte_cgu`) VALUES
+(1, '2018-06-05', 'Vidé car sinon ça marche pas l\'import ;)');
+
 -- --------------------------------------------------------
 
 --
--- Structure de la table `contact_domisep`
+-- Table structure for table `contact_domisep`
 --
 
 CREATE TABLE `contact_domisep` (
@@ -98,7 +105,7 @@ CREATE TABLE `contact_domisep` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `controleur`
+-- Table structure for table `controleur`
 --
 
 CREATE TABLE `controleur` (
@@ -112,11 +119,11 @@ CREATE TABLE `controleur` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `controleur`
+-- Dumping data for table `controleur`
 --
 
 INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `niveau_batterie`, `ID_piece`) VALUES
-(1, '0001', 'Température', 'capteur', 'éteint', 100, 1),
+(1, '0001', 'Température', 'capteur', 'Éteint', 100, 1),
 (2, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 1),
 (3, '0001', 'Température', 'capteur', 'Allumé', 100, 2),
 (4, '0001', 'Température', 'capteur', 'Allumé', 100, 3),
@@ -129,15 +136,15 @@ INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `nivea
 (11, '0001', 'Température', 'capteur', 'Allumé', 100, 8),
 (12, '0001', 'Température', 'capteur', 'Allumé', 100, 9),
 (13, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 2),
-(14, '0003', 'Humidité', 'capteur', 'éteint', 100, 1),
+(14, '0003', 'Humidité', 'capteur', 'Éteint', 100, 1),
 (15, '0002', 'Lumière', 'actionneur', 'Éteint', 0, 4),
 (16, '0004', 'Présence', 'capteur', 'Allumé', 100, 1),
-(17, '0005', 'Store', 'actioneur', '100', 0, 1);
+(17, '0005', 'Store', 'actioneur', 'Éteint', 0, 1);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `donnee`
+-- Table structure for table `donnee`
 --
 
 CREATE TABLE `donnee` (
@@ -148,7 +155,7 @@ CREATE TABLE `donnee` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `donnee`
+-- Dumping data for table `donnee`
 --
 
 INSERT INTO `donnee` (`ID`, `date`, `donnee`, `ID_controleur`) VALUES
@@ -169,7 +176,7 @@ INSERT INTO `donnee` (`ID`, `date`, `donnee`, `ID_controleur`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `droit`
+-- Table structure for table `droit`
 --
 
 CREATE TABLE `droit` (
@@ -180,18 +187,19 @@ CREATE TABLE `droit` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `faq`
+-- Table structure for table `faq`
 --
 
 CREATE TABLE `faq` (
   `ID` int(11) NOT NULL,
-  `texte` text NOT NULL
+  `titre` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `reponse` text CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `forfait`
+-- Table structure for table `forfait`
 --
 
 CREATE TABLE `forfait` (
@@ -204,7 +212,7 @@ CREATE TABLE `forfait` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `gestionnaire_immeuble`
+-- Table structure for table `gestionnaire_immeuble`
 --
 
 CREATE TABLE `gestionnaire_immeuble` (
@@ -218,7 +226,7 @@ CREATE TABLE `gestionnaire_immeuble` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `habitation`
+-- Table structure for table `habitation`
 --
 
 CREATE TABLE `habitation` (
@@ -229,7 +237,7 @@ CREATE TABLE `habitation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `habitation`
+-- Dumping data for table `habitation`
 --
 
 INSERT INTO `habitation` (`ID`, `nom`, `surface`, `ID_adresse`) VALUES
@@ -240,7 +248,7 @@ INSERT INTO `habitation` (`ID`, `nom`, `surface`, `ID_adresse`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `lien_control_program`
+-- Table structure for table `lien_control_program`
 --
 
 CREATE TABLE `lien_control_program` (
@@ -252,7 +260,7 @@ CREATE TABLE `lien_control_program` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `lien_droit_personne`
+-- Table structure for table `lien_droit_personne`
 --
 
 CREATE TABLE `lien_droit_personne` (
@@ -264,20 +272,20 @@ CREATE TABLE `lien_droit_personne` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `message`
+-- Table structure for table `message`
 --
 
 CREATE TABLE `message` (
   `ID` int(11) NOT NULL,
   `objet` varchar(255) NOT NULL,
-  `date` date NOT NULL,
+  `date` datetime NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `panne`
+-- Table structure for table `panne`
 --
 
 CREATE TABLE `panne` (
@@ -292,7 +300,7 @@ CREATE TABLE `panne` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `pays`
+-- Table structure for table `pays`
 --
 
 CREATE TABLE `pays` (
@@ -301,7 +309,7 @@ CREATE TABLE `pays` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `pays`
+-- Dumping data for table `pays`
 --
 
 INSERT INTO `pays` (`ID`, `nom`) VALUES
@@ -314,7 +322,7 @@ INSERT INTO `pays` (`ID`, `nom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `personne`
+-- Table structure for table `personne`
 --
 
 CREATE TABLE `personne` (
@@ -333,7 +341,7 @@ CREATE TABLE `personne` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `personne`
+-- Dumping data for table `personne`
 --
 
 INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
@@ -343,7 +351,7 @@ INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile
 -- --------------------------------------------------------
 
 --
--- Structure de la table `piece`
+-- Table structure for table `piece`
 --
 
 CREATE TABLE `piece` (
@@ -354,7 +362,7 @@ CREATE TABLE `piece` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `piece`
+-- Dumping data for table `piece`
 --
 
 INSERT INTO `piece` (`ID`, `nom`, `surface`, `ID_habitation`) VALUES
@@ -385,21 +393,55 @@ INSERT INTO `piece` (`ID`, `nom`, `surface`, `ID_habitation`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `programmation`
+-- Table structure for table `programmation`
 --
 
 CREATE TABLE `programmation` (
   `ID` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `type_action` varchar(255) NOT NULL,
-  `date_execution` date NOT NULL,
+  `date_execution` datetime NOT NULL,
   `ID_personne` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `ticket_sav`
+-- Table structure for table `reference_capteur`
+--
+
+CREATE TABLE `reference_capteur` (
+  `ID` int(11) NOT NULL,
+  `reference` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `categorie` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reference_capteur`
+--
+
+INSERT INTO `reference_capteur` (`ID`, `reference`, `categorie`, `type`) VALUES
+(1, 'BX75', 'Température', 'capteur'),
+(2, 'BX72', 'Température', 'capteur'),
+(3, 'XF25', 'Température', 'capteur'),
+(4, 'XF126', 'Température', 'capteur'),
+(5, 'LX715', 'Lumière', 'actionneur'),
+(6, 'LX256', 'Lumière', 'actionneur'),
+(7, 'LX758', 'Lumière', 'actionneur'),
+(8, 'LX512', 'Lumière', 'actionneur'),
+(9, 'LXX23', 'Lumière', 'actionneur'),
+(10, 'HM25', 'Humidité', 'capteur'),
+(11, 'HM74', 'Humidité', 'capteur'),
+(12, 'HMX226', 'Humidité', 'capteur'),
+(13, 'PR12', 'Présence', 'capteur'),
+(14, 'PR036', 'Présence', 'capteur'),
+(15, 'PR786', 'Présence', 'capteur');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ticket_sav`
 --
 
 CREATE TABLE `ticket_sav` (
@@ -412,7 +454,7 @@ CREATE TABLE `ticket_sav` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `ville`
+-- Table structure for table `ville`
 --
 
 CREATE TABLE `ville` (
@@ -421,7 +463,7 @@ CREATE TABLE `ville` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `ville`
+-- Dumping data for table `ville`
 --
 
 INSERT INTO `ville` (`ID`, `nom`) VALUES
@@ -429,261 +471,273 @@ INSERT INTO `ville` (`ID`, `nom`) VALUES
 (2, 'Noirmoutier-en-l\'Île');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `adresse`
+-- Indexes for table `adresse`
 --
 ALTER TABLE `adresse`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `appartenance_maison`
+-- Indexes for table `appartenance_maison`
 --
 ALTER TABLE `appartenance_maison`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `cgu`
+-- Indexes for table `cgu`
 --
 ALTER TABLE `cgu`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `contact_domisep`
+-- Indexes for table `contact_domisep`
 --
 ALTER TABLE `contact_domisep`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `controleur`
+-- Indexes for table `controleur`
 --
 ALTER TABLE `controleur`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `donnee`
+-- Indexes for table `donnee`
 --
 ALTER TABLE `donnee`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `droit`
+-- Indexes for table `droit`
 --
 ALTER TABLE `droit`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `faq`
+-- Indexes for table `faq`
 --
 ALTER TABLE `faq`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `forfait`
+-- Indexes for table `forfait`
 --
 ALTER TABLE `forfait`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `gestionnaire_immeuble`
+-- Indexes for table `gestionnaire_immeuble`
 --
 ALTER TABLE `gestionnaire_immeuble`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `habitation`
+-- Indexes for table `habitation`
 --
 ALTER TABLE `habitation`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `lien_control_program`
+-- Indexes for table `lien_control_program`
 --
 ALTER TABLE `lien_control_program`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `lien_droit_personne`
+-- Indexes for table `lien_droit_personne`
 --
 ALTER TABLE `lien_droit_personne`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `message`
+-- Indexes for table `message`
 --
 ALTER TABLE `message`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `panne`
+-- Indexes for table `panne`
 --
 ALTER TABLE `panne`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `pays`
+-- Indexes for table `pays`
 --
 ALTER TABLE `pays`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `personne`
+-- Indexes for table `personne`
 --
 ALTER TABLE `personne`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `piece`
+-- Indexes for table `piece`
 --
 ALTER TABLE `piece`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `programmation`
+-- Indexes for table `programmation`
 --
 ALTER TABLE `programmation`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `ticket_sav`
+-- Indexes for table `reference_capteur`
+--
+ALTER TABLE `reference_capteur`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `ticket_sav`
 --
 ALTER TABLE `ticket_sav`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `ville`
+-- Indexes for table `ville`
 --
 ALTER TABLE `ville`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `adresse`
+-- AUTO_INCREMENT for table `adresse`
 --
 ALTER TABLE `adresse`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `appartenance_maison`
+-- AUTO_INCREMENT for table `appartenance_maison`
 --
 ALTER TABLE `appartenance_maison`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT pour la table `cgu`
+-- AUTO_INCREMENT for table `cgu`
 --
 ALTER TABLE `cgu`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `contact_domisep`
+-- AUTO_INCREMENT for table `contact_domisep`
 --
 ALTER TABLE `contact_domisep`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `controleur`
+-- AUTO_INCREMENT for table `controleur`
 --
 ALTER TABLE `controleur`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT pour la table `donnee`
+-- AUTO_INCREMENT for table `donnee`
 --
 ALTER TABLE `donnee`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT pour la table `droit`
+-- AUTO_INCREMENT for table `droit`
 --
 ALTER TABLE `droit`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `faq`
+-- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `forfait`
+-- AUTO_INCREMENT for table `forfait`
 --
 ALTER TABLE `forfait`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `gestionnaire_immeuble`
+-- AUTO_INCREMENT for table `gestionnaire_immeuble`
 --
 ALTER TABLE `gestionnaire_immeuble`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `habitation`
+-- AUTO_INCREMENT for table `habitation`
 --
 ALTER TABLE `habitation`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT pour la table `lien_control_program`
+-- AUTO_INCREMENT for table `lien_control_program`
 --
 ALTER TABLE `lien_control_program`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `lien_droit_personne`
+-- AUTO_INCREMENT for table `lien_droit_personne`
 --
 ALTER TABLE `lien_droit_personne`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `message`
+-- AUTO_INCREMENT for table `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `panne`
+-- AUTO_INCREMENT for table `panne`
 --
 ALTER TABLE `panne`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `pays`
+-- AUTO_INCREMENT for table `pays`
 --
 ALTER TABLE `pays`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT pour la table `personne`
+-- AUTO_INCREMENT for table `personne`
 --
 ALTER TABLE `personne`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT pour la table `piece`
+-- AUTO_INCREMENT for table `piece`
 --
 ALTER TABLE `piece`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT pour la table `programmation`
+-- AUTO_INCREMENT for table `programmation`
 --
 ALTER TABLE `programmation`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `ticket_sav`
+-- AUTO_INCREMENT for table `reference_capteur`
+--
+ALTER TABLE `reference_capteur`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `ticket_sav`
 --
 ALTER TABLE `ticket_sav`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `ville`
+-- AUTO_INCREMENT for table `ville`
 --
 ALTER TABLE `ville`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
