@@ -37,13 +37,10 @@
                         <form id="form_lum" class="slidecontainer" method="post" action="../Controleur/envoi_donnee_capteur_controleur.php">
                             <label class="switch ON_OFF">
                             <input type="hidden" name="ID_capteur" value="<?php echo $capteur['ID']?>">
-                            <input id="input_lum" type="checkbox" name="valeur_prog" class="selection_ON_OFF" value="<?php if(getValuesCapteur($capteur['ID'])=="1"){echo 'off';}else{echo 'on';}?>" <?php if(getValuesCapteur($capteur['ID'])=="1"){echo 'checked';}?>>
+                            <input id="input_lum" type="checkbox" <?php if(getValuesCapteur($capteur['ID'])=="1"){echo 'checked';}?> name="valeur_prog" class="selection_ON_OFF">
                             <span class="curseur rond ON_OFF"></span>
                             </label>
                         </form>
-
-
-
                         </label>
                     </div>
                 </div>
@@ -63,10 +60,21 @@
                                     <div class="nom_capteur tab_bord" id="nom_capteur "> <?php echo $capteur['categorie'];?> </div>
                                     <div id = "icone_capteur_tableaubord" class = "icone_capteur_tableaubord_<?php echo $capteur['ID']?>" >
                                         <div class="selecteur"><img class="icone_capteur" src="../Vue/image/capteurs/<?php echo $capteur['categorie']?>.png" alt="icone <?php echo $alt_lum;?>"  >
-                                            <div class="selecteur-content ON_OFF">
-                                                <label class="switch ON_OFF">
-                                                    <input type="checkbox" class="selection_ON_OFF">
-                                                    <span class="curseur rond ON_OFF"></span>
+                                            <div class="valeur_capteur_actuelle" > <?php if (getValuesCapteur($capteur['ID'])=="1") {
+                                                    echo "ON";
+                                                }
+                                                else {
+                                                    echo "OFF";
+                                                }
+                                                ?> </div>
+                                            <div class="selecteur-content selecteur_a_remonter">
+                                                <form id="form_pres" class="slidecontainer" method="post" action="../Controleur/envoi_donnee_capteur_controleur.php">
+                                                    <label class="switch ON_OFF">
+                                                        <input type="hidden" name="ID_capteur" value="<?php echo $capteur['ID']?>">
+                                                        <input id="input_pres" type="checkbox" <?php if(getValuesCapteur($capteur['ID'])=="1"){echo 'checked';}?> name="valeur_prog" class="selection_ON_OFF">
+                                                        <span class="curseur rond ON_OFF"></span>
+                                                    </label>
+                                                </form>
                                                 </label>
                                             </div>
                                         </div>
@@ -86,10 +94,12 @@
                                                                 </form>
                                                             </div>
                                                     </div>
+                                                    </div>
 
                                                                 <?php    }    ?>
 
-                                                        </div>
+
+    </div> <!-- Avant Script -->
 
 
 
@@ -139,6 +149,9 @@
 
         $('#input_lum').on('click', function() {
             $('#form_lum').submit();
+        });
+        $('#input_pres').on('click', function() {
+            $('#form_pres').submit();
         });
 
     });
