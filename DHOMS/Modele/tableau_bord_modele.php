@@ -73,6 +73,29 @@ function postValeurProgrammationControleur($ID_controleur,$valeur_action){ //$ID
     $ID_programmation = "";
     $ID_personne = "1";
     $date = date("Y-m-d H:i:s");
+
+    if (getCategorieCapteur($ID_controleur)=="Lumière" or getCategorieCapteur($ID_controleur)=="Présence"){
+        $ID_donnee = "";
+        if ($valeur_action=="on"){
+            $valeur_action="1";
+            $valeur_etat="Allumé";
+        }
+        else {
+            $valeur_action="0";
+            $valeur_etat="Éteint";
+        }
+        $req = $bdd->prepare('INSERT INTO donnee(ID, date, donnee, ID_controleur) VALUES(:ID, :date, :donnee, :ID_controleur)');
+        $req->execute(array(
+            'ID' => $ID_donnee,
+            'date' => $date,
+            'donnee' => $valeur_action,
+            'ID_controleur' => $ID_controleur,
+        ));
+
+        $req = $bdd->prepare("UPDATE controleur SET etat = '$valeur_etat' WHERE controleur.ID = '$ID_controleur';");
+        $req->execute();
+    }
+
     $req = $bdd->prepare('INSERT INTO programmation(ID, valeur_action, date_execution, ID_personne) VALUES(:ID, :valeur_action, :date_execution, :ID_personne)');
     $req->execute(array(
         'ID' =>$ID_programmation,
@@ -88,31 +111,7 @@ function postValeurProgrammationControleur($ID_controleur,$valeur_action){ //$ID
         'ID_programmation' =>$ID_programmation,
         'ID_controleur' => $ID_controleur,
     ));
-    if (getCategorieCapteur($ID_controleur)=="Lumière"){
-        $ID_donnee = "";
-        if ($valeur_action=="on"){
-            $valeur_donnee="1";
-            $valeur_etat="Allumé";
-        }
-        else {
-            $valeur_donnee="0";
-            $valeur_etat="Éteint";
-        }
-        $req = $bdd->prepare('INSERT INTO donnee(ID, date, donnee, ID_controleur) VALUES(:ID, :date, :donnee, :ID_controleur)');
-        $req->execute(array(
-            'ID' => $ID_donnee,
-            'date' => $date,
-            'donnee' => $valeur_donnee,
-            'ID_controleur' => $ID_controleur,
-        ));
-        $req = $bdd->prepare('INSERT INTO donnee(ID, date, donnee, ID_controleur) VALUES(:ID, :date, :donnee, :ID_controleur)');
-        $req->execute(array(
-            'ID' => $ID_donnee,
-            'date' => $date,
-            'donnee' => $valeur_donnee,
-            'ID_controleur' => $ID_controleur,
-        ));
-    }
+
 
 }
 
