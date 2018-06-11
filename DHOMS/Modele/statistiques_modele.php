@@ -7,4 +7,9 @@ function getInfoControleur(){
     return $reponse;
 }
 
+function getNombreConnecte(){
+    global $bdd;
+    $reponse = $bdd->query("SELECT count(*) AS total FROM personneconnecte");
+    return $reponse;
+}
 ?>

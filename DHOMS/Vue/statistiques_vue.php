@@ -24,6 +24,13 @@
             <h3 id="titre_tableau_de_bord">Statistiques d'utilisation :</h3>
 
             <div id="box_panne_message" >
+                <h2 id="titre_statistique">Nombre d'utilisateurs connectés :</h2>
+
+                <p>Nombre de personne connectés sur le site : 1</p>
+
+            </div>
+
+            <div id="box_panne_message" >
                 <h2 id="titre_statistique">Répartition du déploiment des capteurs :</h2>
 
                     <?php foreach($liste_categorie as $row):
