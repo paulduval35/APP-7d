@@ -41,7 +41,7 @@
            </ul>
        </form>
 
-        <form method="post" action="../Controleur/modifier_faq_controleur.php">
+        <form method="post" action="../Controleur/supprimer_faq_controleur.php">
             <p>
                 <!-- une balise select ou input ne peut pas être imbriquée directement dans form -->
                 <select name="menu_destination">

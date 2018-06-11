@@ -5,23 +5,22 @@
  * Date: 30/05/2018
  * Time: 11:58
  */
-
+session_start();
 
 include "../Modele/faq_modele.php";
-include "../Vue/modifier_faq.php";
 
-$nvtitre = isset($_POST['nvtitre']) ? $_POST['nvtitre'] : NULL;
-$nvreponse = isset($_POST['nvreponse']) ? $_POST['nvreponse'] : NULL;
+if(isset($_SESSION['ID'])) {
+    if ($_SESSION['statut'] == "Admin") {
 
-
-ajouterFAQ($nvtitre,$nvreponse);
-
-$retourTitre = isset($_POST['abc']) ? $_POST['abc'] : NULL;
-
-
-if(isset($retourTitre))
-{
-    deleteFAQ($retourTitre);
-    include "../Controleur/faq_controleur.php";
+        include "../Vue/modifier_faq.php";
+    }
 }
+
+
+else{
+    header('Location: http://localhost:63342/site_app/APP-7d/DHOMS/Vue/connexion_inscription_vue.php');
+}
+
+
+
 

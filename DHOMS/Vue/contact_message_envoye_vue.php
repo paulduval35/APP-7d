@@ -23,7 +23,8 @@ include "../Controleur/url.php";
     </header>
 
     <section>
-        <h2> Votre message à bien été envoyé à nos administrateur</h2>
+        <h2> Votre message à bien été envoyé à nos administrateurs</h2>
+        <a href="">Retourner à la page d'accueil</a>
     </section>
 
     <footer>
