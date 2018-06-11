@@ -99,11 +99,25 @@
                                                                 <?php    }    ?>
 
 
-    </div> <!-- Avant Script -->
-
-
+    </div>
 
 <?php endwhile;?>
+
+    <div class = "capteur_vue">
+    <input type="hidden" class = "valeur" value="<?php echo $idpiece?>">
+        <div class="nom_capteur tab_bord" id="nom_capteur "> Modifier capteurs </div>
+
+        <div id = "icone_capteur_tableaubord" >
+            <div class="selecteur"><img class="icone_capteur" src="../Vue/image/capteurs/plus.png" alt="icone plus"  >
+                <div class="selecteur-content">
+                    <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/ajout_capteur_page_controleur.php">
+                        <input type="hidden" name="ID_piece" value="<?php echo $idpiece?>">
+                        <button class="bouton_capteur" id="bouton_plus" >Modifier</button></form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 <script>
 
