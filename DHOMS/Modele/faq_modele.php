@@ -13,8 +13,10 @@ function getValues()
     $req = $bdd->query("SELECT titre, reponse FROM faq");
     while ($donnees = $req->fetch())
     {
-        print $donnees['titre']; ?><br>
-        <?php print $donnees['reponse']; ?><br><?php
+        echo $donnees['titre'];
+        echo "<br>";
+        echo $donnees['reponse'];
+        echo "<br>";
     };
 }
 

@@ -25,7 +25,7 @@
         <h3>FAQ</h3>
 
         <p>
-            <div class="faq"
+            <div class="faq">
                 <?php echo getValues() ?>
             </div>
         </p>
