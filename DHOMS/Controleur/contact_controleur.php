@@ -7,6 +7,6 @@ $message=$_POST['message'];
 
 contact_message($bdd);
 
-include "../Vue/contact_message_envoye_vue.php";
+header('Location:../Vue/contact_message_envoye_vue.php');
 
 ?>

@@ -188,7 +188,7 @@ b{
     margin: auto;
 }
 
-.flex-outer li input:not([type='checkbox']), .flex-outer select, .flex-outer textarea{
+.flex-outer li input:not([type='checkbox']), .flex-outer select, .flex-outer textarea, #input_serie{
     padding: 10px;
     border: none;
 }
@@ -437,12 +437,13 @@ input:checked + .curseur.rond.ON_OFF:before {
 
 .box_tableaubord{
     overflow: auto;
+    overflow-x:hidden;
     display:grid;
     background-color: rgba(255, 255, 255, 0.3);
     width: 90%;
     grid-template-rows: repeat(auto-fill, 1fr);
     height: max-content;
-    margin: 20px 20px 70px 20px;
+    margin: 10px 15px 0px 15px;
     padding: 20px;
 }
 
@@ -563,12 +564,11 @@ input:checked + .curseur.rond.ON_OFF:before {
     text-transform: uppercase;
 }
 
-.nom_capteur.tab_bord{
+.nom_capteur {
     font-size: 1.1em;
     text-align: center;
     display:block;
     padding-top: 3px;
-    cursor: pointer;
     text-transform: uppercase;
 }
 
@@ -594,6 +594,11 @@ input:checked + .curseur.rond.ON_OFF:before {
 
 .ajout_habitation{
     margin: auto;
+}
+
+#bouton_plus {
+    max-height: 50px;
+    margin-top: 5%;
 }
 
 /*
@@ -656,7 +661,7 @@ input:checked + .curseur.rond.ON_OFF:before {
     background-color: white;
 }
 
-.connexion_inscription, #ajouter_habitation, #titre_tableau_de_bord{
+.connexion_inscription, #ajouter_habitation, #titre_tableau_de_bord, #titre_serie{
     font-size: 2em;
     text-align: center;
     color: #ffff;
@@ -665,12 +670,16 @@ input:checked + .curseur.rond.ON_OFF:before {
     letter-spacing: 0.1em;
 }
 
+#titre_serie {
+    margin-bottom: 20px;
+}
+
 #titre_tableau_de_bord{
     padding-top: 0px;
     margin-bottom: 20px;
 }
 
-#box_connexion_inscription {
+#box_connexion_inscription, #ajout_numero_serie {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -688,10 +697,18 @@ input:checked + .curseur.rond.ON_OFF:before {
     width: 35%;
 }
 
+ #form_serie {
+     width: 60%;
+     background-color: rgba(255, 255, 255, 0.3);
+     align-content: center;
+     margin: 30px;
+ }
+
 
 #form_habitation {
     width: 70%;
 }
+
 
 input, select{
     -ms-box-sizing:content-box;
@@ -723,15 +740,15 @@ input, select{
     width: 15px;
 }
 
-section::-webkit-scrollbar{
+section::-webkit-scrollbar, .box_tableaubord::-webkit-scrollbar{
     background-color: lightgray;
 }
 
-section::-webkit-scrollbar-thumb{
+section::-webkit-scrollbar-thumb, .box_tableaubord::-webkit-scrollbar-thumb{
     background-image: linear-gradient(#59A4C9, #59B3B7);
 }
 
-section::-webkit-scrollbar-track{
+section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
 
 }
 
@@ -774,6 +791,30 @@ section::-webkit-scrollbar-track{
     grid-template-columns: minmax(90px,1fr) minmax(90px,1fr) minmax(90px,1fr) minmax(90px,1fr);
     margin-bottom: 20px;
 }
+
+#texte_serie {
+    max-width: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(25%,1fr) minmax(25%,1fr);
+    margin-bottom: 20px;
+}
+
+#input_serie {
+    text-transform: uppercase;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.icone_serie {
+    max-height: 150px;
+}
+
+ #icone_serie {
+     max-width: 100%;
+     display: grid;
+     grid-template-columns: minmax(25%, 1fr) minmax(25%, 1fr);
+ }
 
 .nom_capteur {
     text-align: center;
@@ -906,3 +947,27 @@ section::-webkit-scrollbar-track{
     height: 100%;
     display: flex;
 }
+
+ /*
+     Statistiques
+ */
+
+ #piechart{
+     margin-right: 25%;
+     margin-left: 19%;
+     background-color: rgba(255, 255, 255, 0.3);
+ }
+
+ #stat_capteurs{
+     border: 1px solid black;
+     margin-right: 25%;
+     margin-left: 40%;
+     border-collapse:collapse;
+     text-align: center;
+ }
+
+ #titre_statistique {
+     font-size: 30px;
+     text-align: center;
+     color: #ffff;
+ }

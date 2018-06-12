@@ -35,7 +35,7 @@
                 <?php endforeach;?>
                 <div class="flex-outer" id="bouton_ajout_habitation">
                     <li >
-                        <a href="../Vue/ajout_capteur.php" class="ajout_habitation"><button >Ajouter un capteur</button></a>
+                        <a href="ajout_capteur_vue.php" class="ajout_habitation"><button >Ajouter un capteur</button></a>
                     </li>
                 </div>
                 <div class="flex-outer" id="bouton_ajout_habitation">

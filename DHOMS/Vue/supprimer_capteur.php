@@ -5,17 +5,16 @@ include "../Controleur/url.php";
 <html lang="en">
 
 <head>
-    <script src = "../Vue/jquery-3.2.1.js"></script>
     <title>DHOMS</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../Vue/style.css">
+    <link rel= "stylesheet" href="style.css" />
     <!-- commentaire -->
 </head>
 
 <body>
-    <nav>
-        <?php include "../Vue/nav.php"?>
-    </nav>
+<nav>
+    <?php include "nav.php"?>
+</nav>
 
 <div id = "header_footer">
     <header>
@@ -23,9 +22,21 @@ include "../Controleur/url.php";
     </header>
 
     <section>
-        <h2> Votre message à bien été envoyé à nos administrateurs</h2>
-        <a href="">Retourner à la page d'accueil</a>
-    </section>
+		<?php
+		echo "<h1> Selectionner le capteur à supprimer:  </h1>";
+
+
+include "../Modele/ajout_capteur_modele.php";
+$id_piece = 2;
+$rangee_capteur=findCapteur($id_piece);	
+
+
+
+?>
+
+
+	
+</section>
 
     <footer>
         <?php include "footer.php"?>

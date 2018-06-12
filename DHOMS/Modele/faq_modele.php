@@ -55,8 +55,7 @@ function deleteFAQ($retourTitre)
     include "connect_database_modele.php";
     global $bdd;
     //$reponse = $bdd->prepare("DELETE titre, reponse FROM faq WHERE titre = '$retourTitre';");
-    $reponse = $bdd->prepare("DELETE FROM faq WHERE reponse, titre = '$retourTitre';");
-    $reponse -> execute();
+    $reponse = $bdd->query("DELETE FROM faq WHERE titre = '$retourTitre'");
 }
 
 

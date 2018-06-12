@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 04 juin 2018 à 01:27
+-- Généré le :  ven. 08 juin 2018 à 09:50
 -- Version du serveur :  10.1.31-MariaDB
--- Version de PHP :  7.2.4
+-- Version de PHP :  7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -81,6 +81,14 @@ CREATE TABLE `cgu` (
   `texte_cgu` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `cgu`
+--
+
+INSERT INTO `cgu` (`ID`, `date_modification`, `texte_cgu`) VALUES
+(1, '2017-11-01', 'Copier/Coller le texte des CGU ic :)'),
+(2, '2018-06-08', ' Copier/Coller le texte des CGU ici :)');
+
 -- --------------------------------------------------------
 
 --
@@ -116,7 +124,7 @@ CREATE TABLE `controleur` (
 --
 
 INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `niveau_batterie`, `ID_piece`) VALUES
-(1, '0001', 'Température', 'capteur', 'éteint', 100, 1),
+(1, '0001', 'Température', 'capteur', 'Éteint', 100, 1),
 (2, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 1),
 (3, '0001', 'Température', 'capteur', 'Allumé', 100, 2),
 (4, '0001', 'Température', 'capteur', 'Allumé', 100, 3),
@@ -129,10 +137,10 @@ INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `type`, `etat`, `nivea
 (11, '0001', 'Température', 'capteur', 'Allumé', 100, 8),
 (12, '0001', 'Température', 'capteur', 'Allumé', 100, 9),
 (13, '0002', 'Lumière', 'actionneur', 'Allumé', 0, 2),
-(14, '0003', 'Humidité', 'capteur', 'éteint', 100, 1),
+(14, '0003', 'Humidité', 'capteur', 'Éteint', 100, 1),
 (15, '0002', 'Lumière', 'actionneur', 'Éteint', 0, 4),
 (16, '0004', 'Présence', 'capteur', 'Allumé', 100, 1),
-(17, '0005', 'Store', 'actioneur', '100', 0, 1);
+(17, '0005', 'Store', 'actioneur', 'Éteint', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -274,6 +282,13 @@ CREATE TABLE `message` (
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Déchargement des données de la table `message`
+--
+
+INSERT INTO `message` (`ID`, `objet`, `date`, `message`) VALUES
+(1, 'Capteur température ', '2018-06-08', 'Panne du capteur de température de ma cuisine !');
+
 -- --------------------------------------------------------
 
 --
@@ -343,6 +358,17 @@ INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `personneconnecte`
+--
+
+CREATE TABLE `personneconnecte` (
+  `ID` int(11) NOT NULL,
+  `id_personne` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `piece`
 --
 
@@ -392,9 +418,43 @@ CREATE TABLE `programmation` (
   `ID` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `type_action` varchar(255) NOT NULL,
-  `date_execution` date NOT NULL,
+  `date_execution` datetime NOT NULL,
   `ID_personne` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `reference_capteur`
+--
+
+CREATE TABLE `reference_capteur` (
+  `ID` int(11) NOT NULL,
+  `reference` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `categorie` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `reference_capteur`
+--
+
+INSERT INTO `reference_capteur` (`ID`, `reference`, `categorie`, `type`) VALUES
+(1, 'BX75', 'Température', 'capteur'),
+(2, 'BX72', 'Température', 'capteur'),
+(3, 'XF25', 'Température', 'capteur'),
+(4, 'XF126', 'Température', 'capteur'),
+(5, 'LX715', 'Lumière', 'actionneur'),
+(6, 'LX256', 'Lumière', 'actionneur'),
+(7, 'LX758', 'Lumière', 'actionneur'),
+(8, 'LX512', 'Lumière', 'actionneur'),
+(9, 'LXX23', 'Lumière', 'actionneur'),
+(10, 'HM25', 'Humidité', 'capteur'),
+(11, 'HM74', 'Humidité', 'capteur'),
+(12, 'HMX226', 'Humidité', 'capteur'),
+(13, 'PR12', 'Présence', 'capteur'),
+(14, 'PR036', 'Présence', 'capteur'),
+(15, 'PR786', 'Présence', 'capteur');
 
 -- --------------------------------------------------------
 
@@ -547,6 +607,12 @@ ALTER TABLE `programmation`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Index pour la table `reference_capteur`
+--
+ALTER TABLE `reference_capteur`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Index pour la table `ticket_sav`
 --
 ALTER TABLE `ticket_sav`
@@ -572,13 +638,13 @@ ALTER TABLE `adresse`
 -- AUTO_INCREMENT pour la table `appartenance_maison`
 --
 ALTER TABLE `appartenance_maison`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `cgu`
 --
 ALTER TABLE `cgu`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `contact_domisep`
@@ -626,7 +692,7 @@ ALTER TABLE `gestionnaire_immeuble`
 -- AUTO_INCREMENT pour la table `habitation`
 --
 ALTER TABLE `habitation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT pour la table `lien_control_program`
@@ -644,7 +710,7 @@ ALTER TABLE `lien_droit_personne`
 -- AUTO_INCREMENT pour la table `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `panne`
@@ -675,6 +741,12 @@ ALTER TABLE `piece`
 --
 ALTER TABLE `programmation`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `reference_capteur`
+--
+ALTER TABLE `reference_capteur`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT pour la table `ticket_sav`
