@@ -34,7 +34,7 @@
 
             <div class="flex-outer" id="bouton_ajout_habitation">
                 <li >
-                    <a href="../Vue/ajout_capteur.php" class="ajout_habitation"><button >Ajouter un actionneur</button></a>
+                    <a href="ajout_capteur_vue.php" class="ajout_habitation"><button >Ajouter un actionneur</button></a>
                 </li>
             </div>
             <div class="flex-outer" id="bouton_ajout_habitation">
