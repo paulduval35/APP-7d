@@ -115,5 +115,13 @@ function postValeurProgrammationControleur($ID_controleur,$valeur_action){ //$ID
 
 }
 
+function getStatut($id_maison, $id_personne){
+    global $bdd;
+    $req = $bdd ->query("SELECT appartenance_maison.Statut FROM appartenance_maison WHERE appartenance_maison.id_habitation = '$id_maison' AND appartanance_maison.id_personne = '$id_personne'");
+    while($a = $req->fetch()){
+        $retour = $a['Statut'];
+    }
+    return $retour;
+}
 
 ?>
