@@ -26,6 +26,7 @@ include "../Controleur/url.php";
                     $('#section_capteurs').html(response);
                 }
             })
+            document.getElementById('nom_piece_focused').innerHTML="CouCou";
         }
 
 
@@ -38,11 +39,12 @@ include "../Controleur/url.php";
                     $('#section_capteurs').html(response);
                 }
             })
+            document.getElementById('nom_piece_focused').innerHTML="Global";
         }
 
 
 
-        function changeValueCapteursVue(value) {
+        function changeValueCapteursVue(value,nom) {
             $.ajax({
                 type: 'GET',
                 url: '../Controleur/capteur_controleur.php',
@@ -51,6 +53,7 @@ include "../Controleur/url.php";
                     $('#section_capteurs').html(response);
                 }
             })
+            document.getElementById('nom_piece_focused').innerHTML= nom;
         }
     </script>
     <title>DHOMS</title>
@@ -83,12 +86,11 @@ include "../Controleur/url.php";
                             </div>
                         <div id = "global_tableaubord">
                             <div>
-                                <button class = "button_global" onclick = "changeValueGlobal(1)">
-                                    Global
+                                <button class = "button_global" onclick = "changeValueGlobal(<?php echo $idglobal['ID']?>)">
+                                    <?php echo $idglobal['nom']?>
                                 </button>
                             </div>
-                            <div class="nom_piece_focused">
-                                Global
+                            <div id="nom_piece_focused">
                             </div>
                         </div>
                         <div id = "nav_maison">
@@ -97,18 +99,26 @@ include "../Controleur/url.php";
 
                             </div>
 
-                            <div id = "section_capteurs">
+                            <div id="sk-circle" class="sk-circle">
+                                <div class="sk-circle1 sk-child"></div>
+                                <div class="sk-circle2 sk-child"></div>
+                                <div class="sk-circle3 sk-child"></div>
+                                <div class="sk-circle4 sk-child"></div>
+                                <div class="sk-circle5 sk-child"></div>
+                                <div class="sk-circle6 sk-child"></div>
+                                <div class="sk-circle7 sk-child"></div>
+                                <div class="sk-circle8 sk-child"></div>
+                                <div class="sk-circle9 sk-child"></div>
+                                <div class="sk-circle10 sk-child"></div>
+                                <div class="sk-circle11 sk-child"></div>
+                                <div class="sk-circle12 sk-child"></div>
+                            </div>
 
+                            <div id = "section_capteurs">
 
                             </div>
                         </div>
 
-
-                        <div class="flex-outer" id="bouton_ajout_habitation">
-                            <li >
-                                <a href="ajout_capteur_vue.php" class="ajout_habitation"><button >Ajouter un capteur</button></a>
-                            </li>
-                        </div>
                         <div class="flex-outer" id="bouton_ajout_habitation">
                             <li >
                                 <a href="../Vue/habitation.php" class="ajout_habitation"><button >Ajouter une habitation</button></a>
@@ -129,9 +139,7 @@ include "../Controleur/url.php";
                     </div>
 
 
-<script>changeValuePieceVue(1);
-    changeValueGlobal(1);
-</script>
+
 
         </section>
 
@@ -140,6 +148,12 @@ include "../Controleur/url.php";
         </footer>
     </div>
 
-
+    <?php include "../Vue/loader_vue.php";?>
 </body>
+
+<script>
+    changeValuePieceVue(1);
+    changeValueGlobal(<?php echo $idglobal['ID']?>)
+</script>
+
 </html>

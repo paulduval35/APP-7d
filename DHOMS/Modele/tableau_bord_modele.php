@@ -24,6 +24,13 @@ function getPieces($id_maison){
     return $listePiece;
 }
 
+function getGlobal($id_maison){
+    global $bdd;
+    $liste = $bdd->query("SELECT * FROM piece WHERE piece.ID_habitation = '$id_maison' AND piece.nom = 'Global'");
+    $listeGlobal = $liste -> fetch();
+    return $listeGlobal;
+}
+
 function getCapteur($id_piece){
     global $bdd;
     $listeCapteur = $bdd->query("SELECT * FROM controleur WHERE controleur.ID_piece ='$id_piece'");

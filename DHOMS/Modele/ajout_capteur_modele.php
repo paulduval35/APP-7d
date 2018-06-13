@@ -2,10 +2,10 @@
 global $bdd;
 include "connect_database_modele.php";
 
-function insertCapteur($value,$piece){
+function insertCapteur($value,$piece,$numero_serie){
       global $bdd;
 
-   $query = $bdd->prepare("SELECT categorie, `type`, ID, reference FROM reference_capteur WHERE `reference_capteur`.`reference` = '$value'");
+   $query = $bdd->prepare("SELECT categorie, type, reference FROM reference_capteur WHERE reference_capteur.reference = '$value'");
    
 $query->execute();
 $row = $query->fetch();
@@ -14,9 +14,14 @@ $type=$row['type'];
 $categorie=$row['categorie'];
 $reference=$row['reference'];
 
-
-$query = $bdd->prepare ( "INSERT INTO `controleur` (`categorie`, `type`, `ID_piece`,`reference`) VALUES (?,?,?,?)") ; 
-$query->execute([$categorie, $type, $piece,$reference]);
+$query = $bdd->prepare ( "INSERT INTO controleur (reference, categorie, numero_serie, type, ID_piece) VALUES (:reference, :categorie, :numero_serie, :type, :piece)") ;
+$query->execute(array(
+    'reference' => $reference,
+    'categorie' => $categorie,
+    'numero_serie' => $numero_serie,
+    'type' => $type,
+    'piece' => $piece
+));
 
 }
 
@@ -49,6 +54,17 @@ if ($query->rowCount() > 0) { ?>
 <?php	
 }
 
+function getCategorieCapteur($value){
+    global $bdd;
+
+    $categorie = $bdd->prepare("SELECT categorie, type, reference FROM reference_capteur WHERE reference_capteur.reference = '$value'");
+
+    $categorie->execute();
+    while ($liste = $categorie -> fetch()){
+        $a = $liste['categorie'];
+        return $a;
+    }
+}
 
 function removeCapteur($value){
 global $bdd;

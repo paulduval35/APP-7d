@@ -120,7 +120,6 @@
 
 
 <script>
-
     var idcapteur = document.getElementsByClassName('valeur');
 
     var timeOut = setInterval(fullrefresh, 2000);
@@ -131,9 +130,6 @@
         }
 
     }
-
-
-
 
     function refresh(value) {
         $.ajax({

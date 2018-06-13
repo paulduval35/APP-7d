@@ -34,6 +34,6 @@
     </footer>
 </div>
 
-
+<?php include "../Vue/loader_vue.php"?>
 </body>
 </html>
