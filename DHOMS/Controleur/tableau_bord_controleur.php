@@ -10,6 +10,8 @@ if (isset($_SESSION['ID'])) {
     $listeMaison = $maisons->fetchall();
 
 
+
+
     $arrayMaison = array();
     foreach ($listeMaison as $maison) {
         $arrayMaison[] = $maison['ID'];
@@ -29,7 +31,7 @@ if (isset($_SESSION['ID'])) {
                 echo $affichage['nom'];
             }
         };
-
+        $idglobal = getGlobal($IDmaison);
         include "../Vue/tableau_bord_vue.php";
     }
 

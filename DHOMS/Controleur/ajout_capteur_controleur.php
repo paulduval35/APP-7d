@@ -1,10 +1,11 @@
 <?php
 $piece=$_POST['ID_piece'];
-$capteur = $_POST['subject'];
+$capteur = $_POST['capteur'];
+$numero_serie = $_POST['serie'];
 $etat='éteint';
 
 include "../Modele/ajout_capteur_modele.php";
-$result = insertCapteur($capteur,$piece);
+insertCapteur($capteur,$piece,$numero_serie);
 
 ?>
 
