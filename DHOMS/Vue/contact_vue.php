@@ -19,29 +19,33 @@
     </header>
 
     <section>
-        <form id="form_contact" action="../Controleur/contact_controleur.php" method="post">
-        <h3> Nous contacter</h3>
+        <div id="contact_vue">
+            <form id="form_contact" action="../Controleur/contact_envoie_controleur.php" method="post">
+                <h3> Nous contacter</h3>
 
-            <ul class="flex-outer">
-                <li><label>Appelez nous</label>
-                    <div class ="gros_texte">0123456789</div>
-                </li>
+                <ul class="flex-outer">
+                    <li><label>Appelez nous</label>
+                        <div class ="gros_texte">0123456789</div>
+                    </li>
 
-                <li ><label><br>ou envoyez nous un message<br></label></li>
+                    <li><label>ou<br></label></li>
+                    <li><label>envoyez nous un message<br></label></li>
 
-                <li >
-                    <input name="objet" type="text" textarea rows = "1" class="message_contact" placeholder="OBJECT"></inputtextarea>
-                </li>
+                    <li>
+                        <input name="objet" type="text" textarea rows = "1" class="message_contact" placeholder="OBJECT"></inputtextarea>
+                    </li>
 
-                <li >
-                    <textarea rows = "8" input name="message" class="message_contact" placeholder="VOTRE MESSAGE"></textarea>
-                </li>
+                    <li>
+                        <textarea rows = "8" input name="message" class="message_contact" placeholder="VOTRE MESSAGE"></textarea>
+                    </li>
 
-                <li>
-                    <button type="submit">Envoyer</button>
-                </li>
-            </ul>
-        </form>
+                    <li>
+                        <button type="submit">Envoyer</button>
+                    </li>
+                </ul>
+            </form>
+            <button id="bouton_contact"> <a href="<?php echo $DHOMS_URL; ?>/Controleur/ticket_controleur.php"> <label class="lien_acc">Vos tickets envoyés</label> </a> </button>
+        </div>
     </section>
 
     <footer>

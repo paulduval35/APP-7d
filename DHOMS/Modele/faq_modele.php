@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: paulduval
- * Date: 28/05/2018
- * Time: 11:37
- */
 
 function getValues()
 {
@@ -20,8 +14,6 @@ function getValues()
     };
 }
 
-
-
 function modifierTitre($nvtitre)
 {
     include "connect_database_modele.php";
@@ -31,7 +23,6 @@ function modifierTitre($nvtitre)
         'nvtitre' => $nvtitre,
     ));
 }
-
 
 function ajouterFAQ($nvtitre,$nvreponse)
 {
@@ -59,7 +50,5 @@ function deleteFAQ($retourTitre)
     //$reponse = $bdd->prepare("DELETE titre, reponse FROM faq WHERE titre = '$retourTitre';");
     $reponse = $bdd->query("DELETE FROM faq WHERE titre = '$retourTitre'");
 }
-
-
 
 ?>

@@ -21,7 +21,7 @@
 
     <section>
         <div>
-            <h3 id="titre_tableau_de_bord">Message des utilisateurs :</h3>
+            <h3 id="titre_tableau_de_bord">Vos tickets envoyés :</h3>
             <div id = "box_panne_message" >
                 <table>
                     <tr class="bord">
@@ -45,8 +45,7 @@
                             </tr>
                         </div>
                     <?php endforeach;?>
-                </table><br/>
-                <button class="bouton_acc_admin"> <a href="<?php echo $DHOMS_URL; ?>/Controleur/gestion_panne_reponse_controleur.php"> <label class="lien_acc">Répondre</label> </a> </button>
+                </table>
             </div>
         </div>
     </section>

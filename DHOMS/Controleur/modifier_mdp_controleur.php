@@ -1,23 +1,15 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: epida
- * Date: 04/05/2018
- * Time: 10:24
- */
 
 if(!empty($_POST['reste_connecte']))
 {
     session_start();
 }
 
-
 include "../Modele/connexion_inscription_modele.php";
 
 //Initialisation des variables
 
 $email="";
-
 
 $email = $_POST['email'];
 
@@ -29,8 +21,6 @@ $nb_email = check_pseudo($email);
 //echo $nb_email;
 
 $mdplenght = strlen($_POST['mdp']);
-
-
 
     if (!empty($email) AND !empty($mdp) AND !empty($mdp2))
     {
@@ -46,13 +36,8 @@ $mdplenght = strlen($_POST['mdp']);
                         changeData($email,$mot_de_passe);
                         include "tableau_bord_controleur.php";
                     }
-
-
             }
-
     }
-
-
 
 if($mdplenght < 8) {
     ?>

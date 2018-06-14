@@ -11,7 +11,6 @@
 
 <body>
 
-
 <nav>
     <?php include "nav.php"?>
 </nav>
@@ -23,21 +22,17 @@
 
     <section>
         <h3>FAQ</h3>
-
         <p>
             <div class="faq">
                 <?php echo getValues() ?>
             </div>
         </p>
-
-
     </section>
 
     <footer>
         <?php include "footer.php"?>
     </footer>
 </div>
-
 
 </body>
 </html>

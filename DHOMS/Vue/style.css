@@ -176,6 +176,11 @@ b{
     min-height: 15px;
 }
 
+#contact_vue{
+    width: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
 
 .flex-outer li button, #bouton_serie{
     padding: 8px 16px;
@@ -201,10 +206,15 @@ b{
 }
 
 #form_contact{
-    width: 50%;
+    width: 70%;
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
-    margin:20px;
+    margin-right: 20%;
+    margin-left: 15%;
+}
+
+#bouton_contact{
+    margin-left: 43%;
 }
 
 /*
@@ -243,6 +253,39 @@ b{
  #panne_message {
      justify-content: center;
      width: 100%;
+ }
+
+ table {
+     border-collapse: collapse;
+     margin: 20px;
+     margin-left: 42px;
+ }
+
+ .bord {
+     border-width:1px;
+     border-style:solid;
+     border-color: #444444;
+     text-align: center;
+     border-collapse: collapse;
+ }
+
+ .panne_envoie_reponse {
+     height: 80%;
+     margin-top: 30px;
+     min-width: 320px;
+     background-color: rgba(255, 255, 255, 0.3);
+     margin-right: 20%;
+     margin-left: 15%;
+ }
+
+ #reponse_panne{
+     min-width: 95%;
+     min-height: 15px;
+     margin-left: 30px;
+ }
+
+ tr, td {
+     padding: 8px;
  }
 
 /*
