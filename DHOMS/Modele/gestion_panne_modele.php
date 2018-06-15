@@ -8,13 +8,9 @@ function getMessage(){
     return $reponse;
 }
 
-function panne_reponse($retourTitre) {
-    include "connect_database_modele.php";
+function panne_reponse($retourTitre, $reponse) {
     global $bdd;
-    $req = $bdd->prepare("INSERT INTO message(reponse) VALUE(:reponse) WHERE titre = '$retourTitre'");
-    $req->execute(array(
-        'reponse' => $_POST['reponse'],
-    ));
+    $req = $bdd->query("UPDATE message SET reponse = '$reponse' WHERE objet='$retourTitre'");
 }
 
 ?>

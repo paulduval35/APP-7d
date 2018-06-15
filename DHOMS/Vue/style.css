@@ -269,19 +269,26 @@ b{
      border-collapse: collapse;
  }
 
- .panne_envoie_reponse {
-     height: 80%;
-     margin-top: 30px;
+ #panne_envoie_reponse {
+     width: 50%;
+     height: 60%;
+     margin-top: 50px;
      min-width: 320px;
      background-color: rgba(255, 255, 255, 0.3);
      margin-right: 20%;
      margin-left: 15%;
  }
 
- #reponse_panne{
-     min-width: 95%;
+ .reponse_panne{
+     min-width: 60%;
      min-height: 15px;
-     margin-left: 30px;
+     margin-left: 20%;
+ }
+
+ .input_panne{
+     min-width: 30%;
+     min-height: 15px;
+     margin-left: 35%;
  }
 
  tr, td {

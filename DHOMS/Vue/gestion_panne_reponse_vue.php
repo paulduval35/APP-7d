@@ -20,16 +20,14 @@
 
     <section>
         <form id="panne_envoie_reponse" action="../Controleur/gestion_panne_envoie_reponse_controleur.php" method="post">
-
-                <label>A quel message souhaitez vous répondre :<br></label><br/>
-                <select name="menu_destination">
-                    <?php foreach($listeObjet as $row):?>
-                        <option name="abc" value="<?php echo $row['objet']?>"><?php echo $row['objet']?></option>
-                    <?php endforeach;?>
-                </select><br/><br/>
-                <textarea rows = "3" input name="reponse" class="reponse_panne" placeholder="VOTRE REPONSE"></textarea><br/><br/>
-                <button type="submit">Répondre</button>
-
+            <br/><br/><label class="connexion_inscription">A quel message souhaitez vous répondre :<br></label><br/><br/>
+            <select name="menu_destination" class="input_panne">
+                <?php foreach($listeObjet as $row):?>
+                    <option name="abc" value="<?php echo $row['objet']?>"><?php echo $row['objet']?></option>
+                <?php endforeach;?>
+            </select><br/><br/><br/><br/>
+            <textarea rows = "3" input name="reponse" class="reponse_panne" placeholder="VOTRE REPONSE"></textarea><br/><br/><br/><br/>
+            <button type="submit" id="bouton_contact">Répondre</button>
         </form>
     </section>
 
