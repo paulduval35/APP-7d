@@ -21,7 +21,7 @@
 
     <section>
         <div id="mentions_legales">
-            <h2>Mentions légales</h2>
+            <h3 class="connexion_inscription" >Mentions légales</h3>
                 <p id="intro_mentions_legales">
                     La société SetD soucieuse des droits des individus, notamment au regard des traitements automatisés,
                     et dans une volonté de transparence avec ses clients, a mis en place une politique reprenant

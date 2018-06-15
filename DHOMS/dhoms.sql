@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 13 juin 2018 à 10:06
+-- Généré le :  sam. 16 juin 2018 à 00:41
 -- Version du serveur :  10.1.31-MariaDB
 -- Version de PHP :  7.2.4
 
@@ -145,8 +145,8 @@ INSERT INTO `controleur` (`ID`, `reference`, `categorie`, `numero_serie`, `type`
 (19, 'PR036', 'Présence', 'goiqrgosn-obboub-oihobob-ikoiknl', 'capteur', '', 0, 1),
 (20, 'LX256', 'Lumière', 'BB7', 'actionneur', '', 0, 1),
 (21, 'HM25', 'Humidité', '', 'capteur', '', 0, 0),
-(22, 'PR12', 'Présence', 'BB7', 'capteur', '', 0, 24),
-(23, 'LX758', 'Lumière', 'Bj', 'actionneur', 'Éteint', 0, 24),
+(22, 'PR12', 'Présence', 'BB7', 'capteur', 'Allumé', 0, 24),
+(23, 'LX758', 'Lumière', 'Bj', 'actionneur', 'Allumé', 0, 24),
 (24, 'XF126', 'Température', 'fgdfgdfg', 'capteur', '', 0, 24),
 (25, 'HM74', 'Humidité', 'BB7', 'capteur', '', 0, 24);
 
@@ -211,7 +211,38 @@ INSERT INTO `donnee` (`ID`, `date`, `donnee`, `ID_controleur`) VALUES
 (41, '2018-06-12 00:47:43', 0, 2),
 (42, '2018-06-12 00:54:48', 1, 2),
 (43, '2018-06-12 13:50:05', 1, 23),
-(44, '2018-06-13 09:32:35', 0, 23);
+(44, '2018-06-13 09:32:35', 0, 23),
+(45, '2018-06-13 10:52:55', 0, 2),
+(46, '2018-06-13 10:52:58', 1, 2),
+(47, '2018-06-13 10:53:19', 0, 2),
+(48, '2018-06-13 10:53:21', 1, 2),
+(49, '2018-06-13 10:53:50', 0, 16),
+(50, '2018-06-13 10:53:52', 1, 16),
+(51, '2018-06-13 10:53:54', 0, 2),
+(52, '2018-06-13 10:53:55', 1, 2),
+(53, '2018-06-13 12:01:31', 0, 2),
+(54, '2018-06-13 12:01:33', 1, 2),
+(55, '2018-06-13 12:02:12', 0, 2),
+(56, '2018-06-13 12:02:15', 1, 2),
+(57, '2018-06-13 12:02:24', 0, 2),
+(58, '2018-06-13 12:02:26', 1, 2),
+(59, '2018-06-13 12:03:27', 0, 2),
+(60, '2018-06-13 12:03:38', 1, 2),
+(61, '2018-06-13 15:06:17', 0, 2),
+(62, '2018-06-13 15:06:20', 1, 2),
+(63, '2018-06-13 16:27:51', 1, 23),
+(64, '2018-06-13 16:28:13', 1, 22),
+(65, '2018-06-13 16:28:15', 0, 22),
+(66, '2018-06-13 19:05:14', 0, 2),
+(67, '2018-06-13 19:05:19', 1, 22),
+(68, '2018-06-13 19:16:32', 0, 23),
+(69, '2018-06-13 19:16:34', 1, 23),
+(70, '2018-06-13 19:21:23', 1, 2),
+(71, '2018-06-13 19:21:26', 0, 23),
+(72, '2018-06-13 19:21:30', 0, 22),
+(73, '2018-06-13 19:21:32', 1, 22),
+(74, '2018-06-13 19:21:36', 1, 23),
+(75, '2018-06-15 12:40:56', 1, 6);
 
 -- --------------------------------------------------------
 
@@ -235,6 +266,18 @@ CREATE TABLE `faq` (
   `titre` text COLLATE utf8_bin NOT NULL,
   `reponse` text COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `faq`
+--
+
+INSERT INTO `faq` (`ID`, `titre`, `reponse`) VALUES
+(1, 'Comment ajouter une maison ?', 'Pour ajouter une maison il existe plusieurs moyens. A l\'inscription il vous est automatiquement demandé d\'ajouter votre maison principale. Vous pouvez ensuite ajouter une maison depuis votre tableau de bord en cliquant sur \"Ajouter une Maison\" puis en complétant le formulaire d\'ajout.'),
+(2, 'Comment ajouter ou supprimer une pièce dans ma maison ?', 'Sur le tableau de bord, un bouton \"Gérer les pièces\" est présent et vous permet soit d\'ajouter ou de supprimer une pièce.'),
+(3, 'Comment ajouter de nouveaux capteurs dans ma maison ?', 'Il est très facile d\'ajouter un capteur ou un actionneur depuis le site une fois avoir sélectionné la pièce dans le tableau de bord. <br>\r\nEn ce qui concerne le remplacement d\'un capteur défectueux ou l\'ajout d\'un capteur dans votre maison, il est nécessaire de prendre contact pour être redirigé vers la maintenance technique.\r\n'),
+(4, 'Combien coûte une nouvelle prise en charge ?', 'La société DHOMS vous invite à nous appeler, dans l’onglet contact, pour recevoir des offres personnelles en fonction de vos critères.'),
+(5, 'Où puis-je trouver le numéro de série de mon contrôleur ?', 'Lors de l\'installation de votre système domotique un document vous a été remis indiquant la liste des capteurs et actionneurs, leur emplacement et leur numéro de série. <br>\r\nSi vous n\'avez plus ce document mais que vous pouvez accéder au capteur ou à l\'actionneur facilement, ce numéro est indiqué sur une étiquette ou directement gravé. Il comporte en moyenne une dizaine de chiffres et de lettres. <br>\r\nSi toutefois cela n\'est pas possible, vous pouvez nous contacter via le formulaire de contact ou en nous appelant directement.'),
+(6, 'Puis-je gérer manuellement mon système domotique ?', 'La plupart des actionneurs qui sont pilotables depuis le tableau de bord comprennent un accès manuel. Cet accès manuel dépend de chaque type de capteur ou actionneur et du modèle de celui-ci. En cas de soucis pour accéder manuellement à un contrôleur, contactez nous via le formulaire de contact.');
 
 -- --------------------------------------------------------
 
@@ -334,7 +377,49 @@ INSERT INTO `lien_control_program` (`ID`, `ID_controleur`, `ID_programmation`) V
 (30, 2, 30),
 (31, 2, 31),
 (32, 23, 32),
-(33, 23, 33);
+(33, 23, 33),
+(34, 2, 34),
+(35, 2, 35),
+(36, 17, 36),
+(37, 17, 37),
+(38, 1, 38),
+(39, 2, 39),
+(40, 2, 40),
+(41, 1, 41),
+(42, 1, 42),
+(43, 17, 43),
+(44, 16, 44),
+(45, 16, 45),
+(46, 2, 46),
+(47, 2, 47),
+(48, 2, 48),
+(49, 2, 49),
+(50, 2, 50),
+(51, 2, 51),
+(52, 2, 52),
+(53, 2, 53),
+(54, 2, 54),
+(55, 1, 55),
+(56, 2, 56),
+(57, 2, 57),
+(58, 2, 58),
+(59, 1, 59),
+(60, 23, 60),
+(61, 22, 61),
+(62, 22, 62),
+(63, 24, 63),
+(64, 1, 64),
+(65, 2, 65),
+(66, 22, 66),
+(67, 23, 67),
+(68, 23, 68),
+(69, 2, 69),
+(70, 23, 70),
+(71, 22, 71),
+(72, 22, 72),
+(73, 23, 73),
+(74, 24, 74),
+(75, 6, 75);
 
 -- --------------------------------------------------------
 
@@ -358,15 +443,17 @@ CREATE TABLE `message` (
   `ID` int(11) NOT NULL,
   `objet` varchar(255) NOT NULL,
   `date` date NOT NULL,
-  `message` text NOT NULL
+  `message` text NOT NULL,
+  `reponse` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `message`
 --
 
-INSERT INTO `message` (`ID`, `objet`, `date`, `message`) VALUES
-(1, 'Capteur température ', '2018-06-08', 'Panne du capteur de température de ma cuisine !');
+INSERT INTO `message` (`ID`, `objet`, `date`, `message`, `reponse`) VALUES
+(1, 'Capteur température ', '2018-06-15', 'Panne du capteur de température de ma cuisine !', 'Nous allons vous envoyer un nouveau capteur au plus vite !'),
+(2, 'test', '2018-06-15', 'ça va ?', '');
 
 -- --------------------------------------------------------
 
@@ -431,8 +518,7 @@ CREATE TABLE `personne` (
 --
 
 INSERT INTO `personne` (`ID`, `nom`, `prenom`, `statut`, `num_fixe`, `num_mobile`, `email`, `mot_de_passe`, `forfait`, `etat`, `ID_parent`, `ID_adresse`) VALUES
-(1, 'SKYWALKER', 'Anakin', 'Primaire', 211223344, 611223344, 'anakinskywalker@gmail.com', 'anakinskywalker', '', 0, 0, 1),
-(2, 'SOLO', 'Han', 'Primaire', 100112233, 600112233, 'hansolo@gmail.com', 'hansolo', '', 0, 0, 3);
+(1, 'SKYWALKER', 'ANAKIN', 'Primaire', 0, 0, 'anakinskywalker@gmail.com', '$2y$10$bkKx7tt9e7nX2ooDg2ZI5eLYbVh1Oo5Vzquz/VgGNecdXXlG8JT1m', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -444,6 +530,21 @@ CREATE TABLE `personneconnecte` (
   `ID` int(11) NOT NULL,
   `id_personne` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `personneconnecte`
+--
+
+INSERT INTO `personneconnecte` (`ID`, `id_personne`) VALUES
+(0, 1),
+(0, 1),
+(0, 1),
+(0, 1),
+(0, 1),
+(0, 1),
+(0, 1),
+(0, 1),
+(0, 1);
 
 -- --------------------------------------------------------
 
@@ -539,7 +640,49 @@ INSERT INTO `programmation` (`ID`, `valeur_action`, `date_execution`, `ID_person
 (30, 0, '2018-06-12 00:47:43', 1),
 (31, 1, '2018-06-12 00:54:48', 1),
 (32, 1, '2018-06-12 13:50:05', 1),
-(33, 0, '2018-06-13 09:32:35', 1);
+(33, 0, '2018-06-13 09:32:35', 1),
+(34, 0, '2018-06-13 10:52:55', 1),
+(35, 1, '2018-06-13 10:52:58', 1),
+(36, 63, '2018-06-13 10:53:08', 1),
+(37, 21, '2018-06-13 10:53:13', 1),
+(38, 27, '2018-06-13 10:53:18', 1),
+(39, 0, '2018-06-13 10:53:19', 1),
+(40, 1, '2018-06-13 10:53:21', 1),
+(41, 25, '2018-06-13 10:53:28', 1),
+(42, 10, '2018-06-13 10:53:33', 1),
+(43, 26, '2018-06-13 10:53:39', 1),
+(44, 0, '2018-06-13 10:53:50', 1),
+(45, 1, '2018-06-13 10:53:52', 1),
+(46, 0, '2018-06-13 10:53:54', 1),
+(47, 1, '2018-06-13 10:53:55', 1),
+(48, 0, '2018-06-13 12:01:31', 1),
+(49, 1, '2018-06-13 12:01:33', 1),
+(50, 0, '2018-06-13 12:02:12', 1),
+(51, 1, '2018-06-13 12:02:15', 1),
+(52, 0, '2018-06-13 12:02:24', 1),
+(53, 1, '2018-06-13 12:02:26', 1),
+(54, 0, '2018-06-13 12:03:27', 1),
+(55, 25, '2018-06-13 12:03:34', 1),
+(56, 1, '2018-06-13 12:03:38', 1),
+(57, 0, '2018-06-13 15:06:17', 1),
+(58, 1, '2018-06-13 15:06:20', 1),
+(59, 21, '2018-06-13 15:11:51', 1),
+(60, 1, '2018-06-13 16:27:51', 1),
+(61, 1, '2018-06-13 16:28:13', 1),
+(62, 0, '2018-06-13 16:28:15', 1),
+(63, 26, '2018-06-13 16:28:17', 1),
+(64, 28, '2018-06-13 19:05:07', 1),
+(65, 0, '2018-06-13 19:05:14', 1),
+(66, 1, '2018-06-13 19:05:19', 1),
+(67, 0, '2018-06-13 19:16:32', 1),
+(68, 1, '2018-06-13 19:16:34', 1),
+(69, 1, '2018-06-13 19:21:23', 1),
+(70, 0, '2018-06-13 19:21:26', 1),
+(71, 0, '2018-06-13 19:21:30', 1),
+(72, 1, '2018-06-13 19:21:32', 1),
+(73, 1, '2018-06-13 19:21:36', 1),
+(74, 24, '2018-06-13 19:21:38', 1),
+(75, 1, '2018-06-15 12:40:56', 1);
 
 -- --------------------------------------------------------
 
@@ -787,7 +930,7 @@ ALTER TABLE `controleur`
 -- AUTO_INCREMENT pour la table `donnee`
 --
 ALTER TABLE `donnee`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT pour la table `droit`
@@ -799,7 +942,7 @@ ALTER TABLE `droit`
 -- AUTO_INCREMENT pour la table `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `forfait`
@@ -823,7 +966,7 @@ ALTER TABLE `habitation`
 -- AUTO_INCREMENT pour la table `lien_control_program`
 --
 ALTER TABLE `lien_control_program`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT pour la table `lien_droit_personne`
@@ -835,7 +978,7 @@ ALTER TABLE `lien_droit_personne`
 -- AUTO_INCREMENT pour la table `message`
 --
 ALTER TABLE `message`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `panne`
@@ -853,7 +996,7 @@ ALTER TABLE `pays`
 -- AUTO_INCREMENT pour la table `personne`
 --
 ALTER TABLE `personne`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `piece`
@@ -865,7 +1008,7 @@ ALTER TABLE `piece`
 -- AUTO_INCREMENT pour la table `programmation`
 --
 ALTER TABLE `programmation`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT pour la table `reference_capteur`

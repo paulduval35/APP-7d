@@ -30,7 +30,7 @@ include "../Controleur/url.php";
 
 include "../Modele/gerer_capteur_modele.php";
 
-$rangee_capteur=findCapteur($id_piece);	
+$rangee_capteur=supprimerCapteur($id_piece);
 
 ?>
 

@@ -21,7 +21,7 @@
     <section>
         <div id="contact_vue">
             <form id="form_contact" action="../Controleur/contact_envoie_controleur.php" method="post">
-                <h3> Nous contacter</h3>
+                <h3 class="connexion_inscription"> Nous contacter</h3>
 
                 <ul class="flex-outer">
                     <li><label>Appelez nous</label>

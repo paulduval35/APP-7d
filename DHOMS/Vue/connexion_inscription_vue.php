@@ -97,7 +97,7 @@
                 </li>
 
                 <li class="checkboxclass">
-                    <input id = "checkbox" type="checkbox" name="CGU" value="CGU"><a href="CGU.php">J'ai lu et j'accepte les CGU<a/>
+                    <input id = "checkbox" type="checkbox" name="CGU" value="CGU"><a href="CGU.php">J'ai lu et j'accepte les CGU</a>
                 </li>
 
                 <li>
@@ -109,7 +109,6 @@
 
 
     </section>
-
     <footer>
         <?php include "footer.php"?>
     </footer>

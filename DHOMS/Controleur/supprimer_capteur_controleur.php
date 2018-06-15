@@ -2,7 +2,7 @@
 include "../Modele/gerer_capteur_modele.php";
 
 
-		$ID = $_POST["pieceselect"];
+		$ID = $_POST["ID_piece"];
 
 		 removeCapteur($ID);
 		//include "../Vue/supprimer_utilisateurs_recherche_vue.php"; 

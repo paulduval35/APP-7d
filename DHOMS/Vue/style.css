@@ -172,7 +172,7 @@ b{
     min-width: 150px;
 }
 
-.flex-outer, .message_contact, .nvtitre_faq{
+.flex-outer, .message_contact{
     min-width: 95%;
     min-height: 15px;
 }
@@ -230,7 +230,7 @@ b{
 }
 
 .text_footer{
-    color: white;
+    color: rgb(72,72,72);
     font-size : 90%;
     text-align: center;
 }
@@ -454,7 +454,7 @@ input:checked + .curseur.rond.ON_OFF:before {
     margin: 20px;
 }
 
-.partie_mentions_legales{
+.partie_mentions_legales, .titre_faq{
     color: darkslategray;
     font-size: 1.8em;
     margin: 20px;
@@ -754,12 +754,26 @@ input:checked + .curseur.rond.ON_OFF:before {
     align-items: flex-start;
 }
 
-#form_inscription, #form_habitation, #form_connexion, .form_gerer_piece, .form_supprimer_capteurs, #form_mdp_oublie{
+#form_inscription, #form_habitation, #form_connexion, .form_gerer_piece, .form_supprimer_capteurs, #form_mdp_oublie,.box_faq{
     margin: auto;
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
     margin:25px;
     width: 35%;
+}
+
+.box_faq {
+    width: 75%;
+    display: block;
+    margin: 30px auto;
+    color: rgb(72,72,72);
+    padding-bottom: 20px;
+}
+
+.texte_faq {
+    margin-top: 5px;
+    padding: 0px 20px;
+    text-align: left;
 }
 
 .form_supprimer_capteurs, #form_mdp_oublie{
@@ -898,6 +912,10 @@ section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
     display: block;
     margin: 5px auto;
 
+}
+
+#section_faq {
+    display: block;
 }
 
 .dropbtn {

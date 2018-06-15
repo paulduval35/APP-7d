@@ -6,11 +6,16 @@ function getValues()
     global $bdd;
     $req = $bdd->query("SELECT titre, reponse FROM faq");
     while ($donnees = $req->fetch())
-    {
+    {?><h3 class="titre_faq"><?php
         echo $donnees['titre'];
-        echo "<br>";
+        ?></h3>
+<p class="texte_faq">
+<?php
         echo $donnees['reponse'];
         echo "<br>";
+?>
+        </p>
+        <?php
     };
 }
 

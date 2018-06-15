@@ -25,7 +25,7 @@ $query->execute(array(
 
 }
 
-function findCapteur($value){//ressort la liste des capteurs dans une piece
+function supprimerCapteur($value){//ressort la liste des capteurs dans une piece
    global $bdd;
 
 	$query = $bdd->prepare("SELECT * FROM controleur WHERE controleur.ID_piece = '$value'");
@@ -46,7 +46,7 @@ if ($query->rowCount() > 0) { ?>
   </select>
 <?php } ?>
 <br>
-
+    <input type="hidden" name="ID_piece" value="<?php echo $value;?>" >
 <input class="bouton" type="submit" name="boutonsupp" value="Supprimer ce capteur">
 
 </form>
