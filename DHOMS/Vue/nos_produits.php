@@ -24,7 +24,7 @@
     <section>
 	                <div id="ajout_capteurs">
 
-        	<h2> Nos produits:</h2> <br>
+        	<h3 class="connexion_inscription"> Nos produits:</h3> <br>
 	 
   
 

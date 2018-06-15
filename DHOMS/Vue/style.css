@@ -136,7 +136,7 @@ p {
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(72,72,72);
 }
 
 b{
@@ -151,6 +151,7 @@ b{
     padding: 20px;
     text-transform: uppercase;
     list-style: none;
+    color: rgb(72,72,72);
 }
 
 .flex-outer li {/*form*/
@@ -182,7 +183,8 @@ b{
     margin-right: 25%;
 }
 
-.flex-outer li button, #bouton_serie{
+.flex-outer li button, .bouton {
+    display: block;
     padding: 8px 16px;
     border: none;
     background: white;
@@ -713,13 +715,19 @@ input:checked + .curseur.rond.ON_OFF:before {
     background-color: white;
 }
 
-.connexion_inscription, #ajouter_habitation, #titre_tableau_de_bord, #titre_serie{
+.connexion_inscription, #ajouter_habitation, #titre_tableau_de_bord, #titre_serie, .gerer_capteurs{
     font-size: 2em;
     text-align: center;
     color: #ffff;
     margin: 0;
     padding-top: 20px;
     letter-spacing: 0.1em;
+}
+
+.gerer_capteurs, .supprimer_capteurs {
+    margin-bottom: 20px;
+    padding-top: 0px;
+    font-size: 1.5em;
 }
 
 #titre_serie {
@@ -746,12 +754,16 @@ input:checked + .curseur.rond.ON_OFF:before {
     align-items: flex-start;
 }
 
-#form_inscription, #form_habitation, #form_connexion{
+#form_inscription, #form_habitation, #form_connexion, .form_gerer_piece, .form_supprimer_capteurs, #form_mdp_oublie{
     margin: auto;
     min-width: 320px;
     background-color: rgba(255, 255, 255, 0.3);
     margin:25px;
     width: 35%;
+}
+
+.form_supprimer_capteurs, #form_mdp_oublie{
+    width: 60%;
 }
 
  #form_serie {
@@ -880,6 +892,12 @@ section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
 
 #form_nouv_capteur{
     margin-top: 50px;
+}
+
+.select_piece {
+    display: block;
+    margin: 5px auto;
+
 }
 
 .dropbtn {

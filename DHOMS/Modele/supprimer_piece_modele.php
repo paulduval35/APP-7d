@@ -14,7 +14,7 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <?php
 if ($query->rowCount() > 0) { ?>
-  <select name="pieceselect">
+  <select class="select_piece" name="pieceselect">
     <?php foreach ($results as $row) { ?>
       <option value="<?php echo $row['ID']; ?>"><?php echo $row['nom'];?></option>
 	  

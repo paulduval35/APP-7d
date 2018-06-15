@@ -21,14 +21,14 @@
         <header>
             <?php include "header.php"?>
         </header>
-<?//$IDmaison = $_POST["IDmaison"];?>
+
 		<section>
 		
-		<form id ="ajouter_salle" action="../Controleur/ajouter_piece_controleur.php" method="post">
-            <ul class = "flex-outer">
+		<form class ="form_gerer_piece" action="../Controleur/ajouter_piece_controleur.php" method="post">
+            <ul class = "flex-outer gerer_piece">
 
 				
-				<h1> Ajouter une piece</h1>
+				<h1 class="gerer_capteurs" > Ajouter une piece</h1>
 
 				<li>
 
@@ -43,23 +43,23 @@
                     </label>
                     <input id="surface" type="number" name="surface"  required  placeholder="LA SURFACE DE LA PIECE">
                 </li>
-				<input id="IDmaison" name="IDmaison" type="hidden" value="<?php echo "$IDmaison"?> ">
+				<input id="IDmaison" name="IDmaison" type="hidden" value="<?php echo $IDmaison ?> ">
 
-				<li>
-                    <button type="submit" name="bouton">Ajouter la piece</button>
-                </li>
-				</form>
-				
-				<h1> Supprimer une piece</h1>
-				<br>
+                <button class="bouton" type="submit" name="bouton">Ajouter la piece</button>
 
-				
-		<form action="../Controleur/supprimer_piece_controleur.php" method="post" id="supp_capt">
+            </ul>
+        </form>
+
+            <form action="../Controleur/supprimer_piece_controleur.php" method="post" class="form_gerer_piece" >
+            <ul class = "flex-outer gerer_piece">
+				<h1 class="gerer_capteurs" > Supprimer une piece</h1>
+
 		<?php
-		findPiece(2);
+		findPiece($IDmaison);
 		?>
 		<br>
-		<button type="submit" name="bouton">Supprimer la piece</button>
+		<button class="bouton" type="submit" name="bouton">Supprimer la piece</button>
+            </ul>
 		</form>
 		
 		</section>

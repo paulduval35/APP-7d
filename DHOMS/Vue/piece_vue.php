@@ -12,8 +12,8 @@ while($piece = $idpiece->fetch()):
 <?php } endwhile; ?>
 
 <div id = "nav_pieces_interne">
-    <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/ajout_piece_page_controleur.php">
-        <input type="hidden" name="ID_maison" value="<?php echo $IDmaison ?>">
+    <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/gerer_piece_controleur.php">
+        <input type="hidden" name="IDmaison" value="<?php echo $IDmaison ?>">
         <button class="button_pieces" type="submit">Gérer les pièces</button>
     </form>
 </div>

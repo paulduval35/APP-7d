@@ -22,7 +22,7 @@
 
 					<ul class = "flex-outer">
 
-	<h2> selectionner le capteur:</h2>
+	<h3 class="connexion_inscription">Sélectionner le capteur à ajouter:</h3>
 
 <form id ="form_nouv_capteur" action="../Controleur/ajout_capteur_page_2_controleur.php" method="post" >
                             <input type="hidden" name="ID_piece" value="<?php echo $piece?>">

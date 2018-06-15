@@ -34,7 +34,7 @@
                         </div>
                         <div>
                             <input id="input_serie"  type="text" name="serie" placeholder="Entrez le numéro de série"><br>
-                            <button id="bouton_serie" type="submit">Ajouter le capteur</button>
+                            <button class="bouton" type="submit">Ajouter le capteur</button>
 
                         <div id="sk-circle" class="sk-circle loader-serie">
                             <div class="sk-circle1 sk-child"></div>

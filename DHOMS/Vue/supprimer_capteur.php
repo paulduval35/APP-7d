@@ -22,19 +22,20 @@ include "../Controleur/url.php";
     </header>
 
     <section>
-		<?php
-		echo "<h1> Selectionner le capteur à supprimer:  </h1>";
+        <form class ="form_supprimer_capteurs" method="post">
+            <ul class = "flex-outer supprimer_capteurs">
+        <h3 class="connexion_inscription supprimer_capteurs" >Selectionner le capteur à supprimer:</h3>
 
+<?php
 
-include "../Modele/ajout_capteur_modele.php";
-$id_piece = 2;
+include "../Modele/gerer_capteur_modele.php";
+
 $rangee_capteur=findCapteur($id_piece);	
-
-
 
 ?>
 
-
+            </ul>
+        </form>
 	
 </section>
 

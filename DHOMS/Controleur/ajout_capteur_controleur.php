@@ -4,7 +4,7 @@ $capteur = $_POST['capteur'];
 $numero_serie = $_POST['serie'];
 $etat='éteint';
 
-include "../Modele/ajout_capteur_modele.php";
+include "../Modele/gerer_capteur_modele.php";
 insertCapteur($capteur,$piece,$numero_serie);
 
 ?>

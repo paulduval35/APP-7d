@@ -38,7 +38,7 @@ $results = $query->fetchAll(PDO::FETCH_ASSOC);
 <form action="../Controleur/supprimer_capteur_controleur.php" method="post" id="supp_capt">
 <?php
 if ($query->rowCount() > 0) { ?>
-  <select name="pieceselect">
+  <select name="pieceselect" class="select_piece" >
     <?php foreach ($results as $row) { ?>
       <option value="<?php echo $row['ID']; ?>"><?php echo $row['categorie'];?></option>
 	  
@@ -47,7 +47,7 @@ if ($query->rowCount() > 0) { ?>
 <?php } ?>
 <br>
 
-<input type="submit" name="boutonsupp" value="Supprimer ce capteur">
+<input class="bouton" type="submit" name="boutonsupp" value="Supprimer ce capteur">
 
 </form>
 
