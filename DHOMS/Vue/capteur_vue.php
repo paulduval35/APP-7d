@@ -104,7 +104,6 @@
 <?php endwhile;?>
 
     <div class = "capteur_vue">
-    <input type="hidden" class = "valeur" value="<?php echo $idpiece?>">
         <div class="nom_capteur tab_bord" id="nom_capteur "> Modifier capteurs </div>
 
         <div id = "icone_capteur_tableaubord" >
@@ -112,7 +111,12 @@
                 <div class="selecteur-content">
                     <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/ajout_capteur_page_controleur.php">
                         <input type="hidden" name="ID_piece" value="<?php echo $idpiece?>">
-                        <button class="bouton_capteur" id="bouton_plus" >Modifier</button></form>
+                        <button class="bouton_capteur" id="bouton_plus" type="submit">Ajouter</button>
+                    </form>
+                    <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/supprimer_capteur_page_controleur.php">
+                        <input type="hidden" name="ID_piece" value="<?php echo $idpiece?>">
+                        <button class="bouton_capteur" id="bouton_plus" type="submit">Supprimer</button>
+                    </form>
                 </div>
             </div>
         </div>

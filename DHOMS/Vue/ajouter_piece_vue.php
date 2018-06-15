@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +22,6 @@
         <header>
             <?php include "header.php"?>
         </header>
-<?//$IDmaison = $_POST["IDmaison"];?>
 		<section>
 			<form id ="ajouter_salle" action="../Controleur/ajouter_piece_controleur.php" method="post">
             <ul class = "flex-outer">

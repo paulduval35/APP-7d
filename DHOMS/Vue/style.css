@@ -586,6 +586,8 @@ input:checked + .curseur.rond.ON_OFF:before {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: max-content;
     justify-items: flex-start;
+    margin-left: 5%;
+    width: 100%;
 }
 
 .nom_maison{

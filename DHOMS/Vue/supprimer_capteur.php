@@ -7,7 +7,7 @@ include "../Controleur/url.php";
 <head>
     <title>DHOMS</title>
     <meta charset="UTF-8">
-    <link rel= "stylesheet" href="style.css" />
+    <link rel= "stylesheet" href="../Vue/style.css" />
     <!-- commentaire -->
 </head>
 

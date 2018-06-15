@@ -12,10 +12,10 @@ while($piece = $idpiece->fetch()):
 <?php } endwhile; ?>
 
 <div id = "nav_pieces_interne">
-    <input type="hidden" id="pieceID.<?php echo $piece['ID']?>" value="<?php echo $piece['ID']?>">
-    <button class = "button_pieces" value = "<?php echo $piece['ID']?>"><a href = ../Controleur/logout.php> </a>
-        Ajouter une pièce
-    </button>
+    <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/ajout_piece_page_controleur.php">
+        <input type="hidden" name="ID_maison" value="<?php echo $IDmaison ?>">
+        <button class="button_pieces" type="submit">Gérer les pièces</button>
+    </form>
 </div>
 
 
