@@ -67,6 +67,11 @@
 
                      </li>
 
+                     <li>
+
+                         <button type = "submit" name ="button">Valider</button>
+                     </li>
+
             </ul>
         </form>
 

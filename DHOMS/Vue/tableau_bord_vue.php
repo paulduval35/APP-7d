@@ -67,7 +67,7 @@ include "../Controleur/url.php";
 
 	
     <nav>
-        <?php include "../Vue/nav.php"?>
+        <?php   include "../Vue/nav.php"?>
     </nav>
 
     <div id = "header_footer">
@@ -127,7 +127,7 @@ include "../Controleur/url.php";
 
                         <?php
 
-                        if ($_SESSION['statut']="Admin"):?>
+                        if ($_SESSION['statut'][0]=="Admin"):?>
 
                             <div class = "flex-outer" id = "bouton_ajout_habitation">
                                 <li>

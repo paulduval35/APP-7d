@@ -81,10 +81,10 @@ function check_pseudo($email)
 }
 
 
-function getStatut($id)
+function getStatut1($id)
 {
     include "connect_database_modele.php";
-    $req = $bdd->query("SELECT Statut FROM personne WHERE personne.id = '$id'");
+    $req = $bdd->query("SELECT statut FROM personne WHERE personne.id = '$id'");
     while ($a = $req->fetch()) {
         return $a;
     }

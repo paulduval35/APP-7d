@@ -1,6 +1,7 @@
 <?php
 session_start();
 include "../Modele/tableau_bord_modele.php";
+include "url.php";
 
 
 if (isset($_SESSION['ID'])) {
@@ -32,11 +33,11 @@ if (isset($_SESSION['ID'])) {
             }
         };
         $idglobal = getGlobal($IDmaison);
-        include "../Vue/tableau_bord_vue.php";
+        include '../Vue/tableau_bord_vue.php';
     }
 
     else{
-        header('Location:'.$DHOMS_URL."/Vue/habitation.php");
+        header("Location:".$DHOMS_URL."/Vue/habitation.php");
     }
 }
 

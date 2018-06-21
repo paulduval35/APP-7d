@@ -1,4 +1,9 @@
 <?php session_start();?>
+<?php include "../Controleur/url.php"?>
+<?php if (!isset($_SESSION['statut'][0])){
+    $_SESSION['statut'][0]='a';
+}?>
+<?php if ($_SESSION['statut'][0]=="Admin"):?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +17,7 @@
 </head>
 
 <body>
-    <?php include "../Controleur/url.php"?>
+
 	
     <nav>
         <?php include "nav.php"?>
@@ -65,3 +70,7 @@
 
 </body>
 </html>
+<?php endif;?>
+<?php if ($_SESSION['statut'][0] != "Admin"){
+    header('Location:'.$DHOMS_URL."/Controleur/tableau_bord_controleur.php");
+}
