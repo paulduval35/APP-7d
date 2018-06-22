@@ -1,5 +1,5 @@
 <?php
-
+include "connect_database_modele.php";
 $reponse = $bdd->query('SELECT * FROM habitation');
 
 
@@ -12,10 +12,10 @@ $reponse = $bdd->query('SELECT * FROM habitation');
 if (PaysExiste()){
 }
 else {
-    $req = $bdd->prepare('INSERT INTO pays(ID, pays) VALUES(:ID,:pays)');
+    $req = $bdd->prepare('INSERT INTO pays(ID, nom) VALUES(:ID,:nom)');
     $req->execute(array(
         'ID'=>$ID_pays,
-        'pays'=>$pays,
+        'nom'=>$pays,
     ));
     $ID_pays = $bdd->lastInsertId();
 }

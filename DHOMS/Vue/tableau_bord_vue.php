@@ -79,9 +79,30 @@ include "../Controleur/url.php";
 
                     <div id="box_tableaubord" class = "box_tableaubord" >
                         <h3 id="titre_tableau_de_bord">Tableau de bord</h3>
-                            <div>
+                            <div class="gestion_maisons">
+                                <div >
+                                    <div class="selecteur">
+                                        <button class="gérer_maison">Gérer ses Maisons</button>
+                                    <div class="selecteur-content selecteur_maison">
+                                        <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/habitation_page_controleur.php">
+                                            <input type="hidden" name="ID_personne" value="<?php echo "Ok" ?>">
+                                            <button class="bouton_capteur" id="bouton_plus" type="submit">Ajouter</button>
+                                        </form>
+                                        <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/supprimer_maison_page_controleur.php">
+                                            <input type="hidden" name="ID_personne" value="<?php echo "Ok" ?>">
+                                            <button class="bouton_capteur" id="bouton_plus" type="submit">Supprimer</button>
+                                        </form>
+                                    </div>
+                                    </div>
+                                </div>
                                 <div id = "maison_tableaubord <?php echo $IDmaison?>" class="box_nom_maison" value = "<?php echo $IDmaison?>">
                                     <span class="nom_maison"> <?php echo getNomMaison($IDmaison);?> </span>
+                                </div>
+                                <div >
+                                    <form id="form_capteur" class="slidecontainer" method="post" action="../Controleur/changer_maison_controleur.php">
+                                        <input type="hidden" name="ID_personne" value="<?php echo $_SESSION['ID'] ?>">
+                                        <button class="gérer_maison" type="submit">Changer de maison</button>
+                                    </form>
                                 </div>
                             </div>
                         <div id = "global_tableaubord">
@@ -121,7 +142,7 @@ include "../Controleur/url.php";
 
                         <div class="flex-outer" id="bouton_ajout_habitation">
                             <li >
-                                <a href="../Vue/habitation.php" class="ajout_habitation"><button >Ajouter une habitation</button></a>
+                                <a href="habitation_vue.php" class="ajout_habitation"><button >Ajouter une habitation</button></a>
                             </li>
                         </div>
 
@@ -152,7 +173,7 @@ include "../Controleur/url.php";
 </body>
 
 <script>
-    changeValuePieceVue(1);
+    changeValuePieceVue(<?php echo $IDmaison ?>);
     changeValueGlobal(<?php echo $idglobal['ID']?>)
 </script>
 

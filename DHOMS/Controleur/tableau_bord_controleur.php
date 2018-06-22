@@ -21,17 +21,18 @@ if (isset($_SESSION['ID'])) {
     $lenArray = count($arrayMaison);
 
     if($lenArray > 0) {
-        $IDmaison = $arrayMaison[0];
+
+        if (isset ($_POST['ID_maison'])){
+            $IDmaison = $_POST['ID_maison'];
+        }
+        else {
+            $IDmaison = $arrayMaison[0];
+        }
 
 
-        if (isset($_GET['valeur'])) {
-            $test = $_GET['valeur'];
-            $valeur = getPieces($test);
 
-            while ($affichage = $valeur->fetch()) {
-                echo $affichage['nom'];
-            }
-        };
+        $pieces = getPieces($IDmaison);
+
         $idglobal = getGlobal($IDmaison);
         include '../Vue/tableau_bord_vue.php';
     }
@@ -42,5 +43,5 @@ if (isset($_SESSION['ID'])) {
 }
 
 else{
-    header('Location: http://localhost:63342/site_app/APP-7d/DHOMS/Vue/connexion_inscription_vue.php');
+    header('Location: http://localhost/DHOMS/Vue/connexion_inscription_vue.php');
 }

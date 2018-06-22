@@ -39,7 +39,7 @@
             </div>
             <div class="flex-outer" id="bouton_ajout_habitation">
                 <li >
-                    <a href="../Vue/habitation.php" class="ajout_habitation"><button >Supprimer un actionneur</button></a>
+                    <a href="habitation_vue.php" class="ajout_habitation"><button >Supprimer un actionneur</button></a>
                 </li>
             </div>
         </div>

@@ -30,28 +30,8 @@ function supprimerCapteur($value){//ressort la liste des capteurs dans une piece
 
 	$query = $bdd->prepare("SELECT * FROM controleur WHERE controleur.ID_piece = '$value'");
 		$query->execute();
-		
 			
-			
-$results = $query->fetchAll(PDO::FETCH_ASSOC);
-?>
-<form action="../Controleur/supprimer_capteur_controleur.php" method="post" id="supp_capt">
-<?php
-if ($query->rowCount() > 0) { ?>
-  <select name="pieceselect" class="select_piece" >
-    <?php foreach ($results as $row) { ?>
-      <option value="<?php echo $row['ID']; ?>"><?php echo $row['categorie'];?></option>
-	  
-    <?php } ?>
-  </select>
-<?php } ?>
-<br>
-    <input type="hidden" name="ID_piece" value="<?php echo $value;?>" >
-<input class="bouton" type="submit" name="boutonsupp" value="Supprimer ce capteur">
-
-</form>
-
-<?php	
+    return $query;
 }
 
 function getCategorieCapteur($value){
@@ -69,7 +49,7 @@ function getCategorieCapteur($value){
 function removeCapteur($value){
 global $bdd;
 
-	$query = $bdd->prepare("DELETE FROM controleur WHERE `controleur`.`ID` = '$value'");
+	$query = $bdd->prepare("DELETE FROM controleur WHERE controleur.ID = '$value'");
 	$query->execute();
 }
 

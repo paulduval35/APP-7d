@@ -163,7 +163,6 @@ b{
 
 .flex-outer li label {
     flex: 1;
-    max-width: 320px;
     min-width: 100px;
 }
 
@@ -499,6 +498,11 @@ input:checked + .curseur.rond.ON_OFF:before {
     padding: 20px;
 }
 
+.gestion_maisons {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+
 #section_tableau_bord{
     display: grid;
     grid-template-columns: 10% 10% 1fr;
@@ -564,6 +568,25 @@ input:checked + .curseur.rond.ON_OFF:before {
     font-family: "Century Gothic";
 }
 
+ .gérer_maison {
+     font-size: 1.2em;
+     background-color: rgb(72,72,72);
+     border-color: rgb(142,142,142);
+     text-align: center;
+     cursor: pointer;
+     height: 60px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+     text-transform: uppercase;
+     color: white;
+     display: grid;
+     font-family: "Century Gothic";
+     min-width: 120px;
+ }
+
+ .label_habitation {
+     max-width: 200px;
+ }
+
 #nom_piece_focused {
     height: 20px;
     margin: 10px 5%;
@@ -609,6 +632,8 @@ input:checked + .curseur.rond.ON_OFF:before {
     font-family: "Century Gothic";
 }
 
+
+
 .nom_piece{
     font-size: 1.1em;
     text-align: center;
@@ -634,9 +659,7 @@ input:checked + .curseur.rond.ON_OFF:before {
     padding: 20px 0px;
     height: 20px;
     display: grid;
-    margin-bottom: 30px;
-    grid-template-columns: 1fr;
-    width: 100%;
+    margin: 0px 5px 30px 5px;
     background-color: rgb(72,72,72);
     border-color: rgb(142,142,142);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
@@ -944,6 +967,11 @@ section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+
+.selecteur_maison {
+    width: 100%;
+    left: 0px;
 }
 
 /* Links inside the selecteur */

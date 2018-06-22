@@ -39,7 +39,7 @@ session_start();
             <h3 id="ajouter_habitation"> AJOUTER UNE HABITATION </h3><br>
             <ul class = "flex-outer">
                 <li>
-                    <label>
+                    <label class="label_habitation">
                         Nom de l'habitation
                     </label>
 
@@ -47,7 +47,7 @@ session_start();
                 </li>
 
                 <li>
-                    <label>
+                    <label class="label_habitation">
                         Surface
                     </label>
 
@@ -55,21 +55,21 @@ session_start();
                 </li>
 
                 <li>
-                    <label>
+                    <label class="label_habitation">
                         Numéro de rue
                     </label>
                     <input id="num_rue" type="text" name="num_rue"  required  placeholder="NUMERO DE RUE">
                 </li>
 
                 <li>
-                    <label>
+                    <label class="label_habitation">
                         Nom de la rue
                     </label>
                     <input id="nom_rue" type="text"  name="rue" required placeholder="NOM DE LA RUE">
                 </li>
 
                 <li>
-                    <label>
+                    <label class="label_habitation">
                         Code postal
                     </label>
 
@@ -78,7 +78,7 @@ session_start();
                 </li>
 
                 <li>
-                    <label>
+                    <label class="label_habitation">
                         Ville
                     </label>
 
@@ -87,7 +87,7 @@ session_start();
 
 
                 <li>
-                    <label>
+                    <label class="label_habitation">
                         Pays
                     </label>
 
