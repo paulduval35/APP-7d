@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
 <nav>
     <?php include "nav.php"?>
 </nav>

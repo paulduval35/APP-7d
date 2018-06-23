@@ -1,4 +1,3 @@
-<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +19,7 @@
     </header>
 
     <section>
-        <div id="box_gestion_actionneurs" class = "box_gestion_actionneurs" >
+        <div class = "box_gestion_actionneurs" >
             <h3 id="titre_tableau_de_bord">Listes des actionneurs :</h3>
 
             <div id = "icone_capteur_tableaubord" >

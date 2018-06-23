@@ -1,30 +1,18 @@
 <?php
 session_start();
-/**
- * Created by IntelliJ IDEA.
- * User: epida
- * Date: 04/05/2018
- * Time: 10:24
- */
 
 include "../Modele/connexion_inscription_modele.php";
 include "url.php";
 
-
 //Initialisation des variables
-
 $email="";
 $email_confirmation="";
-
 $email = $_POST['email'];
 $email_confirmation=$_POST['emailconfirmation'];
 $mdp = $_POST['mdp'];
 $mdp2 = $_POST['mdp2'];
-
 $nb_email="";
 $nb_email = check_pseudo($email);
-//echo $nb_email;
-
 $mdplenght = strlen($_POST['mdp']);
 
 if (isset($_POST['CGU']))
@@ -54,7 +42,6 @@ if (isset($_POST['CGU']))
             }
         }
     }
-
 }
 
 if($mdplenght < 8) {
@@ -90,4 +77,3 @@ if(isset($_POST['CGU']) == NULL) {
     <?php
 }
 ?>
-

@@ -1055,7 +1055,6 @@ section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
 
 .box_gestion_actionneurs{
     display:grid;
-    background-color: rgba(255, 255, 255, 0.3);
     width: 20%;
     height: 2%;
     grid-template-rows: repeat(auto-fill, 1fr);
@@ -1076,7 +1075,7 @@ section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
 
  #piechart{
      margin-right: 25%;
-     margin-left: 19%;
+     margin-left: 1%;
      background-color: rgba(255, 255, 255, 0.3);
  }
 

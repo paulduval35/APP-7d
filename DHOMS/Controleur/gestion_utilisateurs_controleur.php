@@ -1,12 +1,16 @@
+<?php session_start();?>
+<?php include "../Controleur/url.php"?>
+<?php if (!isset($_SESSION['statut'][0])){
+    $_SESSION['statut'][0]='a';
+}?>
+<?php if ($_SESSION['statut'][0]=="Admin"):?>
+
 <?php
 GLOBAL $email;
 $email= $_POST["email"];
 include "../Modele/supprimer_utilisateurs_modele.php";
 
-
-
 $utilisateur= getUtilisateur($email);
-//$listeUtilisateur = $utilisateur->fetchall();
 
 include "../Vue/supprimer_des_util_vues.php";
 ?>	
@@ -26,8 +30,10 @@ if ($_POST['buttondel']){
 echo '</script>';
 echo '<script>window.location.href = "../Vue/supprimer_utilisateurs_recherche_vue.php";</script>';
 		exit();}
-
-} 
-
+}
 ?>
 
+<?php endif;?>
+<?php if ($_SESSION['statut'][0] != "Admin"){
+    header('Location:'.$DHOMS_URL."/Controleur/tableau_bord_controleur.php");
+}

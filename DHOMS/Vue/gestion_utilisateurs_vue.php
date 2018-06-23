@@ -29,15 +29,16 @@
                     <td>Email</td>
                 </tr>
             </table>
-                <?php foreach($listeUtilisateur as $row):?>
-                    <table class="liste_Utilisateurs">
-                        <tr>
-                            <td><?php echo $row['nom']?></td>
-                            <td><?php echo $row['prenom']?></td>
-                            <td><?php echo $row['email']?></td>
-                        </tr>
-                    </table>
-                <?php endforeach;?>
+
+            <?php foreach($listeUtilisateur as $row):?>
+                <table class="liste_Utilisateurs">
+                    <tr>
+                        <td><?php echo $row['nom']?></td>
+                        <td><?php echo $row['prenom']?></td>
+                        <td><?php echo $row['email']?></td>
+                    </tr>
+                </table>
+            <?php endforeach;?>
 				
 			<br><br><br>
 

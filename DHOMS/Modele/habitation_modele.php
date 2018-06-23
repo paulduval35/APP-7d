@@ -2,13 +2,10 @@
 include "connect_database_modele.php";
 $reponse = $bdd->query('SELECT * FROM habitation');
 
-
-
 // Initialiation des variables
-
-
 //Pour insérer des habitations
 //On check d'abord si le pays existe
+
 if (PaysExiste()){
 }
 else {

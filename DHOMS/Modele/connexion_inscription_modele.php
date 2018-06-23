@@ -1,10 +1,4 @@
-    <?php
-/**
- * Created by IntelliJ IDEA.
- * User: epida
- * Date: 04/05/2018
- * Time: 11:06
- */
+<?php
 
 include "connect_database_modele.php";
 
@@ -16,8 +10,6 @@ function getData($email)
         'email' => $email));
     $resultat = $req->fetch();
     return $resultat['mot_de_passe'];
-    //return $resultat['ID'];
-
 }
 
 function getConnexion($email)
@@ -99,7 +91,4 @@ function setDisconnected($id){
     $req = $bdd->query("DELETE FROM personneconnecte WHERE id_personne = '$id'");
 }
 
-
 ?>
-
-

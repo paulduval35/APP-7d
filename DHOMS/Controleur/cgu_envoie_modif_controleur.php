@@ -8,7 +8,4 @@ modif_cgu($bdd);
 
 include "../Vue/accueil_admin_vue.php";
 
-
 ?>
-
-

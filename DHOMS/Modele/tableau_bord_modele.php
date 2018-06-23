@@ -59,8 +59,6 @@ function getCategorieCapteur($id_controleur){
     }
 }
 
-
-
 function getValuesProgrammationCapteur($id_capteur){
     global $bdd;
     $listeValeursProgrammationCapteurs = $bdd->query("SELECT * FROM programmation p 
@@ -72,7 +70,6 @@ GROUP BY programmation.ID_controleur) last_p ON p.ID_controleur = '$id_capteur' 
         $a = $liste['donnee'];
         return $a;
     }
-
 }
 
 function postValeurProgrammationControleur($ID_controleur,$valeur_action){ //$ID_personne sera à rajouter
@@ -118,8 +115,6 @@ function postValeurProgrammationControleur($ID_controleur,$valeur_action){ //$ID
         'ID_programmation' =>$ID_programmation,
         'ID_controleur' => $ID_controleur,
     ));
-
-
 }
 
 function getStatut($id_maison, $id_personne){

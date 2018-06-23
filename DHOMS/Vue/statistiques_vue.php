@@ -1,4 +1,3 @@
-<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,15 +22,13 @@
         <div>
             <h3 id="titre_tableau_de_bord">Statistiques d'utilisation :</h3>
 
-            <div id="box_panne_message" >
-                <h2 id="titre_statistique">Nombre d'utilisateurs connectés :</h2>
-
+            <div id="box_panne_message">
+                <h3 id="titre_tableau_de_bord">Nombre d'utilisateurs connectés :</h3>
                 <p>Nombre de personne connectés sur le site : 1</p>
-
             </div>
 
             <div id="box_panne_message" >
-                <h2 id="titre_statistique">Répartition du déploiment des capteurs :</h2>
+                <h3 id="titre_tableau_de_bord">Répartition du déploiment des capteurs :</h3>
 
                     <?php foreach($liste_categorie as $row):
                         global $temperature;

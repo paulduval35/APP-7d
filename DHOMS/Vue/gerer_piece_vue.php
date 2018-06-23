@@ -2,10 +2,8 @@
 <html lang="en">
 
 <head>
-
     <title>DHOMS</title>
     <meta charset="UTF-8">
-
     <link rel="stylesheet" href="../Vue/style.css">
 	<!-- commentaire -->
 </head>
@@ -23,15 +21,12 @@
         </header>
 
 		<section>
-		
 		<form class ="form_gerer_piece" action="../Controleur/ajouter_piece_controleur.php" method="post">
             <ul class = "flex-outer gerer_piece">
-
 				
 				<h1 class="gerer_capteurs" > Ajouter une piece</h1>
 
 				<li>
-
                     <label for="nom_salle">
                         Nom de la piece
                     </label>
@@ -50,26 +45,22 @@
             </ul>
         </form>
 
-            <form action="../Controleur/supprimer_piece_controleur.php" method="post" class="form_gerer_piece" >
+        <form action="../Controleur/supprimer_piece_controleur.php" method="post" class="form_gerer_piece" >
             <ul class = "flex-outer gerer_piece">
 				<h1 class="gerer_capteurs" > Supprimer une piece</h1>
 
-		<?php
-		findPiece($IDmaison);
-		?>
-		<br>
-		<button class="bouton" type="submit" name="bouton">Supprimer la piece</button>
+		        <?php
+		            findPiece($IDmaison);
+		        ?>
+		        <br>
+		        <button class="bouton" type="submit" name="bouton">Supprimer la piece</button>
             </ul>
 		</form>
-		
 		</section>
+
         <footer>
             <?php include "footer.php"?>
         </footer>
     </div>
-
-
 </body>
 </html>
-		
-		
