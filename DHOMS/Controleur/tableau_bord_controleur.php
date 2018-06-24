@@ -4,7 +4,7 @@ include "../Modele/tableau_bord_modele.php";
 include "url.php";
 include "../Modele/trame_modele.php";
 
-getTrameToDB();
+
 if (isset($_SESSION['ID'])) {
 
 
@@ -36,6 +36,7 @@ if (isset($_SESSION['ID'])) {
 
         $idglobal = getGlobal($IDmaison);
         include '../Vue/tableau_bord_vue.php';
+
     }
 
     else{

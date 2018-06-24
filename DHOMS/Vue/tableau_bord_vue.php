@@ -51,6 +51,17 @@ include "../Controleur/url.php";
             document.getElementById('nom_piece_focused').innerHTML= nom;
         }
 
+        function refreshDB(){
+            $.ajax({
+                type: 'POST',
+                url: '../Controleur/trame_controleur.php',
+                success:function(response){
+
+                }
+            })
+        }
+
+        var timeout1 = setInterval(refreshDB, 2000);
 
     </script>
     <title>DHOMS</title>

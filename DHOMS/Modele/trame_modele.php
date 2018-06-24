@@ -45,9 +45,7 @@ GROUP BY donnee.ID_controleur) last_d ON d.ID_controleur = '$id' AND d.date = la
 function compareTime($id,$y,$m,$d,$h,$min,$s){
     $verif=false;
     $date1=date("$y-$m-$d");
-    echo $date1."<br>";
     $date=getLastDateCapteur($id);
-    echo $date."<br>";
    $split = explode(" ",$date);
    $splitHeure = explode(":", $split[1]);
 
@@ -59,7 +57,7 @@ function compareTime($id,$y,$m,$d,$h,$min,$s){
    elseif($date1==$split[0]){
        if ($h>=$splitHeure[0]){
            if($min>=$splitHeure[1]){
-               if($s>=$splitHeure[2]){
+               if($s>$splitHeure[2]){
                    $verif = true;
                }
            }
@@ -122,8 +120,6 @@ function getTrameToDB(){
 
 
     }
-
-
 
 }
 
