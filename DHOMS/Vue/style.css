@@ -1044,9 +1044,13 @@ section::-webkit-scrollbar-track, .box_tableaubord::-webkit-scrollbar-track{
     letter-spacing: 0.1em;
 }
 
-.bouton_acc_admin{
+.bouton_acc_admin {
     margin:auto;
 }
+
+ #bouton_acc_admin{
+     margin-left: 38%;
+ }
 
 .lien_acc{
     color: dimgrey;

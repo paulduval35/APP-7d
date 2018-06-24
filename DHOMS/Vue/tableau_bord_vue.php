@@ -5,9 +5,7 @@ include "../Controleur/url.php";
 <html lang="en">
 
 <head>
-
     <script src = "../Vue/jquery-3.2.1.js"></script>
-
     <script>
         function changeValuePieceVue(value) {
             $.ajax({
@@ -29,7 +27,6 @@ include "../Controleur/url.php";
             document.getElementById('nom_piece_focused').innerHTML="CouCou";
         }
 
-
         function changeValueGlobal(value) {
             $.ajax({
                 type: 'GET',
@@ -41,8 +38,6 @@ include "../Controleur/url.php";
             })
             document.getElementById('nom_piece_focused').innerHTML="Global";
         }
-
-
 
         function changeValueCapteursVue(value,nom) {
             $.ajax({
@@ -60,14 +55,11 @@ include "../Controleur/url.php";
     </script>
     <title>DHOMS</title>
     <meta charset="UTF-8">
-
     <link rel="stylesheet" href="../Vue/style.css">
 	<!-- commentaire -->
 </head>
 
 <body>
-
-	
     <nav>
         <?php   include "../Vue/nav.php"?>
     </nav>
@@ -78,9 +70,7 @@ include "../Controleur/url.php";
         </header>
 
         <section>
-
                     <div id="box_tableaubord" class = "box_tableaubord" >
-                        <h3 id="titre_tableau_de_bord">Tableau de bord</h3>
                             <div class="gestion_maisons">
                                 <div >
                                     <div class="selecteur">
@@ -138,39 +128,25 @@ include "../Controleur/url.php";
                             </div>
 
                             <div id = "section_capteurs">
-
                             </div>
                         </div>
 
-                        <div class="flex-outer" id="bouton_ajout_habitation">
-                            <li >
-                                <a href="habitation_vue.php" class="ajout_habitation"><button >Ajouter une habitation</button></a>
-                            </li>
-                        </div>
-
                         <?php
-
                         if ($_SESSION['statut'][0]=="Admin"):?>
 
-                            <div class = "flex-outer" id = "bouton_ajout_habitation">
+                            <div class="flex-outer" id="bouton_acc_admin">
                                 <li>
                                     <a href=<?php echo $DHOMS_URL?>/Vue/accueil_admin_vue.php><button>Espace administrateur</button></a>
                                 </li>
                             </div>
-
                         <?php endif;?>
                     </div>
-
-
-
-
         </section>
 
         <footer>
             <?php include "footer.php"?>
         </footer>
     </div>
-
     <?php include "../Vue/loader_vue.php";?>
 </body>
 
