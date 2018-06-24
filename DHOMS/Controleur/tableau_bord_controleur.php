@@ -2,8 +2,9 @@
 session_start();
 include "../Modele/tableau_bord_modele.php";
 include "url.php";
+include "../Modele/trame_modele.php";
 
-
+getTrameToDB();
 if (isset($_SESSION['ID'])) {
 
 
@@ -43,5 +44,7 @@ if (isset($_SESSION['ID'])) {
 }
 
 else{
-    header('Location: http://localhost/DHOMS/Vue/connexion_inscription_vue.php');
+    header('Location:'.$DHOMS_URL.'/Vue/connexion_inscription_vue.php');
 }
+
+

@@ -128,6 +128,7 @@
 
     var timeOut = setInterval(fullrefresh, 2000);
 
+
     function fullrefresh(){
         for (var i = 0; i<idcapteur.length ; i++){
             refresh(idcapteur[i].value);

@@ -55,6 +55,8 @@ include "../Controleur/url.php";
             })
             document.getElementById('nom_piece_focused').innerHTML= nom;
         }
+
+
     </script>
     <title>DHOMS</title>
     <meta charset="UTF-8">

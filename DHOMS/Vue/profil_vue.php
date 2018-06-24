@@ -1,4 +1,5 @@
 <?php session_start();?>
+<?php include "../Controleur/url.php";?>;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@
    <section id = "box_connexion_inscription">
 
 
-             <form id ="form_habitation" action="http://localhost/DHOMS/Controleur/habitation_controleur.php" method="POST" id="p_habitation">
+             <form id ="form_habitation" action=<?echo $DHOMS_URL?>/Controleur/profil_controleur.php" method="POST" id="p_habitation">
                  <h3 id="ajouter_habitation"> PROFIL </h3><br>
                  <ul class = "flex-outer">
                      <li>
